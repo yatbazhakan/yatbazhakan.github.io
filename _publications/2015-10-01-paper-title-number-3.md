@@ -1,15 +1,13 @@
 ---
-title: "Paper Title Number 3"
+title: "Activity recognition and anomaly detection in E-health applications using color-coded representation and lightweight CNN architectures"
 collection: publications
 permalink: /publication/2015-10-01-paper-title-number-3
-excerpt: 'This paper is about the number 3. The number 4 is left for future work.'
-date: 2015-10-01
-venue: 'Journal 1'
-paperurl: 'http://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2015). &quot;Paper Title Number 3.&quot; <i>Journal 1</i>. 1(3).'
+excerpt: ' In this study, a new approach to data representation is presented with convolutional neural network architectures for high accuracy and lightweight activity detection.'
+date: 2021-2-23
+venue: 'IEEE Sensors Journal
+'
+paperurl: 'https://ieeexplore.ieee.org/abstract/document/9360822'
+citation: 'H. Y. Yatbaz, E. Ever and A. Yazici, "Activity Recognition and Anomaly Detection in E-Health Applications Using Color-Coded Representation and Lightweight CNN Architectures," in IEEE Sensors Journal, vol. 21, no. 13, pp. 14191-14202, 1 July1, 2021, doi: 10.1109/JSEN.2021.3061458.'
 ---
-This paper is about the number 3. The number 4 is left for future work.
-
-[Download paper here](http://academicpages.github.io/files/paper3.pdf)
-
-Recommended citation: Your Name, You. (2015). "Paper Title Number 3." <i>Journal 1</i>. 1(3).
+In this study, a new approach to data representation is presented with convolutional neural network architectures for high accuracy and lightweight activity detection. An anomaly detection framework is presented, which uses ECG data for the prediction of cardiac stress activities. The novel approach to data representation and the proposed deep learning model are tested on the MHEALTH dataset with two different validation techniques for accuracy and three different complexity metrics. The experimental results show that the proposed approaches can achieve up to 96.92% and 97.06% accuracy for the HAR and cardiac stress level, respectively.
+[Download paper here](https://ieeexplore.ieee.org/abstract/document/9360822)
