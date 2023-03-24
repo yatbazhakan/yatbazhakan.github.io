@@ -11,9 +11,9 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.S. in Computer Engineering, Middle East Technical University, Northern Cyprus Campus, 2018
+* M.S. in Computer Engineering, Middle East Technical University, Northern Cyprus Campus, 2020
+* Ph.D in Engineering, University of Warwick, 2024 (expected)
 
 Work experience
 ======
