@@ -29,12 +29,8 @@ Work experience
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Programming: Python,  C, C++, Java, C#, SQL, LaTeX
+* Frameworks: PyTorch, Sci-Kit Learn, Robot Operating System (ROS), OpenMMLAB
 
 Publications
 ======
