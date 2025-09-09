@@ -1,200 +1,224 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Hakan Yekta Yatbaz",
+    "label": "Lecturer (Assistant Professor) in Autonomous Systems",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "yatbazhakan@gmail.com",
+    "phone": "",
+    "url": "https://scholar.google.com/citations?user=5Q596f4AAAAJ&hl=en",
+    "summary": "Researcher in safe and resilient artificial intelligence for intelligent transport systems. Expertise in run-time monitoring, introspection, and uncertainty quantification for LiDAR-based 3D object detection in autonomous vehicles.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "EEECS, Queen's University Belfast",
+      "postalCode": "BT7 1NN",
+      "city": "Belfast",
+      "countryCode": "UK",
+      "region": "Northern Ireland"
     },
     "profiles": [
-      {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
-      }
+
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
+      "name": "WMG, University of Warwick",
+      "position": "Postdoctoral Research Assistant",
+      "url": "https://warwick.ac.uk/fac/sci/wmg/",
+      "startDate": "2025-02-01",
+      "endDate": "",
+      "summary": "Leading research on self-assessment and run-time introspection for perception modules under adverse conditions in the EU EVENTS project.",
+      "highlights": [
+        "Developing self-assessment functionality for 2D/3D object detection",
+        "Investigating early-layer neural activations in LiDAR-based detectors",
+        "Collaborating with European partners on ADS pipelines",
+        "Preparing publications and EU deliverables"
+      ]
+    },
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "name": "WMG, University of Warwick",
+      "position": "Research Assistant (part-time)",
+      "url": "https://warwick.ac.uk/fac/sci/wmg/",
+      "startDate": "2020-12-01",
+      "endDate": "2025-02-01",
+      "summary": "Contributed to multiple EU projects on cooperative perception, sensor fusion, and remote operation for autonomous vehicles.",
+      "highlights": [
+        "Simulated autonomous tram using CARLA and YOLOv5",
+        "Developed 5G-based remote vehicle operation system",
+        "Implemented LiDAR fusion for Hi-Drive project",
+        "Designed self-assessment systems for EVENTS project"
+      ]
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
+      "institution": "University of Warwick",
+      "location": "Coventry, UK",
+      "url": "https://warwick.ac.uk/",
+      "area": "Engineering",
       "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
+      "startDate": "2020-10-01",
+      "endDate": "2024-10-01",
+      "score": "",
+      "courses": ["Run-time monitoring of perception module in automated driving systems"]
+    },
+    {
+      "institution": "Middle East Technical University (NCC)",
+      "location": "Mersin, Turkey",
+      "url": "https://ncc.metu.edu.tr/",
+      "area": "Computer Engineering",
+      "studyType": "MSc",
+      "startDate": "2018-09-01",
+      "endDate": "2020-08-01",
+      "score": "3.88/4.0",
+      "courses": ["Lightweight CNN architectures for anomaly detection in e-health"]
+    },
+    {
+      "institution": "Middle East Technical University (NCC)",
+      "location": "Mersin, Turkey",
+      "url": "https://ncc.metu.edu.tr/",
+      "area": "Computer Engineering",
+      "studyType": "BSc",
+      "startDate": "2013-09-01",
+      "endDate": "2018-06-01",
+      "score": "3.62/4.0",
+      "courses": ["P2P communication app for emergency localisation"]
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "PhD Studentship",
+      "date": "2020-10-01",
+      "awarder": "University of Warwick",
+      "summary": "Fully funded tuition and stipend for PhD in Engineering."
+    },
+    {
+      "title": "MSc Scholarship",
+      "date": "2018-09-01",
+      "awarder": "METU NCC",
+      "summary": "Full tuition fees and stipend for MSc in Computer Engineering."
+    },
+    {
+      "title": "IEEE Xtreme 13.0 Programming Competition",
+      "date": "2019-10-01",
+      "awarder": "IEEE",
+      "summary": "Ranked 5th in Turkey, 101st in Region 8, and 293rd worldwide."
     }
   ],
   "certificates": [
     {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
+      "name": "Associate Fellow of Advance HE",
+      "date": "2024-01-01",
+      "issuer": "Advance HE",
+      "url": "https://www.advance-he.ac.uk/",
+      "icon": "fa-solid fa-graduation-cap"
     }
   ],
   "publications": [
     {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "name": "Run-Time Introspection of 2D Object Detection in Automated Driving Systems Using Learning Representations",
+      "publisher": "IEEE Transactions on Intelligent Vehicles",
+      "releaseDate": "2024-01-01",
+      "url": "https://doi.org/10.1109/TIV.2024.3385531",
+      "summary": "Proposed a novel introspection framework for 2D object detection in ADS."
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
+      "name": "Introspection of DNN-Based Perception Functions in Automated Driving Systems",
+      "publisher": "IEEE Transactions on Intelligent Transportation Systems",
+      "releaseDate": "2023-01-01",
+      "url": "https://doi.org/10.1109/TITS.2023.3315070",
+      "summary": "Surveyed state-of-the-art introspection approaches and identified open challenges."
     },
     {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "name": "Activity Recognition and Anomaly Detection in E-health Applications",
+      "publisher": "IEEE Sensors Journal",
+      "releaseDate": "2021-03-01",
+      "url": "https://doi.org/10.1109/JSEN.2021.3061458",
+      "summary": "Designed lightweight CNNs for anomaly detection in e-health data streams."
     }
   ],
   "skills": [
     {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
+      "name": "Programming",
+      "level": "Advanced",
+      "keywords": ["Python", "C++", "C", "SQL"]
+    },
+    {
+      "name": "Machine Learning",
+      "level": "Advanced",
+      "keywords": ["PyTorch", "OpenMMLab", "Ultralytics", "OpenPCDet"]
+    },
+    {
+      "name": "Tools",
+      "level": "Advanced",
+      "keywords": ["ROS/ROS2", "Autoware", "TensorRT", "CARLA", "Qt", "MQTT", "GStreamer"]
+    },
+    {
+      "name": "Specialisation",
+      "level": "Expert",
+      "keywords": ["Object Detection", "Runtime Monitoring", "Sensor Fusion", "Safe AI"]
     }
   ],
   "languages": [
     {
-      "language": "German",
-      "fluency": "Native speaker",
-      "icon": ""
+      "language": "Turkish",
+      "fluency": "Native"
     },
     {
       "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
+      "fluency": "C1"
     }
   ],
   "interests": [
     {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
+      "name": "Artificial Intelligence Safety",
+      "keywords": ["Runtime Monitoring", "Neural Introspection", "Uncertainty Quantification"]
+    },
+    {
+      "name": "Autonomous Vehicles",
+      "keywords": ["3D Object Detection", "Sensor Fusion", "LiDAR Perception"]
     }
   ],
   "references": [
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "name": "Prof. Enver Ever",
+      "reference": "Department of Computer Engineering, METU NCC — eever@metu.edu.tr"
     },
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "name": "Dr. Roger Woodman",
+      "reference": "WMG, University of Warwick — r.woodman@warwick.ac.uk"
+    },
+    {
+      "name": "Prof. Adnan Yazici",
+      "reference": "Nazarbayev University — adnan.yazici@nu.edu.kz"
+    },
+    {
+      "name": "Dr. Konstantinos Koufos",
+      "reference": "Queen’s University Belfast"
     }
   ],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "EU EVENTS Project",
+      "summary": "Developing resilient perception and decision-making pipelines for automated driving systems under adverse weather and environmental conditions.",
+      "highlights": ["Self-assessment modules", "ADS pipeline integration"],
+      "startDate": "2023-01-01",
+      "endDate": "",
+      "url": "https://www.events-project.eu"
+    },
+    {
+      "name": "Hi-Drive Project",
+      "summary": "Advancing SAE Level 4 automated driving systems through cooperative perception and real-time LiDAR fusion.",
+      "highlights": ["Early and late fusion", "Infrastructure-based perception"],
+      "startDate": "2022-01-01",
+      "endDate": "2023-12-31",
+      "url": "https://www.hi-drive.eu"
+    },
+    {
+      "name": "5G-CAT Project",
+      "summary": "Developing remote fleet monitoring and drive-by-wire control system for autonomous tram over 5G.",
+      "highlights": ["ROS-based system", "Qt interface"],
+      "startDate": "2021-01-01",
+      "endDate": "2022-12-31",
+      "url": "https://bcimo.co.uk/5g-cat-collaborative-rd-early-win-for-bcimo/"
     }
   ]
 }

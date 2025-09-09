@@ -96,7 +96,7 @@ pagination:
   enabled: true
 
 related_blog_posts:
-  enabled: true
+  enabled: false
   max_related: 5
 
 # Giscus comments (RECOMMENDED)
@@ -267,7 +267,7 @@ scholar:
   last_name: [Yatbaz]
   first_name: [Yekta, Hakan]
 
-  style: ieeetr
+  style: ieee
   locale: en
 
   source: /_bibliography/
