@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: Lecturer (Assistant Prof.) in Autonomous Systems
 
@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>01/0006</p>
+    <p>Room 01/0006</p>
     <p>21 Stranmillis Road</p>
     <p>Belfast, Northern Ireland BT9 5AF</p>
 
