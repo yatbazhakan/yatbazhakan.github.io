@@ -2,96 +2,150 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+      value: Hakan Yekta Yatbaz
+    - name: Email
+      value: h.yatbaz@qub.ac.uk
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: PhD in Engineering
+      institution: University of Warwick (WMG), Coventry, UK
+      year: 2020 – 2024
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - Thesis: Run-time monitoring of perception module in automated driving systems.
+        - Fully funded by WMG Studentship.
+        - Thesis submitted Oct 2024, viva passed Jan 2025 with minor corrections.
+    - title: MSc in Computer Engineering
+      institution: Middle East Technical University (NCC), Mersin, Turkey
+      year: 2018 – 2020
       description:
-        - Description 1.
-        - Description 2.
+        - GPA: 3.88/4.0.
+        - Thesis: Lightweight input representation and CNN architecture for hierarchical anomaly detection on e-health applications.
+    - title: BSc in Computer Engineering
+      institution: Middle East Technical University (NCC), Mersin, Turkey
+      year: 2013 – 2018
+      description:
+        - GPA: 3.62/4.0.
+        - Graduation Project: Android app using P2P communication for emergency localisation.
+        - Ranked 2nd out of 39.
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Postdoctoral Research Assistant
+      institution: WMG, University of Warwick
+      year: Feb 2025 – Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Leading self-assessment development for 2D/3D object detection under adverse conditions in EU EVENTS project.
+        - Researching run-time introspection using neural activations in LiDAR-based detectors.
+        - Collaborating with EU partners to integrate modules into ADS pipelines.
+        - Contributing to publications and EU deliverables.
+    - title: Research Assistant (part-time)
+      institution: WMG, University of Warwick
+      year: Dec 2020 – Feb 2025
       description:
-        - Description 1.
-        - Description 2.
+        - Developed simulations for autonomous tram using CARLA and YOLOv5.
+        - Implemented 5G-based remote vehicle operation.
+        - Built cooperative perception and fusion pipelines for Hi-Drive project.
+        - Designed self-assessment for EVENTS project.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Teaching
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Module Contributor (MIDS)
+      institution: WMG, University of Warwick
+      year: Apr 2025
+      description:
+        - Delivered lecture on Recurrent Neural Networks.
+    - title: Graduate Teaching Assistant
+      institution: WMG, University of Warwick
+      year: May 2022 – Feb 2025
+      description:
+        - Delivered tutorials, supervised labs, graded coursework.
+    - title: Graduate Teaching Assistant
+      institution: METU NCC
+      year: 2018 – 2020
+      description:
+        - Delivered labs/tutorials, graded coursework across multiple modules.
+    - title: Student Assistant
+      institution: METU NCC
+      year: 2016 – 2018
+      description:
+        - Assisted teaching staff in labs for programming and data structures.
+
+- title: Projects
+  type: time_table
+  contents:
+    - title: Reliable In-Vehicle Perception & Decision-Making (EVENTS, EU Horizon)
+      year: 2023 – Present
+      description:
+        - Developed self-assessment for perception and localisation.
+        - Integrated into ADS pipelines for real-time evaluation.
+    - title: Hi-Drive (EU Horizon)
+      year: 2022 – 2023
+      description:
+        - Designed cooperative perception with infrastructure sensors.
+        - Implemented real-time early and late LiDAR fusion.
+    - title: 5G-CAT (Connected Autonomous Tram)
+      year: 2021 – 2022
+      description:
+        - Built fleet monitoring and drive-by-wire system using ROS and 5G.
+        - Developed Qt-based monitoring UI.
+    - title: E-Health Anomaly Detection (Nazarbayev University Grant)
+      year: 2019 – 2020
+      description:
+        - Designed lightweight CNNs for human activity recognition.
+        - Published in IEEE Sensors and ACM TOMM.
+    - title: LTE D2D Emergency Services (Newton Fund)
+      year: 2017 – 2018
+      description:
+        - Built Android app for P2P communication in disasters.
+        - Published at IEEE LCN Workshops.
+
+- title: Publications
+  type: list
+  contents:
+    - Over 15 peer-reviewed publications in IEEE T-IV, IEEE T-ITS, IEEE Sensors, Elsevier IoT, ACM TOMM, CVPRW, ICCVW, and ITSC.
+
+- title: Skills
+  type: list
+  contents:
+    - Programming: Python, C++, C, SQL
+    - ML/AI: PyTorch, OpenMMLab, Ultralytics, OpenPCDet
+    - Tools: ROS/ROS2, Autoware, TensorRT, CARLA, Qt, MQTT, GStreamer
+    - Specialisation: Object Detection, Runtime Monitoring, Sensor Fusion, Safe AI
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2020 – 2024
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - Fully funded PhD Studentship, University of Warwick
+    - year: 2018 – 2020
       items:
-        - Max Planck Medal
+        - MSc Scholarship, METU NCC
+    - year: 2019
+      items:
+        - 5th place Turkey (IEEE Xtreme 13.0)
+    - year: 2017
+      items:
+        - Graduation Project Travel Grant (METU NCC)
+        - 3rd Place, K-Hackathon
+    - year: 2016–2018
+      items:
+        - Merit Certificate & Scholarship (Top 3%)
+        - Multiple Honor/High Honor Certificates
 
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
+- title: Professional Memberships & Qualifications
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - IEEE Member (No: 93612845)
+    - Associate Fellow of Advance HE (No: PR307078)
+
+- title: Reviewing Activities
+  type: list
+  contents:
+    - Reviewer for IEEE Transactions on Fuzzy Systems
+    - Reviewer for IEEE Sensors Journal
+    - Reviewer for Springer Scientific Reports
