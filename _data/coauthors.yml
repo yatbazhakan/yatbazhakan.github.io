@@ -1,14 +1,14 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"eever":
+  - firstname: ["Enver", "E.", "E. E.", "Enver Ever"]
+    url: https://scholar.google.com/citations?user=gwwHpGcAAAAJ&hl=en
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"bkizilkaya":
+  - firstname: ["Burak", "B.", "B. K.", "Burak Kizilkaya"]
+    url: https://scholar.google.com/citations?user=PsMuPQcAAAAJ&hl=en
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"yyeliz":
+  - firstname: ["Yeliz Yesilada", "Y.", "Y. Y.", "Yeliz Y."]
+    url: https://www.yelizyesilada.info
 
 "bach":
   - firstname: ["Johann Sebastian", "J. S."]
