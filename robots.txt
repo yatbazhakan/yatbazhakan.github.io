@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://yatbazhakan.github.io./sitemap.xml
+Sitemap: https://yatbazhakan.github.io/sitemap.xml
