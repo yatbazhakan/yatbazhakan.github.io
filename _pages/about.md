@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Lecturer (Assistant Prof.) in Autonomous Systems
+subtitle: Lecturer (Assistant Professor) in Autonomous Systems
 
 profile:
   align: right
