@@ -34,24 +34,22 @@ I am a Lecturer (Assistant Professor) in Autonomous Systems at the School of Ele
 I’m actively recruiting excellent PhD students and postdoctoral researchers who are excited about trustworthy AI, autonomous systems, and perception safety.
 
 **Current PhD opportunity**
-
 - **Beyond confidence scores: introspective sequence-aware run-time monitoring for ADS perception safety**  
   Fully funded PhD position at Queen’s University Belfast. Full details and application process are available here:  
   https://www.qub.ac.uk/courses/postgraduate-research/phd-opportunities/beyond-confidence-scores-introspective-sequenceaware-runtime-monitoring-for-ads-perception-safety.html
 
 **Postdoc opportunities**
-
 - If you have your own fellowship (or are interested in applying with my support), please get in touch. I’m happy to discuss potential projects aligned with the group’s research themes.
 
 ## Research snapshot
 
-- **Trustworthy perception for autonomous systems:** run-time monitoring, introspection, and uncertainty quantification for LiDAR-based 3D object detection.
-- **Applied safety research:** perception self-assessment under adverse conditions, with experience in Horizon Europe projects (e.g., EVENTS, Hi-Drive).
+- **Trustworthy perception for autonomous systems:** run-time monitoring, introspection, and uncertainty quantification for LiDAR-based 3D object detection.  
+- **Applied safety research:** perception self-assessment under adverse conditions, with experience in Horizon Europe projects (e.g., EVENTS, Hi-Drive).  
 - **Translational focus:** deployment-oriented evaluation and integration into real-world automated driving pipelines.
 
 ## Teaching & supervision
 
-- Teaching experience across undergraduate and postgraduate modules, including Machine Intelligence and Data Science (MIDS).
+- Teaching experience across undergraduate and postgraduate modules, including Machine Intelligence and Data Science (MIDS).  
 - Supervision and co-supervision of MSc theses and undergraduate projects in AI, sensor fusion, and human activity recognition.
 
 ## How to reach me
