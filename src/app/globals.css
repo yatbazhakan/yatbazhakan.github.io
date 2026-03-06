@@ -5,8 +5,8 @@
   --bg-hover: #f1f5f9;
   --text-primary: #0f172a;
   --text-secondary: #475569;
-  --accent-color: #0369a1; /* Conservative Navy Blue */
-  --accent-hover: #075985;
+  --accent-color: #d6000d; /* Queen's Vibrant Red */
+  --accent-hover: #a3000a;
   --border-color: #e2e8f0;
   --glass-bg: rgba(255, 255, 255, 0.9);
   
@@ -23,8 +23,8 @@
     --bg-hover: #334155;
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
-    --accent-color: #38bdf8; /* Readable Light Blue */
-    --accent-hover: #7dd3fc;
+    --accent-color: #ef4444; /* Readable Light Red for Dark Mode */
+    --accent-hover: #fca5a5;
     --border-color: #334155;
     --glass-bg: rgba(15, 23, 42, 0.9);
   }
