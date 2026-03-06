@@ -1,13 +1,13 @@
 :root {
-  /* Clean, Academic Light Theme */
+  /* Clean, Academic Light Theme (Neutral) */
   --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
-  --bg-hover: #f1f5f9;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
+  --bg-secondary: #f5f5f5;
+  --bg-hover: #e5e5e5;
+  --text-primary: #171717;
+  --text-secondary: #525252;
   --accent-color: #d6000d; /* Queen's Vibrant Red */
   --accent-hover: #a3000a;
-  --border-color: #e2e8f0;
+  --border-color: #e5e5e5;
   --glass-bg: rgba(255, 255, 255, 0.9);
   
   --radius-sm: 6px;
@@ -17,16 +17,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Clean, Academic Dark Theme */
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
-    --bg-hover: #334155;
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
+    /* Clean, Academic Dark Theme (Neutral) */
+    --bg-primary: #121212;
+    --bg-secondary: #1a1a1a;
+    --bg-hover: #262626;
+    --text-primary: #f5f5f5;
+    --text-secondary: #a3a3a3;
     --accent-color: #ef4444; /* Readable Light Red for Dark Mode */
     --accent-hover: #fca5a5;
-    --border-color: #334155;
-    --glass-bg: rgba(15, 23, 42, 0.9);
+    --border-color: #262626;
+    --glass-bg: rgba(18, 18, 18, 0.9);
   }
   html {
     color-scheme: dark;
