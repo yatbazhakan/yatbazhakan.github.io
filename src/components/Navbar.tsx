@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import ThemeToggle from '@/components/ThemeToggle';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -73,6 +74,9 @@ export default function Navbar() {
             </Link>
           );
         })}
+        <div style={{ marginLeft: '1rem' }}>
+          <ThemeToggle />
+        </div>
       </div>
     </nav>
   );

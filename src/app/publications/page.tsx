@@ -52,28 +52,59 @@ export default async function Publications() {
   const bibContent = fs.readFileSync(bibPath, 'utf8');
   const publications = parseBibtex(bibContent);
 
+  // Group by year
+  const groupedPublications = publications.reduce((acc, pub) => {
+    const year = pub.year || 'Unknown';
+    if (!acc[year]) acc[year] = [];
+    acc[year].push(pub);
+    return acc;
+  }, {} as Record<string, Publication[]>);
+
+  const years = Object.keys(groupedPublications).sort((a, b) => {
+    if (a === 'Unknown') return 1;
+    if (b === 'Unknown') return -1;
+    return parseInt(b) - parseInt(a);
+  });
+
   return (
     <main className={styles.main}>
       <section className={`${styles.hero}`} style={{ padding: '2rem', textAlign: 'left', maxWidth: '1000px', width: '100%' }}>
-        <h1 className="heading-xl animate-fade-up" style={{ marginBottom: '2rem' }}>Publications</h1>
+        <h1 className="heading-xl animate-fade-up" style={{ marginBottom: '3rem' }}>Publications</h1>
         
-        <div className="animate-fade-up delay-100" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          {publications.map((pub, idx) => (
-            <div key={pub.id} className="glass-panel" style={{ padding: '1.5rem', animationDelay: `${200 + idx * 50}ms` }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                <h3 style={{ color: 'var(--accent-color)', marginBottom: '0.5rem', flex: 1 }}>{pub.title}</h3>
-                {pub.abbr && (
-                  <span style={{ background: 'var(--accent-glow)', padding: '0.2rem 0.5rem', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 'bold' }}>
-                    {pub.abbr}
-                  </span>
-                )}
+        <div className="animate-fade-up delay-100" style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+          {years.map((year, yearIdx) => (
+            <div key={year} style={{ animationDelay: `${yearIdx * 100}ms` }}>
+              <h2 style={{ fontSize: '2rem', color: 'var(--text-secondary)', borderBottom: '2px solid var(--border-color)', paddingBottom: '0.5rem', marginBottom: '1.5rem' }}>
+                {year}
+              </h2>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                {groupedPublications[year].map((pub) => (
+                  <div key={pub.id} className="glass-panel" style={{ padding: '1.5rem', borderLeft: '4px solid var(--accent-color)', transition: 'transform 0.2s ease, box-shadow 0.2s ease' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem' }}>
+                      <h3 style={{ color: 'var(--text-primary)', marginBottom: '0.5rem', flex: 1, fontSize: '1.2rem', lineHeight: 1.4 }}>{pub.title}</h3>
+                      {pub.abbr && (
+                        <span style={{ background: 'var(--accent-glow)', color: 'var(--accent-color)', padding: '0.25rem 0.75rem', borderRadius: '999px', fontSize: '0.85rem', fontWeight: 600, whiteSpace: 'nowrap' }}>
+                          {pub.abbr}
+                        </span>
+                      )}
+                    </div>
+                    <p style={{ color: 'var(--text-primary)', marginBottom: '0.5rem', fontSize: '1.05rem', lineHeight: 1.6 }}>
+                      {pub.author?.replace(/ and /g, ', ').replace(/\{/g, '').replace(/\}/g, '')}
+                    </p>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
+                      <em>{pub.journal || pub.booktitle}</em>
+                      {pub.pages && `, pp. ${pub.pages.replace(/--/g, '-')}`}
+                    </p>
+                    
+                    {/* Placeholder for future PDF/Code links inside BibTeX mapping */}
+                    <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
+                      <span style={{ fontSize: '0.9rem', color: 'var(--accent-color)', fontWeight: 500, cursor: 'pointer' }}>
+                        [Cite]
+                      </span>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <p style={{ color: 'var(--text-primary)', marginBottom: '0.5rem', fontSize: '1.1rem' }}>
-                {pub.author?.replace(/ and /g, ', ').replace(/\{/g, '').replace(/\}/g, '')}
-              </p>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                <em>{pub.journal || pub.booktitle}</em>, {pub.year}
-              </p>
             </div>
           ))}
         </div>
