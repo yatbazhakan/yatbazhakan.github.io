@@ -1,0 +1,52 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-57a9ceb871692378.js",
+      "static/chunks/fd9d1056-49ca28257eb7a92c.js",
+      "static/chunks/117-84cc4289324a4204.js",
+      "static/chunks/main-app-509adeffdc858b2a.js",
+      "static/chunks/app/_not-found/page-4b9eb8aab41bf6df.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-57a9ceb871692378.js",
+      "static/chunks/fd9d1056-49ca28257eb7a92c.js",
+      "static/chunks/117-84cc4289324a4204.js",
+      "static/chunks/main-app-509adeffdc858b2a.js",
+      "static/css/3b45349c377029e4.css",
+      "static/chunks/57-6bf22a3c53f6f023.js",
+      "static/chunks/app/layout-fb2d3bc388f0133b.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-57a9ceb871692378.js",
+      "static/chunks/fd9d1056-49ca28257eb7a92c.js",
+      "static/chunks/117-84cc4289324a4204.js",
+      "static/chunks/main-app-509adeffdc858b2a.js",
+      "static/css/78477280256532d4.css",
+      "static/chunks/app/page-3bfa18bffcce0ab9.js"
+    ],
+    "/about/page": [
+      "static/chunks/webpack-57a9ceb871692378.js",
+      "static/chunks/fd9d1056-49ca28257eb7a92c.js",
+      "static/chunks/117-84cc4289324a4204.js",
+      "static/chunks/main-app-509adeffdc858b2a.js",
+      "static/css/78477280256532d4.css",
+      "static/chunks/app/about/page-1041d4d66f69368e.js"
+    ],
+    "/publications/page": [
+      "static/chunks/webpack-57a9ceb871692378.js",
+      "static/chunks/fd9d1056-49ca28257eb7a92c.js",
+      "static/chunks/117-84cc4289324a4204.js",
+      "static/chunks/main-app-509adeffdc858b2a.js",
+      "static/css/78477280256532d4.css",
+      "static/chunks/app/publications/page-e9084c9dbf450e9b.js"
+    ],
+    "/teaching/page": [
+      "static/chunks/webpack-57a9ceb871692378.js",
+      "static/chunks/fd9d1056-49ca28257eb7a92c.js",
+      "static/chunks/117-84cc4289324a4204.js",
+      "static/chunks/main-app-509adeffdc858b2a.js",
+      "static/css/78477280256532d4.css",
+      "static/chunks/app/teaching/page-e995aee63ad58cdb.js"
+    ]
+  }
+}
