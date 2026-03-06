@@ -1,94 +1,66 @@
 .main {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: calc(100vh - 140px); /* Account for navbar and footer */
   padding: 4rem 2rem;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Abstract Background Shapes */
-.shape {
-  position: absolute;
-  filter: blur(80px);
-  z-index: -1;
-  border-radius: 50%;
-  animation: float 10s ease-in-out infinite alternate;
-}
-
-.shape1 {
-  top: -10%;
-  left: -10%;
-  width: 50vw;
-  height: 50vw;
-  background: var(--accent-glow);
-}
-
-.shape2 {
-  bottom: -20%;
-  right: -10%;
-  width: 60vw;
-  height: 60vw;
-  background: rgba(96, 165, 250, 0.15); /* Adjusted for theme */
-  animation-delay: -5s;
-}
-
-@keyframes float {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(5%, 5%) scale(1.05); }
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .hero {
   max-width: 800px;
-  text-align: center;
-  z-index: 1;
+  text-align: left;
 }
 
 .subtitle {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--text-secondary);
-  margin-bottom: 2rem;
+  margin-top: 1rem;
   font-weight: 400;
+  line-height: 1.4;
+}
+
+.description {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+  max-width: 700px;
 }
 
 .ctaContainer {
   display: flex;
   gap: 1rem;
-  justify-content: center;
-  margin-top: 2rem;
+  justify-content: flex-start;
 }
 
 .btnPrimary {
   padding: 0.75rem 1.5rem;
-  border-radius: var(--radius-md);
-  background: var(--text-primary);
-  color: var(--bg-primary);
+  border-radius: var(--radius-sm);
+  background: var(--accent-color);
+  color: white;
   font-weight: 500;
-  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+  transition: background-color 0.2s ease;
   border: 1px solid transparent;
 }
 
 .btnPrimary:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
-  box-shadow: 0 10px 25px var(--accent-glow);
+  background: var(--accent-hover);
 }
 
 .btnSecondary {
   padding: 0.75rem 1.5rem;
-  border-radius: var(--radius-md);
-  background: var(--glass-bg);
+  border-radius: var(--radius-sm);
+  background: transparent;
   color: var(--text-primary);
   font-weight: 500;
   border: 1px solid var(--border-color);
-  backdrop-filter: blur(8px);
   transition: all 0.2s ease;
 }
 
 .btnSecondary:hover {
-  background: var(--bg-secondary);
+  background: var(--bg-hover);
   border-color: var(--text-secondary);
-  transform: translateY(-2px);
 }

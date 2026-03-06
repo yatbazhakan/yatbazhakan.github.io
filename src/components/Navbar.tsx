@@ -36,12 +36,10 @@ export default function Navbar() {
       padding: '0 5vw',
       zIndex: 100,
       transition: 'all 0.3s ease',
-      background: scrolled ? 'var(--glass-bg)' : 'transparent',
-      backdropFilter: scrolled ? 'blur(12px)' : 'none',
-      WebkitBackdropFilter: scrolled ? 'blur(12px)' : 'none',
+      background: scrolled ? 'var(--bg-primary)' : 'transparent',
       borderBottom: scrolled ? '1px solid var(--border-color)' : '1px solid transparent'
     }}>
-      <div style={{ fontWeight: 700, fontSize: '1.25rem', fontFamily: 'var(--font-outfit)' }}>
+      <div style={{ fontWeight: 600, fontSize: '1.2rem', fontFamily: 'var(--font-inter)' }}>
         <Link href="/" style={{ color: 'var(--text-primary)' }}>HYY.</Link>
       </div>
 

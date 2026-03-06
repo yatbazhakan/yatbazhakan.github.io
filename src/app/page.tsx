@@ -3,26 +3,27 @@ import styles from './page.module.css';
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={`${styles.shape} ${styles.shape1}`} />
-      <div className={`${styles.shape} ${styles.shape2}`} />
-
       <section className={styles.hero}>
-        <h1 className="heading-xl animate-fade-up">
-          Dr. Hakan Yekta Yatbaz
-        </h1>
-        <p className={`${styles.subtitle} animate-fade-up delay-100`}>
-          Researcher, Developer, and Visionary. Bridging the gap between theory and applied science.
+        <div className="animate-fade-up">
+          <h1 className="heading-xl">
+            Dr. Hakan Yekta Yatbaz
+          </h1>
+          <p className={styles.subtitle}>
+            Lecturer (Assistant Professor) in Autonomous Systems at Queen&apos;s University Belfast
+          </p>
+          <div style={{ height: '4px', width: '60px', background: 'var(--accent-color)', margin: '1.5rem 0', borderRadius: '2px' }}></div>
+        </div>
+        
+        <p className={`${styles.description} animate-fade-up delay-100`}>
+          My research focuses on safe and resilient artificial intelligence for intelligent transport, with an emphasis on run-time monitoring, introspection, and uncertainty quantification in LiDAR-based 3D object detection.
         </p>
         
         <div className={`${styles.ctaContainer} animate-fade-up delay-200`}>
           <a href="/about" className={styles.btnPrimary}>
-            About Me
+            Read Full Biography
           </a>
           <a href="/publications" className={styles.btnSecondary}>
-            Publications
-          </a>
-          <a href="/teaching" className={styles.btnSecondary}>
-            Teaching
+            View Publications
           </a>
         </div>
       </section>
