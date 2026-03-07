@@ -29,10 +29,18 @@ export default function Supervision() {
             <p style={{ marginTop: '0.5rem' }}>
               Currently in a supporting role (unofficial supervisor) for 3 BSc Computer Science students covering their Graduation Projects.
             </p>
-            {/* 
-               We will populate the exact details of the 3 BSc students here 
-               once the user provides them!
-            */}
+            
+            <ul style={{ marginTop: '1rem', listStyleType: 'disc', paddingLeft: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+              <li>
+                <strong>Joel Anderson:</strong> <em>Development of an AI driven web application assisting students with exam preparation</em>
+              </li>
+              <li>
+                <strong>Yu-Zhi Wong:</strong> <em>Feature Lens: A Tool for Visualising and Comparing Neural Representations in Object Detection</em>
+              </li>
+              <li>
+                <strong>Jamal Salimov:</strong> <em>Vision Introspector: A GUI Tool for Analysing Object Detection in Driving Images</em>
+              </li>
+            </ul>
           </div>
         </div>
 

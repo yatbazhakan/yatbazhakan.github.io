@@ -47,6 +47,21 @@ export default function Teaching() {
           </div>
         </div>
 
+        <div>
+          <h2 className={styles.sectionTitle}>Middle East Technical University (METU NCC)</h2>
+          
+          <div className={styles.pubItem} style={{ marginBottom: '1.5rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap' }}>
+              <h3 style={{ fontSize: '1.2rem', marginBottom: '0.25rem' }}>Graduate Teaching Assistant</h3>
+              <span style={{ color: 'var(--text-secondary)' }}>Sep 2018 &mdash; Oct 2020</span>
+            </div>
+            <p style={{ marginTop: '0.5rem' }}>
+              Conducted lab sessions and tutorials, developed assignments, and evaluated coursework for undergraduate modules across all undergraduate levels. Taught computer engineering concepts, C programming, discrete computational structures, intro to programming, algorithms, and data management.
+            </p>
+          </div>
+
+        </div>
+
       </div>
     </main>
   );

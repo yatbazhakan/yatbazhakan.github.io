@@ -1,0 +1,298 @@
+Hakan Yekta Yatbaz
+yatbazhakan@gmail.com
+LINKEDIN hakanyektayatbaz | - Hakan Yatbaz
+Belfast, United Kingdom
+RESEARCH SNAPSHOT & INTERESTS
+Lecturer in AI and autonomous systems with a focus on safe perception and run-time monitoring of neural
+network-based object detection, supported by a PhD in Engineering and over 15 peer-reviewed outputs. Contributed
+to Horizon Europe and international collaborative projects on intelligent systems and AI safety. Experienced in
+presenting research and writing deliverables within multi-partner consortia. Over 5 years of undergraduate and
+postgraduate teaching, with Associate Fellowship of the AdvanceHE.
+EDUCATION
+• University of Warwick (WMG)
+Oct 2020 – Jul 2025
+PhD in Engineering
+Coventry, UK
+◦Thesis: Run-time monitoring of perception module in automated driving systems.
+◦Fully funded by WMG Studentship.
+• Middle East Technical University (METU NCC)
+Sep 2018 – Aug 2020
+MSc in Computer Engineering, GPA: 3.88/4.0
+Mersin, Turkey
+◦Thesis: Lightweight input representation and convolutional neural network architecture for hierarchical anomaly
+detection on e-health applications.
+• Middle East Technical University (METU NCC)
+Sep 2013 – Jun 2018
+BSc in Computer Engineering, GPA: 3.62/4.0
+Mersin, Turkey
+◦Graduation Project: An android application using P2P communication for emergency localisation.
+◦Ranked 2nd out of 39.
+EXPERIENCE
+• EEECS, Queen’s University Belfast
+Sept 2025 – Present
+Lecturer in Autonomous Systems
+Belfast, UK
+◦Researcher in the Connected and Autonomous Systems group, focusing on run-time AI/perception safety and
+monitoring for autonomous systems.
+◦Designing and developing a new MSc module: AI Ethics (Summer delivery), including lectures, labs, and
+assessment.
+• WMG, University of Warwick
+Feb 2025 – Sept 2025
+Postdoctoral Research Fellow
+Coventry, UK
+◦Leading the development of a self-assessment functionality for 2D/3D object detection models operating under
+adverse weather and challenging road conditions as part of the European Union-funded project EVENTS.
+◦Conducted research on run-time introspection mechanisms leveraging early-layer neural activations and spatial
+context in LiDAR-based 3D object detectors.
+◦Collaborated with academic and industrial partners across Europe to integrate introspection modules into
+real-world automated driving system pipelines.
+◦Prepared publications based on experimental ﬁndings and contributing to technical deliverables for the EU project
+consortium.
+• WMG, University of Warwick
+Dec 2020 – Feb 2025
+Research Assistant (part-time)
+Coventry, UK
+◦Simulated autonomous tram for Coventry VLR using CARLA, LiDAR maps, and YOLOv5. Demo
+◦Developed 5G-based remote operation with UI for monitoring and control, integrated on a Ford Mondeo test
+vehicle.
+◦Built early/late fusion mechanisms on point clouds and 3D detection via CenterPoint for Hi-Drive EU project.
+◦Designed self-assessment systems for 2D/3D perception under adverse conditions in the EVENTS EU project.
+CONTRIBUTED GRANTS
+• TAITAN: Trustworthy AI for ResilienT and Interoperable Cooperative AutoNomy for CCAM Applications
+Horizon Europe In waiting list, Total budget: £5M
+Contributed to proposal writing as a Postdoctoral Researcher.
+• Smart-Care: Innovative Multi-Sensor Technology for Elderly and Disabled Health Management
+Ministry of Science and Higher Education, Kazakhstan Grant No. AP23487613, Funded: 98,080,127.05 KZT ( ≈£145.000)
+Contributed to proposal writing as a Doctoral Researcher.
+STUDENT SUPERVISION AND SUPPORT
+• Yagmur Mursal, MSc in Computer Engineering
+Department of Computer Engineering, Middle East Technical University (NCC)
+2022 - 2025
+Thesis Title: Utilization of graph data structure and graph neural networks for lightweight and efﬁcient human
+activity recognition in e-health applications
+• Zhanggir Yergaliyev, MSc in Data Science
+School of Engineering and Digital Sciences, Nazarbayev University
+2020 - 2022
+Thesis Title: Human activity recognition and fall detection using video and inertial sensors
+• Undergraduate Project Co-Supervision
+School of Engineering and Digital Sciences, Nazarbayev University
+2019 - 2020
+◦Co-supervised the graduation project titled A Smart e-Health Framework to Monitor the Health of the Elderly
+and Disabled.
+◦Guided a team of four undergraduate students Dana Zhumabekova, Aidana Nurakhmetova, Zhanggir
+Yergaliyev, and Zaida Makisheva in system design, sensor integration, and software development.
+◦The project contributed to subsequent MSc theses and resulted in a peer-reviewed publication.
+TEACHING
+• WMG, University of Warwick
+April 2025
+Module Contributor MIDS
+Coventry, UK
+◦Contributed to the Machine Intelligence and Data Science (MIDS) module as part of the teaching team.
+◦Delivered a lecture on Recurrent Neural Networks (RNNs) and sequence learning.
+• WMG, University of Warwick
+May 2022 – Feb 2025
+Graduate Teaching Assistant (part-time)
+Coventry, UK
+◦Delivered tutorials and supported coursework for the Machine Intelligence and Data Science module.
+◦Assisted students in understanding core concepts and supervised hands-on programming tasks.
+◦Contributed to the preparation of post-module assessments.
+◦Graded in-module and post-module assessments.
+• Middle East Technical University (METU NCC)
+Sep 2018 – Oct 2020
+Graduate Teaching Assistant
+Mersin, Turkey
+◦Conducted lab sessions and tutorials, developed assignments, and evaluated coursework for undergraduate
+modules across all undergraduate levels.
+◦Courses taught:
+∗CNG 111: Introduction to Computer Engineering Concepts
+∗CNG 140: C Programming
+∗CNG 223: Discrete Computational Structures
+∗CNG 230: Introduction to Programming
+∗CNG 242: Programming Language Concepts
+∗CNG 315: Algorithms
+∗CNG 351: Data Management and File Structures
+• Middle East Technical University (METU NCC)
+Oct 2016 – Jun 2018
+Student Assistant
+Mersin, Turkey
+◦Assisted Graduate Teaching Assistants and instructors during labs and lectures; supported students in
+problem-solving and practical exercises.
+◦Courses assisted:
+∗CNG 111: Introduction to Computer Engineering Concepts
+∗CNG 230: Introduction to Programming
+∗CNG 213: Data Structures
+CONTRIBUTED PROJECTS
+• Reliable In-Vehicle Perception & Decision-Making in Complex Environmental Conditions
+Tools: PyTorch, ROS2, LiDAR, Autoware, TensorRT, CUDA, C++
+GLOBE
+◦Horizon Europe project (Grant No. 101069614) focused on building resilient perception and decision-making
+systems for Connected and Automated Vehicles (CAVs).
+◦Developed self-assessment mechanisms for 2D/3D object detection and perception-based localisation.
+◦Integrated developed self-assessment mechanisms into modular ADS pipelines to test and evaluate in real-time
+under different road and weather conditions.
+◦Prepared publications based on experimental ﬁndings and contributed to technical deliverables for the EU project
+consortium.
+• Hi-Drive
+Tools: C++, ROS2, LiDAR, TensorRT, Autoware, Real-Time Fusion
+GLOBE
+◦European Union project (Grant No. 101006664) focused on advancing SAE Level 4 automated driving systems
+across diverse driving scenarios.
+◦Implemented a cooperative perception mechanism using infrastructure-mounted sensors and vehicle-side
+perception modules for real-time testing.
+◦Implemented real-time early and late fusion techniques using ROS for LiDAR point cloud data and 3D detector
+outputs for real-time testing.
+• 5G-CAT: 5G Connected Autonomous Tram
+Tools: ROS, CAN, MQTT, Qt, GStreamer, 5G Networking
+GLOBE
+◦Developed a remote ﬂeet monitoring and drive-by-wire control system over a 5G network.
+◦Built CAN message parsing and MQTT-based communication software for seamless data transfer between vehicle
+and operator interface.
+◦Co-developed a Qt-based user interface for live vehicle tracking, camera feeds, battery status, and remote control
+commands.
+◦Tested remote monitoring and operation of a ROS-enabled Ford Mondeo over a 4G network, equipped with IP
+cameras, 64-channel LiDAR, GPS, and IMU sensors.
+• Effective Use of Heterogeneous Wireless Multimedia Sensor Networks for Surveillance Applications
+Tools: Python, Lightweight CNNs, Embedded Systems, Wearable Sensors, WMSNs
+BOOK
+◦Research funded by Nazarbayev University (Grant No. 110119FD4543), focused on enabling intelligent
+surveillance using WMSNs and IoT-based solutions.
+◦Designed a novel input encoding and lightweight CNN framework for real-time human activity recognition on
+resource-constrained devices and wireless multimedia sensors.
+◦Main contributions published in the IEEE Sensors Journal; secondary application for forest ﬁre detection later
+published in ACM TOMM.
+• Location-Based Emergency Services via LTE D2D Communication (Newton Fund)
+Tools: Android, WiFi Direct, LTE D2D, Java, Mobile Sensing
+GLOBE
+◦International research project supported by Institutional Links grant (Grant No. 216429427) under the Newton
+Programme, in collaboration with METU, Kings College London, and Middlesex University.
+◦Designed and implemented a proof-of-concept Android application for peer-to-peer communication in disaster
+scenarios using WiFi Direct and LTE D2D technologies.
+◦Application enabled real-time localisation and coordination in environments with limited or damaged
+infrastructure.
+◦Outcomes published in the 2018 IEEE 43rd Conference on Local Computer Networks Workshops (LCN Workshops).
+PUBLICATIONS
+C=CONFERENCE, J=JOURNAL, B=BOOK CHAPTER, U=UNDER REVIEW
+[J.1]
+Yatbaz, H. Y., Koufos, K., Dianati, M., Woodman, R. (2026). Multi-Layer Self-Assessment with Filtering for
+3D Object Detection in Autonomous Vehicles. ACM Transactions on Intelligent Systems and Technology (TIST).
+[J.2]
+Ylmaz, T.A., Yatbaz, H.Y., Ever, E. et al. Hierarchical human activity recognition with fusion of audio and
+multiple inertial sensor modalities. Scientiﬁc Reports
+[C.1]
+Yatbaz, H. Y., Dianati, M., Koufos, K., Woodman, R. (2024). Integrity Monitoring of 3D Object Detection in
+Automated Driving Systems using Raw Activation Patterns and Spatial Filtering. In IEEE International
+Conference on Intelligent Transportation Systems (ITSC).
+[C.2]
+Yatbaz, H. Y., Dianati, M., Koufos, K., Woodman, R. (2024). Run-time Monitoring of 3D Object Detection in
+Automated Driving Systems Using Early Layer Neural Activation Patterns. In IEEE/CVF Computer Vision
+and Pattern Recognition Conference (CVPR) Workshops.
+[J.3]
+Yatbaz, H. Y., Dianati, M., Koufos, K., Woodman, R. (2024). Run-Time Introspection of 2D Object Detection
+in Automated Driving Systems Using Learning Representations. IEEE Transactions on Intelligent Vehicles.
+[J.4]
+Yatbaz, H. Y., Dianati, M., Woodman, R. (2024). Introspection of DNN-Based Perception Functions in
+Automated Driving Systems: State-of-the-Art and Open Research Challenges. IEEE Transactions on
+Intelligent Transportation Systems.
+[C.3]
+Yatbaz, H. Y., Dianati, M., Koufos, K., Woodman, R. (2023). Introspection of 2D Object Detection using
+Processed Neural Activation Patterns in Automated Driving Systems. In IEEE/CVF International Conference
+on Computer Vision (ICCV) Workshops.
+[J.5]
+Yazici, A., Zhumabekova, D., Nurakhmetova, A., Yergaliyev, Z., Yatbaz, H. Y., et al. (2023). A smart e-health
+framework for monitoring the health of the elderly and disabled. Elsevier Internet of Things.
+[C.4]
+Xiao, D., Geiger, W. G., Yatbaz, H. Y., Dianati, M., Woodman, R. (2022). Detecting hazardous events: A
+framework for automated vehicle safety systems. In IEEE International Conference on Intelligent Transportation
+Systems (ITSC)
+[J.6]
+Kizilkaya, B., Ever, E., Yatbaz, H. Y., Yazici, A. (2022). An effective forest ﬁre detection framework using
+heterogeneous wireless multimedia sensor networks. ACM Transactions on Multimedia Computing,
+Communications, and Applications.
+[J.7]
+Derogar, S., Ince, C., Yatbaz, H. Y., Ever, E. (2022). Prediction of punching shear strength of slab-column
+connections: A comprehensive evaluation of machine learning and deep learning based approaches.
+Mechanics of Advanced Materials and Structures
+[C.5]
+Yatbaz, H. Y., Yazici, A., Ever, E. (2022). Critical Analysis of Validation Methods for Machine Learning
+Models Used in E-health Applications. In International Conference on Information Science and Communications
+Technologies (ICISCT)
+[J.8]
+Yatbaz, H. Y., Ever, E., Yazici, A. (2021). Activity recognition and anomaly detection in E-health applications
+using color-coded representation and lightweight CNN architectures. IEEE Sensors Journal.
+[C.6]
+Eraslan, ., Yatbaz, H. Y., Ever, E., Yeilada, Y. (2020). Exploring Activity Transitions in the STA-based Activity
+Recognition. In Proceedings of the 2020 28th Signal Processing and Communications Applications Conference (SIU)
+[C.7]
+Yatbaz, H. Y., Erbilek, M. (2020). Deep Learning Based Stress Prediction From Ofﬂine Signatures. In
+International Workshop on Biometrics and Forensics (IWBF)
+[B.1]
+Yatbaz, H. Y., Tasran, A. C. (2020). Statistical analysis for sensory E-Health applications: opportunities and
+challenges. In IoT Technologies in Smart-Cities: From Sensors to Big Data, Security and Trust. Institution of
+Engineering and Technology (IET).
+[J.9]
+Yatbaz, H. Y., Eraslan, S., Yesilada, Y., Ever, E. (2019). Activity recognition using binary sensors for elderly
+people living alone: Scanpath trend analysis approach. IEEE Sensors Journal.
+[C.8]
+Yatbaz, H. Y., Çinar, B., Gökdemir, A., Ever, E., Al-Turjman, F., Nguyen, H. X., Yazici, A. (2018). Hybrid
+Approach for Disaster Recovery Using P2P Communications in Android. In IEEE 43rd Conference on Local
+Computer Networks Workshops (LCN Workshops).
+SKILLS
+• Programming Languages:Python, C++, C, SQL,
+• Data Science & ML:PyTorch, OpenMMLab, Ultralytics, NumPy, SciPy, Matplotlib, Seaborn, Weights & Biases,
+OpenPCDet
+• Software & Tools:ROS, ROS2, Autoware, TensorRT, CARLA, Qt, MQTT, GStreamer, Google Colaboratory, MS
+Visual Studio, VS Code, Matlab, Codeblocks, Dev-C++, Overleaf,
+• Operating Systems:Linux, Windows
+• Specialization:Object Detection, Runtime Monitoring, Sensor Fusion, Safe AI
+ACADEMIC ACTIVITIES
+• Reviewer for IEEE Transactions on Fuzzy Systems
+• Reviewer for IEEE Sensors Journal
+• Reviewer for Springer Scientiﬁc Reports
+• Reviewer for Springer Signal, Image and Video Processing
+COMMUNITY ENGAGEMENT AND PUBLIC IMPACT
+• Orientation Leadership Project (OLP)
+Mersin, Turkey
+Middle East Technical University, Northern Cyprus Campus
+2015–2017
+◦Served as an Orientation Leader for three consecutive years, mentoring new students from diverse international
+backgrounds.
+◦Led campus tours, facilitated social integration activities, and provided guidance to help ﬁrst-year students
+transition smoothly into university life.
+◦Contributed directly to the university’s inclusivity and internationalisation efforts by supporting the onboarding
+and cultural adaptation of students from over 30 countries and diverse backgrounds.
+• GPC 100 Coordination Programme
+Mersin, Turkey
+Middle East Technical University, Northern Cyprus Campus
+2017
+◦Volunteered as a Peer Guide within the GPC 100 Coordination Programme, assisting ﬁrst-year students in
+academic orientation and personal development.
+◦Facilitated classroom discussions and provided mentorship in line with the goals of METU NCC’s General
+Psychology and Communication curriculum.
+◦Supported university-wide student welfare and retention efforts by fostering a welcoming academic environment.
+• IEEE METU NCC Student Branch
+Mersin, Turkey
+Middle East Technical University, Northern Cyprus Campus
+2015–2017
+◦Vice President (2017): Oversaw operations of all sub-societies and coordinated technical, outreach, and
+educational activities.
+◦Computer Society Coordinator (2016): Organized lectures, seminars, and coding workshops to promote technical
+literacy among undergraduate and high school students. Enhanced peer-to-peer learning through public events
+and tutorials.
+◦Twin Branches Representative (2015): Acted as liaison with other IEEE branches in Turkey to deliver joint events,
+strengthening inter-university collaboration and outreach.
+ACADEMIC AWARDS AND PRIZES
+2020–2024 PhD Scholarship from University of Warwick Fully funded tuition and stipend.
+2018–2020 MSc Scholarship from Middle East Technical University, Northern Cyprus Campus Full tuition fees and
+stipend.
+2017
+Awarded Graduation Project Travel Grant for METU NCC Computer Engineering Demo Day one of two
+projects selected out of 10.
+2017
+Awarded Third Place Prize at K-Hackathon hosted by METU NCC.
+2018, 2017Awarded Merit Certiﬁcate & Scholarship (Top 3% of department, GPA above 3.50) at METU NCC.
+2018, 2017Awarded High Honor Certiﬁcate (Semester GPA above 3.50/4.00) at METU NCC.
+2016, 2015Awarded Honor Certiﬁcate for academic excellence at METU NCC.
+LANGUAGES, MEMBERSHIPS & QUALIFICATIONS
+Languages: English (C1), Turkish (Native)
+Memberships: IEEE (Membership No: 93612845)
+Qualiﬁcations: Associate Fellow of Advance HE (Fellowship No: PR307078)
