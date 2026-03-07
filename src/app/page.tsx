@@ -42,14 +42,14 @@ export default function Home() {
           <h2 className={styles.sectionTitle}>About Me</h2>
           <div className={styles.textContent}>
             <p>
-              I am a Lecturer (Assistant Professor) in AI and autonomous systems at the <strong>School of Electronics, Electrical Engineering and Computer Science (EEECS), Queen&apos;s University Belfast</strong>. My research centers on building safe, reliable, and secure artificial intelligence for intelligent transport systems, with a particular focus on two core pillars:
+              I am a Lecturer (Assistant Professor) in autonomous systems at the <strong>School of Electronics, Electrical Engineering and Computer Science (EEECS), Queen&apos;s University Belfast</strong>. My research centers on building safe, reliable, and secure artificial intelligence for intelligent transport systems, with a particular focus on two core pillars:
             </p>
             <ul>
               <li><strong>Run-time Monitoring & Introspection:</strong> Developing mechanisms to assess and ensure the reliability of perception modules (e.g., LiDAR-based 3D object detection) under uncertainties and adverse conditions.</li>
               <li><strong>Safe & Resilient Cooperative Autonomy:</strong> Building verifiable and interoperable frameworks for Connected and Automated Vehicles (CAVs) in real-world environments.</li>
             </ul>
             <p>
-              Prior to joining QUB, I was a Postdoctoral Research Fellow at <strong>WMG, University of Warwick</strong>, where I worked on EU-funded projects (such as <em>EVENTS</em> and <em>Hi-Drive</em>) to integrate self-assessment and perception frameworks into real-world automated driving pipelines. I completed my Ph.D. in Engineering from the University of Warwick (supervised by Dr. Roger Woodman and Prof. Mehrdad Dianati).
+              Prior to joining QUB, I was a Postdoctoral Research Fellow at <strong>WMG, University of Warwick</strong>, where I worked on EU-funded projects (<a href="https://events-project.eu/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-color)' }}>EVENTS</a> and <a href="https://www.hi-drive.eu/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-color)' }}>Hi-Drive</a>) to integrate self-assessment and perception frameworks into real-world automated driving pipelines. I completed my Ph.D. in Engineering from the University of Warwick (supervised by Dr. Roger Woodman and Prof. Mehrdad Dianati).
             </p>
             <p>
               I hold a Master&apos;s and Bachelor&apos;s degree in Computer Engineering from Middle East Technical University (METU NCC).

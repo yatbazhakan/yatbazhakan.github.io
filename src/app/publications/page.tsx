@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import styles from '../page.module.css';
+import CiteButton from '../../components/CiteButton';
 
 interface Publication {
   id: string;
@@ -15,6 +16,7 @@ interface Publication {
   publisher?: string;
   abbr?: string;
   selected?: boolean;
+  bibtex?: string;
 }
 
 function parseBibtex(bibtex: string): Publication[] {
@@ -27,7 +29,7 @@ function parseBibtex(bibtex: string): Publication[] {
     const id = match[2];
     const fieldsStr = match[3];
 
-    const pub: Record<string, string | boolean> = { id, type };
+    const pub: Record<string, string | boolean> = { id, type, bibtex: match[0].trim() };
     
     // Simple field parser
     const fieldRegex = /(\w+)\s*=\s*[\{"]([\s\S]*?)[\}"]/g;
@@ -96,11 +98,9 @@ export default async function Publications() {
                       {pub.pages && `, pp. ${pub.pages.replace(/--/g, '-')}`}
                     </p>
                     
-                    {/* Placeholder for future PDF/Code links inside BibTeX mapping */}
+                    {/* PDF/Code links inside BibTeX mapping */}
                     <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
-                      <span style={{ fontSize: '0.9rem', color: 'var(--accent-color)', fontWeight: 500, cursor: 'pointer' }}>
-                        [Cite]
-                      </span>
+                      <CiteButton bibtex={pub.bibtex || ''} />
                     </div>
                   </div>
                 ))}
