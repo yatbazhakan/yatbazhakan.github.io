@@ -21,6 +21,7 @@ export default function Navbar() {
     { name: 'Home', path: '/' },
     { name: 'Publications', path: '/publications' },
     { name: 'Teaching', path: '/teaching' },
+    { name: 'Supervision', path: '/supervision' },
   ];
 
   return (
