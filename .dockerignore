@@ -1,8 +1,0 @@
-.git/
-.next/
-node_modules/
-out/
-_site/
-assets/
-Dockerfile
-.dockerignore

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teaching | Dr. Hakan Yekta Yatbaz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: #fff; color: #1a1a2e; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    :root {
+      --qub-red: #C8102E; --qub-red-dark: #a00d24;
+      --qub-navy: #1A1F2E; --qub-light: #f5f4f2;
+      --qub-border: #e2e0db; --max-w: 1100px;
+    }
+    nav { position: sticky; top: 0; z-index: 100; background: var(--qub-navy); height: 64px; display: flex; align-items: center; box-shadow: 0 2px 20px rgba(0,0,0,.25); }
+    .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; align-items: center; gap: 12px; }
+    .nav-brand-logo { width: 34px; height: 34px; background: var(--qub-red); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: serif; font-size: 18px; font-weight: 800; color: #fff; }
+    .nav-brand-text { color: #fff; font-size: 14px; font-weight: 600; line-height: 1.2; }
+    .nav-brand-text span { display: block; font-size: 11px; opacity: 0.55; font-weight: 400; }
+    .nav-links { display: flex; gap: 6px; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 6px; transition: all .2s; }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.1); }
+    .nav-links a.active { color: #fff; background: rgba(200,16,46,0.25); }
+    .nav-links .btn-cta { background: var(--qub-red); color: #fff !important; padding: 7px 16px; border-radius: 20px; }
+    .nav-links .btn-cta:hover { background: var(--qub-red-dark); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 6px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: all .25s; }
+    .mobile-menu { display: none; flex-direction: column; background: rgba(26,31,46,0.98); padding: 8px 20px 20px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: rgba(255,255,255,0.85); font-size: 15px; font-weight: 500; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+
+    .page-hero { background: var(--qub-navy); padding: 64px 24px 56px; position: relative; overflow: hidden; }
+    .page-hero::after { content: ''; position: absolute; top: 0; right: 0; width: 40%; height: 100%; background: linear-gradient(135deg, transparent 30%, rgba(200,16,46,0.1)); pointer-events: none; }
+    .page-hero-inner { max-width: var(--max-w); margin: 0 auto; position: relative; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 20px; }
+    .breadcrumb a { color: rgba(255,255,255,0.45); transition: color .2s; }
+    .breadcrumb a:hover { color: rgba(255,255,255,0.8); }
+    .breadcrumb .sep { color: rgba(255,255,255,0.2); }
+    .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 12px; }
+    .page-hero p { font-size: 15px; color: rgba(255,255,255,0.6); max-width: 600px; line-height: 1.7; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(200,16,46,0.15); border: 1px solid rgba(200,16,46,0.35); border-radius: 24px; padding: 6px 16px; margin-bottom: 20px; font-size: 12px; font-weight: 600; color: #fca5a5; letter-spacing: .05em; }
+
+    .page-body { max-width: var(--max-w); margin: 0 auto; padding: 64px 24px 96px; }
+
+    .section-heading { margin-bottom: 36px; }
+    .sec-label { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+    .sec-label span.bar { display: block; width: 20px; height: 2px; background: var(--qub-red); border-radius: 2px; }
+    .sec-label-text { font-size: 11px; font-weight: 700; color: var(--qub-red); letter-spacing: .12em; text-transform: uppercase; }
+    .section-heading h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 700; color: var(--qub-navy); }
+    .section-heading p { font-size: 14px; color: #6b7280; margin-top: 8px; line-height: 1.7; max-width: 640px; }
+
+    /* Institution blocks */
+    .institution-block { margin-bottom: 48px; }
+    .inst-header { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--qub-border); }
+    .inst-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--qub-red); flex-shrink: 0; }
+    .inst-name { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--qub-navy); }
+    .inst-period { font-size: 12px; color: #9ca3af; font-weight: 500; }
+
+    .role-card { background: var(--qub-light); border-radius: 12px; padding: 28px; margin-bottom: 16px; }
+    .role-card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 12px; flex-wrap: wrap; }
+    .role-title { font-weight: 700; font-size: 16px; color: var(--qub-navy); margin-bottom: 3px; }
+    .role-period-badge { font-size: 11px; font-weight: 600; padding: 3px 12px; border-radius: 10px; background: rgba(200,16,46,0.1); color: var(--qub-red); white-space: nowrap; }
+    .role-desc { font-size: 14px; color: #4b5563; line-height: 1.75; }
+
+    .bullet-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+    .bullet-list li { display: flex; align-items: flex-start; gap: 8px; font-size: 13.5px; color: #4b5563; line-height: 1.6; }
+    .bullet-list li::before { content: ''; display: block; width: 5px; height: 5px; border-radius: 50%; background: var(--qub-red); flex-shrink: 0; margin-top: 7px; }
+
+    /* Philosophy */
+    .philosophy-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; margin-bottom: 56px; }
+    .philosophy-card { background: #fff; border: 1px solid var(--qub-border); border-top: 3px solid var(--qub-red); border-radius: 10px; padding: 24px 20px; }
+    .philosophy-icon { font-size: 26px; margin-bottom: 10px; }
+    .philosophy-card h3 { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; color: var(--qub-navy); margin-bottom: 7px; }
+    .philosophy-card p { font-size: 12.5px; color: #6b7280; line-height: 1.7; }
+
+    footer { background: var(--qub-navy); padding: 32px 24px; display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    footer p { color: rgba(255,255,255,0.35); font-size: 12px; }
+    footer a { color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 500; transition: color .2s; }
+    footer a:hover { color: #fff; }
+    .fdiv { color: rgba(255,255,255,0.15); }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .philosophy-grid { grid-template-columns: 1fr 1fr; }
+      .role-card-header { flex-direction: column; gap: 8px; }
+    }
+    @media (max-width: 380px) { .philosophy-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-brand-logo">Q</div>
+      <div class="nav-brand-text"><span>Queen's University Belfast</span>Dr. H. Y. Yatbaz</div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#research">Research</a>
+      <a href="index.html#phd-opportunities">PhD</a>
+      <a href="teaching.html" class="active">Teaching</a>
+      <a href="supervision.html">Supervision</a>
+      <a href="index.html#contact" class="btn-cta">Contact</a>
+    </div>
+    <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mmenu">
+  <a href="index.html">Home</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#research">Research</a>
+  <a href="index.html#phd-opportunities">PhD Opportunities</a>
+  <a href="teaching.html">Teaching</a>
+  <a href="supervision.html">Supervision</a>
+  <a href="index.html#contact">Contact</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span style="color:rgba(255,255,255,0.75)">Teaching</span></div>
+    <div class="hero-badge">Associate Fellow of Advance HE · PR307078</div>
+    <h1>Teaching &amp; Mentorship</h1>
+    <p>Over 5 years of module design and delivery experience across undergraduate and postgraduate engineering programmes at three institutions.</p>
+  </div>
+</div>
+
+<div class="page-body">
+
+  <!-- Philosophy -->
+  <div class="section-heading">
+    <div class="sec-label"><span class="bar"></span><span class="sec-label-text">Approach</span><span class="bar"></span></div>
+    <h2>Teaching Philosophy</h2>
+    <p>I connect theory to real-world engineering challenges, encouraging students to think critically about the safety and societal implications of the systems they build.</p>
+  </div>
+  <div class="philosophy-grid">
+    <div class="philosophy-card"><div class="philosophy-icon">🔗</div><h3>Theory Meets Practice</h3><p>Concepts are anchored in real autonomous systems — from LiDAR pipelines to DNN integrity monitoring in deployed vehicles.</p></div>
+    <div class="philosophy-card"><div class="philosophy-icon">🛡️</div><h3>Safety-First Thinking</h3><p>Students reason about failure modes and safety constraints from day one, treating them as core engineering concerns.</p></div>
+    <div class="philosophy-card"><div class="philosophy-icon">🧪</div><h3>Hands-On Learning</h3><p>Lab sessions use real datasets and open-source tools to build genuine engineering confidence and reproducibility skills.</p></div>
+    <div class="philosophy-card"><div class="philosophy-icon">💬</div><h3>Open-Door Policy</h3><p>Students are always welcome to discuss ideas, ask questions, or explore research directions beyond the curriculum.</p></div>
+  </div>
+
+  <!-- QUB -->
+  <div class="section-heading">
+    <div class="sec-label"><span class="bar"></span><span class="sec-label-text">Experience</span><span class="bar"></span></div>
+    <h2>Teaching History</h2>
+  </div>
+
+  <div class="institution-block">
+    <div class="inst-header">
+      <div class="inst-dot"></div>
+      <div>
+        <div class="inst-name">Queen's University Belfast</div>
+        <div class="inst-period">2025 — Present</div>
+      </div>
+    </div>
+    <div class="role-card">
+      <div class="role-card-header">
+        <div>
+          <div class="role-title">Module Lead: AI Ethics (MSc)</div>
+        </div>
+        <span class="role-period-badge">Summer 2026</span>
+      </div>
+      <p class="role-desc">Designing and developing a new Master's level module focusing on the ethical implications, trustworthiness, and safety protocols of modern AI systems. The curriculum bridges technical run-time introspection with regulatory frameworks for AI safety — including the EU AI Act and ISO 26262.</p>
+    </div>
+  </div>
+
+  <!-- Warwick -->
+  <div class="institution-block">
+    <div class="inst-header">
+      <div class="inst-dot" style="background:var(--qub-navy)"></div>
+      <div>
+        <div class="inst-name">University of Warwick — WMG</div>
+        <div class="inst-period">Oct 2020 — Jul 2025</div>
+      </div>
+    </div>
+    <div class="role-card">
+      <div class="role-card-header">
+        <div><div class="role-title">Graduate Teaching Assistant</div></div>
+        <span class="role-period-badge">5 Years</span>
+      </div>
+      <p class="role-desc">Delivered laboratory sessions, seminars, and marked assignments across multiple undergraduate and postgraduate engineering modules within WMG. Mentored students on capstone projects and provided technical guidance on Python, C++, and machine learning fundamentals.</p>
+      <ul class="bullet-list">
+        <li>Lab sessions for perception and machine learning modules</li>
+        <li>Mentoring of final-year and MSc capstone projects</li>
+        <li>Assessment and feedback on programming assignments</li>
+        <li>Technical guidance on Python, C++, deep learning frameworks</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- METU -->
+  <div class="institution-block">
+    <div class="inst-header">
+      <div class="inst-dot" style="background:#6b7280"></div>
+      <div>
+        <div class="inst-name">Middle East Technical University (METU NCC)</div>
+        <div class="inst-period">Sep 2018 — Oct 2020</div>
+      </div>
+    </div>
+    <div class="role-card">
+      <div class="role-card-header">
+        <div><div class="role-title">Graduate Teaching Assistant</div></div>
+        <span class="role-period-badge">2 Years</span>
+      </div>
+      <p class="role-desc">Conducted lab sessions and tutorials, developed assignments, and evaluated coursework for undergraduate modules across all levels.</p>
+      <ul class="bullet-list">
+        <li>C Programming and Introduction to Programming</li>
+        <li>Discrete Computational Structures</li>
+        <li>Algorithms and Data Management</li>
+        <li>Computer Engineering fundamentals</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div style="background:var(--qub-navy);border-radius:14px;padding:40px 36px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;">
+    <div>
+      <p style="font-size:11px;font-weight:700;color:var(--qub-red);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;">Student Enquiries</p>
+      <h3 style="font-family:'Playfair Display',serif;font-size:20px;color:#fff;margin-bottom:6px;">Interested in a project or module?</h3>
+      <p style="font-size:13px;color:rgba(255,255,255,0.55);">Email with your degree programme and area of interest.</p>
+    </div>
+    <a href="mailto:yatbazhakan@gmail.com?subject=Teaching Enquiry"
+       style="background:var(--qub-red);color:#fff;padding:13px 26px;border-radius:8px;font-weight:600;font-size:14px;white-space:nowrap;"
+       onmouseover="this.style.background='#a00d24'" onmouseout="this.style.background='#C8102E'">Get in Touch</a>
+  </div>
+
+</div>
+
+<footer>
+  <a href="index.html">Home</a><span class="fdiv">·</span>
+  <a href="teaching.html">Teaching</a><span class="fdiv">·</span>
+  <a href="supervision.html">Supervision</a><span class="fdiv">·</span>
+  <a href="index.html#contact">Contact</a><span class="fdiv">·</span>
+  <p>© 2026 Dr. Hakan Yekta Yatbaz · Queen's University Belfast</p>
+</footer>
+
+<script>
+  const ham = document.getElementById('ham');
+  const mmenu = document.getElementById('mmenu');
+  ham.addEventListener('click', () => {
+    mmenu.classList.toggle('open');
+    const spans = ham.querySelectorAll('span');
+    const open = mmenu.classList.contains('open');
+    spans[0].style.transform = open ? 'translateY(7px) rotate(45deg)' : '';
+    spans[1].style.transform = open ? 'scaleX(0)' : '';
+    spans[2].style.transform = open ? 'translateY(-7px) rotate(-45deg)' : '';
+  });
+</script>
+</body>
+</html>
