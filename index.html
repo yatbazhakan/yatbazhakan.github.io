@@ -196,15 +196,15 @@ function Hero({ tweaks }) {
           </p>
           {tweaks.showPhDBadge && (
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(200,16,46,0.15)', border: '1px solid rgba(200,16,46,0.4)', borderRadius: 24, padding: '8px 18px', marginBottom: 36 }}>
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--qub-red)', display: 'block', animation: 'pulse 2s infinite' }}></span>
-              <span style={{ color: 'rgba(255,255,255,0.9)', fontSize: 13, fontWeight: 500 }}>Accepting PhD Applications for 2025–26</span>
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--qub-red)', display: 'block' }}></span>
+              <span style={{ color: 'rgba(255,255,255,0.9)', fontSize: 13, fontWeight: 500 }}>PhD Enquiries Welcome</span>
             </div>
           )}
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
             <a href="#phd-opportunities" style={{ background: 'var(--qub-red)', color: '#fff', padding: '14px 28px', borderRadius: 8, fontWeight: 600, fontSize: 15, transition: 'all 0.2s', display: 'inline-block' }}
               onMouseEnter={e => { e.target.style.background='var(--qub-red-dark)'; e.target.style.transform='translateY(-1px)'; }}
               onMouseLeave={e => { e.target.style.background='var(--qub-red)'; e.target.style.transform='none'; }}>
-              PhD Opportunities →
+              PhD Inquiries →
             </a>
             <a href="#about" style={{ background: 'transparent', color: '#fff', padding: '14px 28px', borderRadius: 8, fontWeight: 600, fontSize: 15, border: '1px solid rgba(255,255,255,0.25)', transition: 'all 0.2s', display: 'inline-block' }}
               onMouseEnter={e => { e.target.style.background='rgba(255,255,255,0.08)'; e.target.style.transform='translateY(-1px)'; }}
@@ -328,68 +328,23 @@ function Research() {
 
 /* ── PHD SECTION ── */
 function PhDSection({ tweaks }) {
-  const projects = [
-    {
-      title: 'Run-Time Safety Monitoring for Autonomous Vehicle Perception',
-      tags: ['Autonomous Driving', 'AI Safety', 'Open'],
-      desc: 'Develop novel introspection mechanisms to monitor the reliability of DNN-based perception pipelines in real-time, enabling detection of out-of-distribution inputs and model failures before they cause safety incidents.',
-      funded: true,
-    },
-    {
-      title: 'Multi-Modal Sensor Fusion for Robust 3D Object Detection',
-      tags: ['LiDAR', 'Computer Vision', 'Open'],
-      desc: 'Design and evaluate sensor fusion architectures combining LiDAR, camera and radar data to improve 3D object detection robustness under adverse weather and occlusion conditions.',
-      funded: true,
-    },
-    {
-      title: 'AI-Powered Continuous Health Monitoring via IoT Wearables',
-      tags: ['IoT', 'E-Health', 'Open'],
-      desc: 'Investigate lightweight deep learning models for real-time activity recognition and anomaly detection on resource-constrained wearable and ambient sensor platforms for elderly care.',
-      funded: false,
-    },
-  ];
   return (
     <section id="phd-opportunities" style={{ background: 'var(--qub-navy)', padding: '96px 24px', position: 'relative', overflow: 'hidden' }}>
       <div style={{ position: 'absolute', top: 0, right: 0, width: '40%', height: '100%', background: 'linear-gradient(135deg, transparent 40%, rgba(200,16,46,0.07))', pointerEvents: 'none' }}></div>
-      <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto', position: 'relative' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 64, alignItems: 'start' }}>
-          <div>
-            <SectionLabel color="var(--qub-red)">Opportunities</SectionLabel>
-            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: 700, color: '#fff', lineHeight: 1.2, marginBottom: 20 }}>
-              PhD Positions Available
-            </h2>
-            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: 14, lineHeight: 1.8, marginBottom: 28 }}>
-              I am actively recruiting motivated PhD students with backgrounds in computer science, mathematics, or related disciplines. Funded positions are available through EPSRC DTP and industry partnerships.
-            </p>
-            <div style={{ background: 'rgba(200,16,46,0.12)', border: '1px solid rgba(200,16,46,0.3)', borderRadius: 10, padding: '20px 22px', marginBottom: 28 }}>
-              <p style={{ color: '#fff', fontSize: 13, fontWeight: 600, marginBottom: 6 }}>📅 Next intake: October 2025</p>
-              <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13 }}>Application deadline: 31 July 2025</p>
-            </div>
-            <a href={`mailto:${tweaks.email}?subject=PhD Enquiry`}
-              style={{ display: 'inline-block', background: 'var(--qub-red)', color: '#fff', padding: '13px 26px', borderRadius: 8, fontWeight: 600, fontSize: 14, transition: 'all 0.2s' }}
-              onMouseEnter={e => { e.target.style.background='var(--qub-red-dark)'; e.target.style.transform='translateY(-1px)'; }}
-              onMouseLeave={e => { e.target.style.background='var(--qub-red)'; e.target.style.transform='none'; }}>
-              Enquire About a Position
-            </a>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-            {projects.map(p => (
-              <div key={p.title} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 12, padding: '28px 28px', transition: 'background 0.2s, border-color 0.2s' }}
-                onMouseEnter={e => { e.currentTarget.style.background='rgba(255,255,255,0.08)'; e.currentTarget.style.borderColor='rgba(200,16,46,0.4)'; }}
-                onMouseLeave={e => { e.currentTarget.style.background='rgba(255,255,255,0.04)'; e.currentTarget.style.borderColor='rgba(255,255,255,0.1)'; }}>
-                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 14 }}>
-                  {p.tags.map(t => (
-                    <span key={t} style={{ fontSize: 11, fontWeight: 600, padding: '3px 10px', borderRadius: 12, background: t === 'Fully Funded' ? 'rgba(200,16,46,0.25)' : 'rgba(255,255,255,0.08)', color: t === 'Fully Funded' ? '#ff8a9b' : 'rgba(255,255,255,0.65)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-                      {t}
-                    </span>
-                  ))}
-                </div>
-                <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 17, fontWeight: 600, color: '#fff', marginBottom: 10, lineHeight: 1.35 }}>{p.title}</h3>
-                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13, lineHeight: 1.75 }}>{p.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+      <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto', position: 'relative', textAlign: 'center' }}>
+        <SectionLabel color="var(--qub-red)" center>Opportunities</SectionLabel>
+        <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: 700, color: '#fff', lineHeight: 1.2, marginBottom: 24 }}>
+          PhD Research
+        </h2>
+        <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: 16, lineHeight: 1.8, marginBottom: 36, maxWidth: 700, margin: '0 auto 36px' }}>
+          I am always interested in hearing from motivated students looking to pursue PhD research in autonomous systems, AI safety, or 3D perception. If you're interested in working together, please reach out via email.
+        </p>
+        <a href={`mailto:${tweaks.email}?subject=PhD Enquiry`}
+          style={{ display: 'inline-block', background: 'var(--qub-red)', color: '#fff', padding: '15px 32px', borderRadius: 8, fontWeight: 600, fontSize: 15, transition: 'all 0.2s' }}
+          onMouseEnter={e => { e.target.style.background='var(--qub-red-dark)'; e.target.style.transform='translateY(-1px)'; }}
+          onMouseLeave={e => { e.target.style.background='var(--qub-red)'; e.target.style.transform='none'; }}>
+          Contact me for PhD Enquiries
+        </a>
       </div>
     </section>
   );
