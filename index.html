@@ -4,7 +4,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Hakan Yekta Yatbaz | Queen's University Belfast</title>
+  <title>Dr. Hakan Yekta Yatbaz | Lecturer in Autonomous Systems | Queen's University Belfast</title>
+  <meta name="description" content="Academic homepage of Dr. Hakan Yekta Yatbaz, Lecturer in Autonomous Systems at Queen's University Belfast. Research in AI safety, run-time monitoring, LiDAR perception, and deep neural network introspection. PhD research opportunities and funded studentships available." />
+  <meta name="keywords" content="Hakan Yatbaz, Hakan Yekta Yatbaz, Queen's University Belfast, Autonomous Systems, AI Safety, Run-time Monitoring, 3D Object Detection, LiDAR, Deep Neural Networks, Automated Driving, QUB EEECS, PhD Opportunities Belfast, Funded PhD Studentships UK, DfE Studentships" />
+  <meta name="author" content="Dr. Hakan Yekta Yatbaz" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://yatbazhakan.github.io/" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yatbazhakan.github.io/" />
+  <meta property="og:title" content="Dr. Hakan Yekta Yatbaz | Queen's University Belfast" />
+  <meta property="og:description" content="Lecturer in Autonomous Systems at Queen's University Belfast. Researching AI safety, run-time monitoring, and perception for automated vehicles." />
+  <meta property="og:image" content="https://yatbazhakan.github.io/photo.jpg" />
+  <meta property="og:site_name" content="Dr. Hakan Yekta Yatbaz" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Dr. Hakan Yekta Yatbaz | Queen's University Belfast" />
+  <meta name="twitter:description" content="Lecturer in Autonomous Systems at Queen's University Belfast. Researching AI safety, run-time monitoring, and perception for automated vehicles." />
+  <meta name="twitter:image" content="https://yatbazhakan.github.io/photo.jpg" />
+
+  <!-- Schema.org JSON-LD for Academic Profile -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dr. Hakan Yekta Yatbaz",
+    "jobTitle": "Lecturer in Autonomous Systems",
+    "worksFor": {
+      "@type": "CollegeOrUniversity",
+      "name": "Queen's University Belfast",
+      "department": "School of Electronics, Electrical Engineering and Computer Science (EEECS)",
+      "url": "https://www.qub.ac.uk"
+    },
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Warwick"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Middle East Technical University"
+      }
+    ],
+    "url": "https://yatbazhakan.github.io/",
+    "image": "https://yatbazhakan.github.io/photo.jpg",
+    "email": "mailto:yatbazhakan@gmail.com",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=5Q596f4AAAAJ",
+      "https://www.linkedin.com/in/hakanyektayatbaz/",
+      "https://github.com/yatbazhakan"
+    ],
+    "knowsAbout": [
+      "Autonomous Systems",
+      "AI Safety",
+      "Run-time Monitoring",
+      "DNN Introspection",
+      "3D Object Detection",
+      "LiDAR Perception",
+      "Automated Driving Systems"
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -73,7 +136,7 @@
       "name": "Dr. Hakan Yekta Yatbaz",
       "title": "Lecturer in Autonomous Systems",
       "department": "School of Electronics, Electrical Engineering and Computer Science",
-      "tagline": "Advancing AI-Safety for Autonomous Systems",
+      "tagline": "Safe, reliable, and introspective perception for autonomous systems and intelligent vehicles.",
       "email": "yatbazhakan@gmail.com",
       "office": "Ashby Building, Room 08.010",
       "scholarUrl": "https:\/\/scholar.google.com\/citations?user=5Q596f4AAAAJ",
@@ -86,6 +149,14 @@
     function App() {
       const [tweaks, setTweak] = window.useTweaks(TWEAK_DEFAULTS);
       const [menuOpen, setMenuOpen] = React.useState(false);
+      const [citationData, setCitationData] = React.useState(null);
+
+      React.useEffect(() => {
+        fetch('citations.json?v=' + Date.now())
+          .then(r => r.json())
+          .then(d => { if (d && d.stats) setCitationData(d); })
+          .catch(e => console.debug('citations.json load note:', e));
+      }, []);
 
       const accent = tweaks.accentColor;
       const accentDark = tweaks.accentColor === '#C8102E' ? '#a00d24' : tweaks.accentColor;
@@ -103,11 +174,11 @@
           <Nav tweaks={tweaks} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           <main>
             <Hero tweaks={tweaks} />
-            <About tweaks={tweaks} />
+            <About tweaks={tweaks} citationData={citationData} />
             <Research />
             <EUProjects />
             <PhDSection tweaks={tweaks} />
-            <Publications />
+            <Publications tweaks={tweaks} citationData={citationData} />
             <News />
             <AcademicServices />
             <Contact tweaks={tweaks} />
@@ -204,52 +275,54 @@
     /* ── HERO ── */
     function Hero({ tweaks }) {
       return (
-        <section id="top" style={{ minHeight: '100vh', background: 'var(--qub-navy)', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden' }}>
-          {/* Background geometry */}
+        <section id="top" style={{ minHeight: '88vh', background: 'var(--qub-navy)', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden' }}>
+          {/* Subtle ambient lighting */}
           <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none' }}>
-            <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '55%', height: '120%', background: 'linear-gradient(135deg, var(--qub-red) 0%, #7a0017 100%)', clipPath: 'polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 0.18 }}></div>
-            <div style={{ position: 'absolute', bottom: '-60px', left: '-60px', width: 400, height: 400, borderRadius: '50%', border: '1px solid rgba(200,16,46,0.15)' }}></div>
-            <div style={{ position: 'absolute', bottom: '-30px', left: '-30px', width: 250, height: 250, borderRadius: '50%', border: '1px solid rgba(200,16,46,0.1)' }}></div>
-            <div style={{ position: 'absolute', top: '10%', right: '8%', width: 180, height: 180, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.05)' }}></div>
+            <div style={{ position: 'absolute', top: '-15%', right: '-5%', width: '50%', height: '130%', background: 'radial-gradient(ellipse at center, rgba(200,16,46,0.12) 0%, transparent 70%)' }}></div>
           </div>
 
           <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto', padding: '120px 24px 80px', width: '100%', display: 'grid', gridTemplateColumns: '1fr auto', gap: 60, alignItems: 'center', position: 'relative' }}>
             <div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 24 }}>
-                <span style={{ display: 'block', width: 36, height: 3, background: 'var(--qub-red)', borderRadius: 2 }}></span>
-                <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13, fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase' }}>{tweaks.department}</span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20 }}>
+                <span style={{ display: 'block', width: 28, height: 2, background: 'var(--qub-red)', borderRadius: 1 }}></span>
+                <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase' }}>{tweaks.department}</span>
               </div>
-              <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(2.4rem, 5vw, 4rem)', fontWeight: 700, color: '#fff', lineHeight: 1.15, marginBottom: 20 }}>
+              <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(2.4rem, 4.8vw, 3.8rem)', fontWeight: 700, color: '#fff', lineHeight: 1.15, marginBottom: 16 }}>
                 {tweaks.name}
               </h1>
-              <p style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)', color: 'var(--qub-red)', fontWeight: 600, marginBottom: 12, letterSpacing: '0.01em' }}>
-                {tweaks.title}
+              <p style={{ fontSize: 'clamp(1.05rem, 1.8vw, 1.25rem)', color: 'rgba(255,255,255,0.92)', fontWeight: 500, marginBottom: 14 }}>
+                {tweaks.title} · <span style={{ color: 'rgba(255,255,255,0.65)' }}>Queen's University Belfast</span>
               </p>
-              <p style={{ fontSize: 'clamp(1rem, 1.8vw, 1.15rem)', color: 'rgba(255,255,255,0.7)', maxWidth: 560, marginBottom: 36, lineHeight: 1.7, fontStyle: 'italic' }}>
-                "{tweaks.tagline}"
+              <p style={{ fontSize: '15.5px', color: 'rgba(255,255,255,0.75)', maxWidth: 620, marginBottom: 28, lineHeight: 1.75 }}>
+                {tweaks.tagline}
               </p>
               {tweaks.showPhDBadge && (
-                <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(200,16,46,0.15)', border: '1px solid rgba(200,16,46,0.4)', borderRadius: 24, padding: '8px 18px', marginBottom: 36 }}>
-                  <span style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--qub-red)', display: 'block' }}></span>
-                  <span style={{ color: 'rgba(255,255,255,0.9)', fontSize: 13, fontWeight: 500 }}>PhD Enquiries Welcome</span>
+                <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 20, padding: '6px 14px', marginBottom: 28 }}>
+                  <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--qub-red)', display: 'block' }}></span>
+                  <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: 12.5, fontWeight: 500 }}>Open to PhD supervision inquiries</span>
                 </div>
               )}
-              <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-                <a href="#phd-opportunities" style={{ background: 'var(--qub-red)', color: '#fff', padding: '14px 28px', borderRadius: 8, fontWeight: 600, fontSize: 15, transition: 'all 0.2s', display: 'inline-block' }}
-                  onMouseEnter={e => { e.target.style.background = 'var(--qub-red-dark)'; e.target.style.transform = 'translateY(-1px)'; }}
-                  onMouseLeave={e => { e.target.style.background = 'var(--qub-red)'; e.target.style.transform = 'none'; }}>
-                  PhD Inquiries →
+              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+                <a href="#about" style={{ background: 'var(--qub-red)', color: '#fff', padding: '11px 22px', borderRadius: 6, fontWeight: 600, fontSize: 13.5, transition: 'background 0.2s', display: 'inline-block' }}
+                  onMouseEnter={e => e.target.style.background = 'var(--qub-red-dark)'}
+                  onMouseLeave={e => e.target.style.background = 'var(--qub-red)'}>
+                  Research Overview
                 </a>
-                <a href="#about" style={{ background: 'transparent', color: '#fff', padding: '14px 28px', borderRadius: 8, fontWeight: 600, fontSize: 15, border: '1px solid rgba(255,255,255,0.25)', transition: 'all 0.2s', display: 'inline-block' }}
-                  onMouseEnter={e => { e.target.style.background = 'rgba(255,255,255,0.08)'; e.target.style.transform = 'translateY(-1px)'; }}
-                  onMouseLeave={e => { e.target.style.background = 'transparent'; e.target.style.transform = 'none'; }}>
-                  My Research
+                <a href="publications.html" style={{ background: 'transparent', color: '#fff', padding: '11px 22px', borderRadius: 6, fontWeight: 500, fontSize: 13.5, border: '1px solid rgba(255,255,255,0.22)', transition: 'background 0.2s', display: 'inline-block' }}
+                  onMouseEnter={e => e.target.style.background = 'rgba(255,255,255,0.08)'}
+                  onMouseLeave={e => e.target.style.background = 'transparent'}>
+                  Publications
+                </a>
+                <a href="#contact" style={{ background: 'transparent', color: 'rgba(255,255,255,0.75)', padding: '11px 18px', borderRadius: 6, fontWeight: 500, fontSize: 13.5, transition: 'color 0.2s', display: 'inline-block' }}
+                  onMouseEnter={e => e.target.style.color = '#fff'}
+                  onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.75)'}>
+                  Contact &amp; Inquiries →
                 </a>
               </div>
             </div>
             {/* Photo */}
-            <div style={{ width: 'clamp(160px, 18vw, 260px)', flexShrink: 0 }} className="hero-photo">
-              <div style={{ aspectRatio: '3/4', borderRadius: 16, overflow: 'hidden', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+            <div style={{ width: 'clamp(160px, 18vw, 250px)', flexShrink: 0 }} className="hero-photo">
+              <div style={{ aspectRatio: '3/4', borderRadius: 12, overflow: 'hidden', background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
                 <img src="photo.jpg" alt="Dr. Hakan Yekta Yatbaz"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   onError={e => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }}
@@ -262,7 +335,6 @@
             </div>
           </div>
           <style>{`
-        @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.4)} }
         @media (max-width: 640px) { .hero-photo { display: none; } }
       `}</style>
         </section>
@@ -270,52 +342,52 @@
     }
 
     /* ── ABOUT ── */
-    function About({ tweaks }) {
+    function About({ tweaks, citationData }) {
       const stats = [
-        { n: '327+', label: 'Citations' },
-        { n: '19', label: 'Publications' },
-        { n: '9', label: 'h-index' },
-        { n: '7', label: 'i10-index' },
+        { n: citationData?.stats?.citations ? String(citationData.stats.citations) : '371', label: 'Citations' },
+        { n: citationData?.stats?.publications ? String(citationData.stats.publications) : '21', label: 'Publications' },
+        { n: citationData?.stats?.h_index ? String(citationData.stats.h_index) : '9', label: 'h-index' },
+        { n: citationData?.stats?.i10_index ? String(citationData.stats.i10_index) : '8', label: 'i10-index' },
       ];
       return (
         <section id="about" style={{ background: '#fff', padding: '96px 24px' }}>
           <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'start' }}>
             <div>
-              <SectionLabel color="var(--qub-red)">About</SectionLabel>
-              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', fontWeight: 700, color: 'var(--qub-navy)', lineHeight: 1.2, marginBottom: 24 }}>
-                Researcher, Educator &amp; Collaborator
+              <SectionLabel color="var(--qub-red)">Overview</SectionLabel>
+              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: 700, color: 'var(--qub-navy)', lineHeight: 1.25, marginBottom: 22 }}>
+                Academic Profile &amp; Research Focus
               </h2>
               <p style={{ color: '#4b5563', lineHeight: 1.85, marginBottom: 16, fontSize: 15 }}>
-                I am a Lecturer (Assistant Professor) in Autonomous Systems at the School of Electronics, Electrical Engineering and Computer Science (EEECS), Queen's University Belfast. My research centres on building safe, reliable, and secure AI for intelligent transport systems, with two core pillars: <strong>Run-time Monitoring &amp; Introspection</strong> of LiDAR-based perception under uncertainty, and <strong>Safe &amp; Resilient Cooperative Autonomy</strong> for Connected and Automated Vehicles (CAVs).
+                I am a Lecturer (Assistant Professor) in Autonomous Systems at the School of Electronics, Electrical Engineering and Computer Science (EEECS), Queen's University Belfast. My research focuses on developing safe, reliable, and trustworthy AI for intelligent transport systems, with two primary areas: <strong>run-time monitoring and introspection</strong> of LiDAR-based perception under uncertainty, and <strong>safe, resilient cooperative autonomy</strong> for Connected and Automated Vehicles (CAVs).
               </p>
-              <p style={{ color: '#4b5563', lineHeight: 1.85, marginBottom: 32, fontSize: 15 }}>
-                Prior to QUB, I was a Postdoctoral Research Fellow at WMG, University of Warwick, working on EU-funded projects (EVENTS and Hi-Drive) integrating self-assessment frameworks into real-world automated driving pipelines. I completed my PhD in Engineering at Warwick (supervised by Dr. Roger Woodman and Prof. Mehrdad Dianati) and hold an MSc and BSc in Computer Engineering from METU NCC.
+              <p style={{ color: '#4b5563', lineHeight: 1.85, marginBottom: 30, fontSize: 15 }}>
+                Prior to joining QUB, I was a Postdoctoral Research Fellow at WMG, University of Warwick (Feb–Sept 2025), working on EU-funded projects (EVENTS and Hi-Drive) integrating self-assessment frameworks into real-world automated driving pipelines. I completed my PhD in Engineering at Warwick (supervised by Dr. Roger Woodman and Prof. Mehrdad Dianati) and hold an MSc and BSc in Computer Engineering from Middle East Technical University (METU NCC).
               </p>
-              <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-                {[['Google Scholar', tweaks.scholarUrl, '📄'], ['LinkedIn', tweaks.linkedinUrl, '💼'], ['GitHub', tweaks.githubUrl, '💻']].map(([label, url, icon]) => (
-                  <a key={label} href={url}
-                    style={{ display: 'flex', alignItems: 'center', gap: 8, border: '1px solid var(--qub-border)', padding: '9px 18px', borderRadius: 8, fontSize: 13, fontWeight: 500, color: 'var(--qub-navy)', transition: 'all 0.2s', background: '#fff' }}
+              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+                {[['Google Scholar', tweaks.scholarUrl], ['LinkedIn', tweaks.linkedinUrl], ['GitHub', tweaks.githubUrl]].map(([label, url]) => (
+                  <a key={label} href={url} target="_blank" rel="noreferrer"
+                    style={{ border: '1px solid var(--qub-border)', padding: '8px 16px', borderRadius: 6, fontSize: 13, fontWeight: 500, color: 'var(--qub-navy)', transition: 'all 0.2s', background: '#fff' }}
                     onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--qub-red)'; e.currentTarget.style.color = 'var(--qub-red)'; }}
                     onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--qub-border)'; e.currentTarget.style.color = 'var(--qub-navy)'; }}>
-                    <span>{icon}</span> {label}
+                    {label} ↗
                   </a>
                 ))}
               </div>
             </div>
             <div>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, marginBottom: 32 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 28 }}>
                 {stats.map(s => (
-                  <div key={s.label} style={{ background: 'var(--qub-light)', borderRadius: 12, padding: '28px 24px', textAlign: 'center' }}>
-                    <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 40, fontWeight: 700, color: 'var(--qub-red)', lineHeight: 1 }}>{s.n}</div>
-                    <div style={{ fontSize: 13, color: 'var(--qub-text-muted, #6b7280)', fontWeight: 500, marginTop: 6 }}>{s.label}</div>
+                  <div key={s.label} style={{ background: 'var(--qub-light)', borderRadius: 10, padding: '24px 20px', textAlign: 'center' }}>
+                    <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 36, fontWeight: 700, color: 'var(--qub-navy)', lineHeight: 1 }}>{s.n}</div>
+                    <div style={{ fontSize: 12.5, color: '#6b7280', fontWeight: 500, marginTop: 6 }}>{s.label}</div>
                   </div>
                 ))}
               </div>
-              <div style={{ background: 'var(--qub-navy)', borderRadius: 12, padding: '24px 28px' }}>
-                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13, marginBottom: 6, fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Current Affiliations</p>
-                {['Member, IEEE', 'Associate Fellow, Advance HE (PR307078)', 'Postdoc, WMG University of Warwick', 'PhD, University of Warwick (Woodman & Dianati)'].map(a => (
-                  <div key={a} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.07)', color: '#fff', fontSize: 14 }}>
-                    <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--qub-red)', flexShrink: 0, display: 'block' }}></span>
+              <div style={{ background: 'var(--qub-navy)', borderRadius: 10, padding: '24px 26px' }}>
+                <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: 12, marginBottom: 8, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Current Appointment &amp; Credentials</p>
+                {['Lecturer in Autonomous Systems, Queen\'s University Belfast', 'School of EEECS, Queen\'s University Belfast', 'Associate Fellow, Advance HE (PR307078)', 'Member, IEEE (ITS Society)'].map(a => (
+                  <div key={a} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.07)', color: '#fff', fontSize: 13.5 }}>
+                    <span style={{ width: 5, height: 5, borderRadius: '50%', background: 'var(--qub-red)', flexShrink: 0, display: 'block' }}></span>
                     {a}
                   </div>
                 ))}
@@ -330,10 +402,10 @@
     /* ── RESEARCH ── */
     function Research() {
       const areas = [
-        { icon: '🚗', title: 'AI Safety for Autonomous Driving', desc: 'Developing run-time monitoring and introspection frameworks that detect failures in DNN-based perception before they lead to safety-critical incidents.' },
-        { icon: '🔍', title: 'DNN Introspection & Integrity Monitoring', desc: 'Analysing neural activation patterns to assess the reliability and integrity of deep learning models operating in dynamic real-world environments.' },
-        { icon: '📡', title: 'LiDAR-based 3D Object Detection', desc: 'Advancing point-cloud perception pipelines for automated vehicles, including multi-layer self-assessment and spatial filtering techniques.' },
-        { icon: '🏥', title: 'IoT & E-Health Systems', desc: 'Designing sensor-based activity recognition and anomaly detection systems for healthcare monitoring of elderly and vulnerable populations.' },
+        { num: '01', title: 'AI Safety for Autonomous Driving', desc: 'Developing run-time monitoring and introspection frameworks that detect failures in DNN-based perception before they lead to safety-critical incidents.' },
+        { num: '02', title: 'DNN Introspection & Integrity Monitoring', desc: 'Analysing neural activation patterns to assess the reliability and integrity of deep learning models operating in dynamic real-world environments.' },
+        { num: '03', title: 'LiDAR-based 3D Object Detection', desc: 'Advancing point-cloud perception pipelines for automated vehicles, including multi-layer self-assessment and spatial filtering techniques.' },
+        { num: '04', title: 'IoT & E-Health Systems', desc: 'Designing sensor-based activity recognition and anomaly detection systems for healthcare monitoring of elderly and vulnerable populations.' },
       ];
       return (
         <section id="research" style={{ background: 'var(--qub-light)', padding: '96px 24px' }}>
@@ -347,9 +419,9 @@
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 24 }}>
               {areas.map(a => (
                 <div key={a.title} style={{ background: '#fff', borderRadius: 12, padding: '32px 28px', borderTop: '3px solid var(--qub-red)', transition: 'transform 0.2s, box-shadow 0.2s' }}
-                  onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.1)'; }}
+                  onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.06)'; }}
                   onMouseLeave={e => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.boxShadow = 'none'; }}>
-                  <div style={{ fontSize: 36, marginBottom: 16 }}>{a.icon}</div>
+                  <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: '0.08em', color: 'var(--qub-red)', marginBottom: 14, fontFamily: 'monospace' }}>{a.num}</div>
                   <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, fontWeight: 700, color: 'var(--qub-navy)', marginBottom: 10 }}>{a.title}</h3>
                   <p style={{ color: '#6b7280', fontSize: 14, lineHeight: 1.75 }}>{a.desc}</p>
                 </div>
@@ -362,38 +434,78 @@
 
     /* ── PHD SECTION ── */
     function PhDSection({ tweaks }) {
+      const topics = [
+        'Run-Time Monitoring & Introspection',
+        'LiDAR 3D Perception',
+        'Cooperative Autonomy & CAVs',
+        'Adverse Weather Robustness',
+      ];
       return (
         <section id="phd-opportunities" style={{ background: 'var(--qub-navy)', padding: '96px 24px', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: 0, right: 0, width: '40%', height: '100%', background: 'linear-gradient(135deg, transparent 40%, rgba(200,16,46,0.07))', pointerEvents: 'none' }}></div>
           <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto', position: 'relative', textAlign: 'center' }}>
-            <SectionLabel color="var(--qub-red)" center>Opportunities</SectionLabel>
-            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: 700, color: '#fff', lineHeight: 1.2, marginBottom: 24 }}>
-              PhD Research
+            <SectionLabel color="var(--qub-red)" center>Prospective Students</SectionLabel>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: 700, color: '#fff', lineHeight: 1.2, marginBottom: 16 }}>
+              PhD Research Opportunities
             </h2>
-            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: 16, lineHeight: 1.8, marginBottom: 36, maxWidth: 700, margin: '0 auto 36px' }}>
-              I am always interested in hearing from motivated students looking to pursue PhD research in autonomous systems, AI safety, or 3D perception. If you're interested in working together, please reach out via email.
+            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 15, lineHeight: 1.8, marginBottom: 24, maxWidth: 700, margin: '0 auto 24px' }}>
+              I welcome inquiries from motivated prospective doctoral students (UK, Republic of Ireland, EU, and international). Funded studentships (DfE Northern Ireland) and scholarship routes are available. Irish and eligible EU applicants qualify for Home Fee Status under the Common Travel Area.
             </p>
-            <a href={`mailto:${tweaks.email}?subject=PhD Enquiry`}
-              style={{ display: 'inline-block', background: 'var(--qub-red)', color: '#fff', padding: '15px 32px', borderRadius: 8, fontWeight: 600, fontSize: 15, transition: 'all 0.2s' }}
-              onMouseEnter={e => { e.target.style.background = 'var(--qub-red-dark)'; e.target.style.transform = 'translateY(-1px)'; }}
-              onMouseLeave={e => { e.target.style.background = 'var(--qub-red)'; e.target.style.transform = 'none'; }}>
-              Contact me for PhD Enquiries
-            </a>
+            <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 32 }}>
+              {topics.map(t => (
+                <span key={t} style={{ fontSize: 12, fontWeight: 500, padding: '5px 14px', borderRadius: 20, background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.85)', border: '1px solid rgba(255,255,255,0.12)' }}>
+                  {t}
+                </span>
+              ))}
+            </div>
+            <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <a href="supervision.html#prospective-students"
+                style={{ display: 'inline-block', background: 'var(--qub-red)', color: '#fff', padding: '12px 26px', borderRadius: 8, fontWeight: 600, fontSize: 14, transition: 'all 0.2s' }}
+                onMouseEnter={e => { e.target.style.background = 'var(--qub-red-dark)'; }}
+                onMouseLeave={e => { e.target.style.background = 'var(--qub-red)'; }}>
+                View Topics &amp; EU Funding Guide →
+              </a>
+              <a href={`mailto:${tweaks.email}?subject=PhD%20Supervision%20Enquiry`}
+                style={{ display: 'inline-block', border: '1px solid rgba(255,255,255,0.25)', color: '#fff', padding: '12px 24px', borderRadius: 8, fontWeight: 500, fontSize: 14, transition: 'all 0.2s' }}
+                onMouseEnter={e => { e.target.style.borderColor = '#fff'; e.target.style.background = 'rgba(255,255,255,0.08)'; }}
+                onMouseLeave={e => { e.target.style.borderColor = 'rgba(255,255,255,0.25)'; e.target.style.background = 'transparent'; }}>
+                Inquire via Email
+              </a>
+            </div>
           </div>
         </section>
       );
     }
 
     /* ── PUBLICATIONS ── */
-    function Publications() {
+    function Publications({ tweaks, citationData }) {
       const pubs = [
-        { year: 2025, title: 'Multi-Layer Self-Assessment with Filtering for 3D Object Detection in Autonomous Vehicles', venue: 'ACM Transactions on Intelligent Systems and Technology', type: 'Journal', citations: null },
-        { year: 2024, title: 'Introspection of DNN-Based Perception Functions in Automated Driving Systems: State-of-the-Art and Open Research Challenges', venue: 'IEEE Transactions on Intelligent Transportation Systems', type: 'Journal', citations: 30 },
-        { year: 2024, title: 'Run-time Introspection of 2D Object Detection in Automated Driving Systems using Learning Representations', venue: 'IEEE Transactions on Intelligent Vehicles', type: 'Journal', citations: 9 },
-        { year: 2024, title: 'Run-time Monitoring of 3D Object Detection using Early Layer Neural Activation Patterns', venue: 'IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)', type: 'Conference', citations: 8 },
-        { year: 2023, title: 'Introspection of 2D Object Detection using Processed Neural Activation Patterns in Automated Driving Systems', venue: 'IEEE/CVF International Conference on Computer Vision (ICCV)', type: 'Conference', citations: 7 },
-        { year: 2022, title: 'An Effective Forest Fire Detection Framework using Heterogeneous Wireless Multimedia Sensor Networks', venue: 'ACM Transactions on Multimedia Computing, Communications, and Applications', type: 'Journal', citations: 102 },
+        { year: 2026, title: 'ZhadigerAI: Software-as-a-Service AI Platform for Kazakh and English', venue: 'Communications in Computer and Information Science, Springer', type: 'Conference', citations: null, doi: 'https://doi.org/10.1007/978-981-95-6963-2_11' },
+        { year: 2025, title: 'Multi-Layer Self-Assessment with Filtering for 3D Object Detection in Autonomous Vehicles', venue: 'ACM Transactions on Intelligent Systems and Technology', type: 'Journal', citations: 1, doi: 'https://doi.org/10.1145/3776551', code: 'https://github.com/yatbazhakan/multi-layer-introspection' },
+        { year: 2025, title: 'Hierarchical Human Activity Recognition with Fusion of Audio and Multiple Inertial Sensor Modalities', venue: 'Scientific Reports (Springer Nature)', type: 'Journal', citations: 5, doi: 'https://doi.org/10.1038/s41598-025-29801-w' },
+        { year: 2024, title: 'Introspection of DNN-Based Perception Functions in Automated Driving Systems: State-of-the-Art and Open Research Challenges', venue: 'IEEE Transactions on Intelligent Transportation Systems', type: 'Journal', citations: 36, doi: 'https://ieeexplore.ieee.org/document/10463055' },
+        { year: 2024, title: 'Run-time Introspection of 2D Object Detection in Automated Driving Systems using Learning Representations', venue: 'IEEE Transactions on Intelligent Vehicles', type: 'Journal', citations: 12, doi: 'https://ieeexplore.ieee.org/document/10387212' },
+        { year: 2024, title: 'Integrity Monitoring of 3D Object Detection in Automated Driving Systems using Raw Activation Patterns and Spatial Filtering', venue: 'IEEE Intelligent Transportation Systems Conference (ITSC)', type: 'Conference', citations: 3, doi: 'https://doi.org/10.1109/itsc58415.2024.10920125' },
+        { year: 2024, title: 'Run-time Monitoring of 3D Object Detection using Early Layer Neural Activation Patterns', venue: 'IEEE/CVF CVPR Workshops (CVPRW)', type: 'Conference', citations: 9, doi: 'https://openaccess.thecvf.com/content/CVPR2024W/WAD/html/Yatbaz_Run-time_Monitoring_of_3D_Object_Detection_using_Early_Layer_Neural_CVPRW_2024_paper.html' },
+        { year: 2022, title: 'An Effective Forest Fire Detection Framework using Heterogeneous Wireless Multimedia Sensor Networks', venue: 'ACM Transactions on Multimedia Computing, Communications, and Applications', type: 'Journal', citations: 111, doi: 'https://dl.acm.org/doi/10.1145/3548456' },
       ];
+
+      const norm = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+      const getCitations = (p) => {
+        if (!citationData || !citationData.papers) return p.citations;
+        const key = norm(p.title);
+        if (typeof citationData.papers[key] === 'number') return citationData.papers[key];
+        const prefix = key.slice(0, 30);
+        for (const k in citationData.papers) {
+          if (k.startsWith(prefix) || key.startsWith(k.slice(0, 30))) {
+            return citationData.papers[k];
+          }
+        }
+        return p.citations;
+      };
+
+      const pubCount = citationData?.stats?.publications || 21;
+
       return (
         <section id="publications" style={{ background: '#fff', padding: '96px 24px' }}>
           <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto' }}>
@@ -402,72 +514,60 @@
                 <SectionLabel color="var(--qub-red)">Publications</SectionLabel>
                 <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', fontWeight: 700, color: 'var(--qub-navy)' }}>Selected Publications</h2>
               </div>
-              <a href="#" style={{ fontSize: 13, fontWeight: 600, color: 'var(--qub-red)', border: '1px solid var(--qub-red)', padding: '9px 18px', borderRadius: 8, transition: 'all 0.2s' }}
-                onMouseEnter={e => { e.target.style.background = 'var(--qub-red)'; e.target.style.color = '#fff'; }}
-                onMouseLeave={e => { e.target.style.background = 'transparent'; e.target.style.color = 'var(--qub-red)'; }}>
-                View All on Google Scholar →
-              </a>
+              <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+                <a href="publications.html" style={{ fontSize: 13, fontWeight: 600, color: '#fff', background: 'var(--qub-red)', padding: '9px 18px', borderRadius: 8, transition: 'all 0.2s' }}
+                  onMouseEnter={e => e.target.style.background = 'var(--qub-red-dark)'}
+                  onMouseLeave={e => e.target.style.background = 'var(--qub-red)'}>
+                  {`All Publications (${pubCount}) →`}
+                </a>
+                <a href={tweaks ? tweaks.scholarUrl : 'https://scholar.google.com/citations?user=5Q596f4AAAAJ'} target="_blank" rel="noreferrer" style={{ fontSize: 13, fontWeight: 600, color: 'var(--qub-red)', border: '1px solid var(--qub-red)', padding: '9px 18px', borderRadius: 8, transition: 'all 0.2s' }}
+                  onMouseEnter={e => { e.target.style.background = 'rgba(200,16,46,0.06)'; }}
+                  onMouseLeave={e => { e.target.style.background = 'transparent'; }}>
+                  Google Scholar ↗
+                </a>
+              </div>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-              {pubs.map((p, i) => (
-                <div key={i} style={{ display: 'grid', gridTemplateColumns: '60px 1fr auto', gap: 20, padding: '24px 0', borderBottom: '1px solid var(--qub-border)', alignItems: 'start' }}
-                  onMouseEnter={e => e.currentTarget.style.background = '#fafafa'}
-                  onMouseLeave={e => e.currentTarget.style.background = 'transparent'}>
-                  <div style={{ textAlign: 'center' }}>
-                    <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, fontWeight: 700, color: 'var(--qub-red)' }}>{p.year}</div>
+              {pubs.map((p, i) => {
+                const citeCount = getCitations(p);
+                return (
+                  <div key={i} style={{ display: 'grid', gridTemplateColumns: '60px 1fr auto', gap: 20, padding: '24px 0', borderBottom: '1px solid var(--qub-border)', alignItems: 'start' }}
+                    onMouseEnter={e => e.currentTarget.style.background = '#fafafa'}
+                    onMouseLeave={e => e.currentTarget.style.background = 'transparent'}>
+                    <div style={{ textAlign: 'center' }}>
+                      <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, fontWeight: 700, color: 'var(--qub-red)' }}>{p.year}</div>
+                    </div>
+                    <div>
+                      <p style={{ fontWeight: 600, color: 'var(--qub-navy)', fontSize: 15, marginBottom: 6, lineHeight: 1.4 }}>
+                        {p.doi ? (
+                          <a href={p.doi} target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}
+                            onMouseEnter={e => e.target.style.color = 'var(--qub-red)'}
+                            onMouseLeave={e => e.target.style.color = 'var(--qub-navy)'}>
+                            {p.title}
+                          </a>
+                        ) : p.title}
+                      </p>
+                      <p style={{ color: '#6b7280', fontSize: 13 }}>{p.venue}</p>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 6, flexShrink: 0 }}>
+                      <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+                        <span style={{ fontSize: 11, fontWeight: 600, padding: '3px 10px', borderRadius: 12, background: p.type === 'Journal' ? '#f0fdf4' : '#eff6ff', color: p.type === 'Journal' ? '#166534' : '#1d4ed8', letterSpacing: '0.04em' }}>{p.type}</span>
+                        {p.code && (
+                          <a href={p.code} target="_blank" rel="noreferrer"
+                            style={{ fontSize: 11, fontWeight: 600, padding: '3px 9px', borderRadius: 12, background: 'rgba(0,0,0,0.06)', color: 'var(--qub-navy)', border: '1px solid var(--qub-border)', textDecoration: 'none' }}
+                            onMouseEnter={e => e.target.style.borderColor = 'var(--qub-red)'}
+                            onMouseLeave={e => e.target.style.borderColor = 'var(--qub-border)'}>
+                            Code
+                          </a>
+                        )}
+                      </div>
+                      {typeof citeCount === 'number' && citeCount > 0 && (
+                        <span style={{ fontSize: 11, color: '#9ca3af' }}>{citeCount} citation{citeCount > 1 ? 's' : ''}</span>
+                      )}
+                    </div>
                   </div>
-                  <div>
-                    <p style={{ fontWeight: 600, color: 'var(--qub-navy)', fontSize: 15, marginBottom: 6, lineHeight: 1.4 }}>{p.title}</p>
-                    <p style={{ color: '#6b7280', fontSize: 13 }}>{p.venue}</p>
-                  </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 6, flexShrink: 0 }}>
-                    <span style={{ fontSize: 11, fontWeight: 600, padding: '3px 10px', borderRadius: 12, background: p.type === 'Journal' ? '#f0fdf4' : '#eff6ff', color: p.type === 'Journal' ? '#166534' : '#1d4ed8', letterSpacing: '0.04em' }}>{p.type}</span>
-                    {p.citations && <span style={{ fontSize: 11, color: '#9ca3af' }}>📈 {p.citations} citations</span>}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      );
-    }
-
-    /* ── INDUSTRY ── */
-    function Industry() {
-      const partners = ['University of Warwick', 'Middle East Technical University', 'Nazarbayev University', 'University of Glasgow', 'IEEE ITS Society', 'ACM'];
-      const offerings = [
-        { icon: '🚗', title: 'Autonomous Systems Consultancy', desc: 'Expert guidance on AI safety frameworks, perception system validation, and regulatory compliance for autonomous vehicle and robotics projects.' },
-        { icon: '🔬', title: 'Collaborative R&D', desc: 'Joint research projects on run-time monitoring, sensor fusion, and reliable AI — open to partnerships with automotive OEMs, Tier-1 suppliers, and tech companies.' },
-        { icon: '🎓', title: 'Training & Workshops', desc: 'Technical training on deep learning for perception, AI safety testing methodologies, and IoT-based monitoring systems for engineering teams.' },
-      ];
-      return (
-        <section id="industry" style={{ background: 'var(--qub-light)', padding: '96px 24px' }}>
-          <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto' }}>
-            <div style={{ textAlign: 'center', marginBottom: 56 }}>
-              <SectionLabel color="var(--qub-red)" center>Industry</SectionLabel>
-              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', fontWeight: 700, color: 'var(--qub-navy)', lineHeight: 1.2 }}>
-                Working with Industry
-              </h2>
-              <p style={{ color: '#6b7280', fontSize: 15, maxWidth: 560, margin: '12px auto 0', lineHeight: 1.7 }}>
-                Bridging the gap between cutting-edge research and industry application is central to my work.
-              </p>
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 24, marginBottom: 56 }}>
-              {offerings.map(o => (
-                <div key={o.title} style={{ background: '#fff', borderRadius: 12, padding: '32px 28px' }}>
-                  <div style={{ fontSize: 34, marginBottom: 14 }}>{o.icon}</div>
-                  <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 17, fontWeight: 700, color: 'var(--qub-navy)', marginBottom: 10 }}>{o.title}</h3>
-                  <p style={{ color: '#6b7280', fontSize: 14, lineHeight: 1.75 }}>{o.desc}</p>
-                </div>
-              ))}
-            </div>
-            <div style={{ textAlign: 'center' }}>
-              <p style={{ color: '#9ca3af', fontSize: 12, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 24 }}>Selected Partners &amp; Clients</p>
-              <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-                {partners.map(p => (
-                  <span key={p} style={{ background: '#fff', border: '1px solid var(--qub-border)', padding: '10px 22px', borderRadius: 8, fontSize: 13, fontWeight: 600, color: 'var(--qub-navy-mid, #2d3350)' }}>{p}</span>
-                ))}
-              </div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -480,9 +580,9 @@
         {
           name: 'Hi-Drive',
           logo: 'EU',
-          period: '2022–2025',
-          role: 'Postdoctoral Researcher',
-          org: 'WMG, University of Warwick',
+          period: 'Feb–Sept 2025',
+          role: 'Postdoctoral Research Fellow',
+          org: 'WMG, University of Warwick (Completed)',
           desc: 'Horizon Europe project developing a comprehensive validation framework for highly automated driving systems. Contributed self-assessment and run-time monitoring components for perception reliability.',
           url: 'https://www.hi-drive.eu',
           partners: '36 Partners',
@@ -492,8 +592,8 @@
           name: 'EVENTS',
           logo: 'EU',
           period: '2021–2024',
-          role: 'Postdoctoral Researcher',
-          org: 'WMG, University of Warwick',
+          role: 'Doctoral Researcher',
+          org: 'WMG, University of Warwick (Completed)',
           desc: 'EU-funded project focused on edge and cloud computing for connected automated vehicles. Led work on event detection and V2X-based hazard monitoring for safety-critical scenarios.',
           url: 'https://events-project.eu',
           partners: '14 Partners',
@@ -505,7 +605,7 @@
           <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 40, flexWrap: 'wrap', gap: 12 }}>
               <div>
-                <SectionLabel color="var(--qub-red)">Funded Projects</SectionLabel>
+                <SectionLabel color="var(--qub-red)">Past Projects</SectionLabel>
                 <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.8rem,3vw,2.4rem)', fontWeight: 700, color: 'var(--qub-navy)', lineHeight: 1.2 }}>
                   EU Research Projects
                 </h2>
@@ -534,7 +634,7 @@
                       <span style={{ fontSize: 11, fontWeight: 600, padding: '3px 10px', borderRadius: 8, background: 'var(--qub-light)', color: '#6b7280' }}>{p.partners}</span>
                     </div>
                     <p style={{ fontSize: 13, color: '#4b5563', lineHeight: 1.75, marginBottom: 16 }}>{p.desc}</p>
-                    <p style={{ fontSize: 12, color: '#9ca3af', marginBottom: 16 }}>📍 {p.org}</p>
+                    <p style={{ fontSize: 12, color: '#9ca3af', marginBottom: 16 }}>{p.org}</p>
                     <a href={p.url} target="_blank" rel="noreferrer"
                       style={{ fontSize: 12, fontWeight: 600, color: 'var(--qub-red)', border: '1px solid rgba(200,16,46,0.25)', padding: '6px 14px', borderRadius: 6, display: 'inline-block', transition: 'all .2s' }}
                       onMouseEnter={e => { e.target.style.background = 'var(--qub-red)'; e.target.style.color = '#fff'; }}
@@ -554,7 +654,7 @@
     function News() {
       const items = [
         { date: 'Sept 2025', text: 'Started as a Lecturer in Autonomous Systems at Queen\'s University Belfast!' },
-        { date: 'Feb 2025', text: 'Started as a Postdoctoral Research Fellow at WMG, University of Warwick.' },
+        { date: 'Feb–Sept 2025', text: 'Postdoctoral Research Fellow at WMG, University of Warwick.' },
         { date: 'Oct 2024', text: 'Submitted PhD Thesis: Run-time monitoring of perception module in automated driving systems.' },
       ];
       return (
@@ -599,7 +699,7 @@
             <div style={{ background: '#fff', borderRadius: 12, padding: '32px 28px', borderTop: '3px solid var(--qub-navy)' }}>
               <SectionLabel color="var(--qub-red)">Memberships</SectionLabel>
               <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, fontWeight: 700, color: 'var(--qub-navy)', marginBottom: 16 }}>Professional Affiliations</h3>
-              {['IEEE Member', 'Associate Fellow, Advance HE (PR307078)', 'EU Projects: EVENTS & Hi-Drive (Warwick)'].map(m => (
+              {['Queen\'s University Belfast (Lecturer in Autonomous Systems)', 'Member, IEEE (Intelligent Transportation Systems Society)', 'Associate Fellow, Advance HE (PR307078)'].map(m => (
                 <div key={m} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '7px 0', borderBottom: '1px solid var(--qub-border)', fontSize: 13.5, color: '#374151' }}>
                   <span style={{ width: 5, height: 5, borderRadius: '50%', background: 'var(--qub-navy)', flexShrink: 0 }}></span>
                   {m}
@@ -621,28 +721,27 @@
             <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', fontWeight: 700, color: 'var(--qub-navy)', marginBottom: 16 }}>
               Get in Touch
             </h2>
-            <p style={{ color: '#6b7280', fontSize: 15, lineHeight: 1.75, marginBottom: 48, maxWidth: 500, margin: '0 auto 48px' }}>
-              Whether you're a prospective PhD student, industry partner, or fellow researcher — I'd love to hear from you.
+            <p style={{ color: '#6b7280', fontSize: 15, lineHeight: 1.75, marginBottom: 40, maxWidth: 520, margin: '0 auto 40px' }}>
+              I welcome inquiries regarding PhD supervision, research collaboration, and academic visits.
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 20, marginBottom: 40 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16, marginBottom: 36 }}>
               {[
-                { label: 'Email', val: tweaks.email, href: `mailto:${tweaks.email}`, icon: '✉️' },
-                { label: 'Office', val: tweaks.office, href: '#', icon: '📍' },
-                { label: 'University', val: "Queen's University Belfast", href: 'https://www.qub.ac.uk', icon: '🎓' },
+                { label: 'Email', val: tweaks.email, href: `mailto:${tweaks.email}` },
+                { label: 'Office', val: tweaks.office, href: '#' },
+                { label: 'Institution', val: "Queen's University Belfast", href: 'https://www.qub.ac.uk' },
               ].map(c => (
-                <a key={c.label} href={c.href} style={{ background: 'var(--qub-light)', borderRadius: 12, padding: '28px 20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, transition: 'all 0.2s', border: '1px solid transparent' }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--qub-red)'; e.currentTarget.style.background = '#fff'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(200,16,46,0.1)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.background = 'var(--qub-light)'; e.currentTarget.style.boxShadow = 'none'; }}>
-                  <span style={{ fontSize: 28 }}>{c.icon}</span>
+                <a key={c.label} href={c.href} style={{ background: 'var(--qub-light)', borderRadius: 10, padding: '24px 20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, transition: 'all 0.2s', border: '1px solid var(--qub-border)' }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--qub-red)'; e.currentTarget.style.background = '#fff'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.06)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--qub-border)'; e.currentTarget.style.background = 'var(--qub-light)'; e.currentTarget.style.boxShadow = 'none'; }}>
                   <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--qub-red)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>{c.label}</span>
-                  <span style={{ fontSize: 13, color: 'var(--qub-navy)', fontWeight: 500, textAlign: 'center', lineHeight: 1.4 }}>{c.val}</span>
+                  <span style={{ fontSize: 13.5, color: 'var(--qub-navy)', fontWeight: 500, textAlign: 'center', lineHeight: 1.4 }}>{c.val}</span>
                 </a>
               ))}
             </div>
-            <a href={`mailto:${tweaks.email}?subject=Research Enquiry`}
-              style={{ display: 'inline-block', background: 'var(--qub-red)', color: '#fff', padding: '16px 40px', borderRadius: 8, fontWeight: 700, fontSize: 16, transition: 'all 0.2s' }}
-              onMouseEnter={e => { e.target.style.background = 'var(--qub-red-dark)'; e.target.style.transform = 'translateY(-2px)'; e.target.style.boxShadow = '0 8px 24px rgba(200,16,46,0.3)'; }}
-              onMouseLeave={e => { e.target.style.background = 'var(--qub-red)'; e.target.style.transform = 'none'; e.target.style.boxShadow = 'none'; }}>
+            <a href={`mailto:${tweaks.email}?subject=Academic Enquiry`}
+              style={{ display: 'inline-block', background: 'var(--qub-red)', color: '#fff', padding: '13px 28px', borderRadius: 8, fontWeight: 600, fontSize: 14, transition: 'all 0.2s' }}
+              onMouseEnter={e => { e.target.style.background = 'var(--qub-red-dark)'; }}
+              onMouseLeave={e => { e.target.style.background = 'var(--qub-red)'; }}>
               Send an Email
             </a>
           </div>
@@ -683,9 +782,9 @@
     function SectionLabel({ children, color, center }) {
       return (
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12, justifyContent: center ? 'center' : 'flex-start' }}>
-          <span style={{ display: 'block', width: 24, height: 2, background: color, borderRadius: 2 }}></span>
+          <span style={{ display: 'block', width: 18, height: 2, background: color, borderRadius: 1 }}></span>
           <span style={{ fontSize: 11, fontWeight: 700, color: color, letterSpacing: '0.12em', textTransform: 'uppercase' }}>{children}</span>
-          <span style={{ display: 'block', width: 24, height: 2, background: color, borderRadius: 2 }}></span>
+          {center && <span style={{ display: 'block', width: 18, height: 2, background: color, borderRadius: 1 }}></span>}
         </div>
       );
     }

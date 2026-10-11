@@ -4,7 +4,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Supervision | Dr. Hakan Yekta Yatbaz</title>
+  <title>PhD Opportunities & Student Supervision | Dr. Hakan Yekta Yatbaz | Queen's University Belfast</title>
+  <meta name="description" content="PhD research opportunities, fully funded DfE studentships, and student supervision by Dr. Hakan Yekta Yatbaz at Queen's University Belfast. Guidance for UK, EU, and international applicants in AI safety, LiDAR perception, and autonomous systems." />
+  <meta name="keywords" content="PhD opportunities Queen's University Belfast, Funded PhD Autonomous Vehicles UK, PhD studentships AI safety, EU PhD students UK funding, DfE studentships Belfast, LiDAR 3D perception PhD, QUB EEECS PhD supervision, Hakan Yatbaz, Common Travel Area Irish students PhD" />
+  <meta name="author" content="Dr. Hakan Yekta Yatbaz" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://yatbazhakan.github.io/supervision.html" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yatbazhakan.github.io/supervision.html" />
+  <meta property="og:title" content="PhD Opportunities & Student Supervision | Dr. Hakan Yekta Yatbaz" />
+  <meta property="og:description" content="PhD research opportunities and funded studentships at Queen's University Belfast in AI safety, LiDAR perception, and autonomous driving. Guidance for UK, EU, and international applicants." />
+  <meta property="og:image" content="https://yatbazhakan.github.io/photo.jpg" />
+  <meta property="og:site_name" content="Dr. Hakan Yekta Yatbaz" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="PhD Opportunities & Student Supervision | Dr. Hakan Yekta Yatbaz" />
+  <meta name="twitter:description" content="PhD research opportunities and funded studentships at Queen's University Belfast in AI safety, LiDAR perception, and autonomous driving." />
+  <meta name="twitter:image" content="https://yatbazhakan.github.io/photo.jpg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -517,6 +537,81 @@
       line-height: 1.65;
     }
 
+    /* Topics & Funding Grids */
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 18px;
+      margin-bottom: 52px;
+    }
+
+    .topic-card {
+      background: #fff;
+      border: 1px solid var(--qub-border);
+      border-top: 3px solid var(--qub-red);
+      border-radius: 12px;
+      padding: 24px 22px;
+    }
+
+    .topic-num {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--qub-red);
+      font-family: monospace;
+      letter-spacing: .08em;
+      margin-bottom: 10px;
+    }
+
+    .topic-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--qub-navy);
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+
+    .topic-card p {
+      font-size: 13px;
+      color: #6b7280;
+      line-height: 1.65;
+    }
+
+    .funding-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-bottom: 52px;
+    }
+
+    .funding-card {
+      background: var(--qub-light);
+      border-radius: 12px;
+      padding: 24px 22px;
+      border-left: 3px solid var(--qub-navy);
+    }
+
+    .funding-card.highlight {
+      border-left-color: var(--qub-red);
+      background: #fff;
+      border: 1px solid var(--qub-border);
+      border-left: 4px solid var(--qub-red);
+    }
+
+    .funding-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--qub-navy);
+      margin-bottom: 8px;
+    }
+
+    .funding-card p {
+      font-size: 13px;
+      color: #4b5563;
+      line-height: 1.65;
+    }
+
     footer {
       background: var(--qub-navy);
       padding: 32px 24px;
@@ -563,6 +658,14 @@
       .expect-grid {
         grid-template-columns: 1fr;
       }
+
+      .topics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .funding-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -579,6 +682,7 @@
         <a href="index.html#about">About</a>
         <a href="index.html#research">Research</a>
         <a href="index.html#phd-opportunities">PhD</a>
+        <a href="publications.html">Publications</a>
         <a href="teaching.html">Teaching</a>
         <a href="supervision.html" class="active">Supervision</a>
         <a href="index.html#contact" class="btn-cta">Contact</a>
@@ -591,6 +695,7 @@
     <a href="index.html#about">About</a>
     <a href="index.html#research">Research</a>
     <a href="index.html#phd-opportunities">PhD</a>
+    <a href="publications.html">Publications</a>
     <a href="teaching.html">Teaching</a>
     <a href="supervision.html">Supervision</a>
     <a href="index.html#contact">Contact</a>
@@ -611,24 +716,50 @@
 
   <div class="page-body">
 
-    <!-- QUB Current -->
+    <!-- QUB Supervision -->
     <div class="section-heading">
-      <div class="sec-label"><span class="bar"></span><span class="sec-label-text">Current</span><span
-          class="bar"></span></div>
-      <h2>Queen's University Belfast</h2>
-      <p>Currently supporting BSc Computer Science students with their graduation projects. Please contact me directly
-        regarding PhD supervision inquiries.</p>
+      <div class="sec-label"><span class="bar"></span><span class="sec-label-text">Queen's University Belfast</span></div>
+      <h2>Student Supervision</h2>
+      <p>Supervising MSc and BSc students at Queen's University Belfast across AI safety, computer vision, and autonomous systems. Please contact me directly regarding PhD supervision inquiries.</p>
     </div>
 
+    <!-- MSc in AI Supervision -->
+    <div class="inst-header" style="margin-bottom:24px;">
+      <div class="inst-dot"></div>
+      <div>
+        <div class="inst-name">MSc in Artificial Intelligence — Dissertation</div>
+        <div class="inst-period">Queen's University Belfast · Supervisor</div>
+      </div>
+    </div>
+
+    <div class="student-grid" style="margin-bottom:48px;">
+      <div class="student-card">
+        <div class="student-card-top">
+          <div class="student-avatar" style="background:var(--qub-navy);color:#fff;">TY</div>
+          <div>
+            <div class="student-name">Tin Yu</div>
+            <div class="student-degree">MSc in Artificial Intelligence</div>
+          </div>
+        </div>
+        <p class="student-thesis">"Compact and Explainable Activation Encodings for Run-time Monitoring of 3D Object Detection under Domain Shift"</p>
+        <div class="student-meta">
+          <span class="tag tag-completed">Completed</span>
+          <span class="tag">MSc Dissertation</span>
+          <span class="tag">Supervisor</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BSc Computer Science -->
     <div class="inst-header" style="margin-bottom:24px;">
       <div class="inst-dot"></div>
       <div>
         <div class="inst-name">BSc Computer Science — Graduation Projects</div>
-        <div class="inst-period">Current · Unofficial Supervisor</div>
+        <div class="inst-period">Current · Project Supervisor</div>
       </div>
     </div>
 
-    <div class="student-grid" style="margin-bottom:40px;">
+    <div class="student-grid" style="margin-bottom:48px;">
       <div class="student-card">
         <div class="student-card-top">
           <div class="student-avatar">JA</div>
@@ -640,7 +771,7 @@
         <p class="student-thesis">"Development of an AI Driven Web Application Assisting Students with Exam Preparation"
         </p>
         <div class="student-meta">
-          <span class="tag tag-current">● Current</span>
+          <span class="tag tag-current">Current</span>
           <span class="tag">Graduation Project</span>
         </div>
       </div>
@@ -656,7 +787,7 @@
         <p class="student-thesis">"Feature Lens: A Tool for Visualising and Comparing Neural Representations in Object
           Detection"</p>
         <div class="student-meta">
-          <span class="tag tag-current">● Current</span>
+          <span class="tag tag-current">Current</span>
           <span class="tag">Graduation Project</span>
         </div>
       </div>
@@ -671,7 +802,7 @@
         </div>
         <p class="student-thesis">"Vision Introspector: A GUI Tool for Analysing Object Detection in Driving Images"</p>
         <div class="student-meta">
-          <span class="tag tag-current">● Current</span>
+          <span class="tag tag-current">Current</span>
           <span class="tag">Graduation Project</span>
         </div>
       </div>
@@ -681,96 +812,154 @@
         <div
           style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--qub-navy);margin-bottom:8px;">
           PhD Opportunities</div>
-        <p style="font-size:14px;color:#6b7280;margin-bottom:16px;">If you are interested in PhD research in autonomous
-          systems, please contact me directly.</p>
-        <a href="mailto:yatbazhakan@gmail.com" class="tag tag-open" style="padding:8px 16px;border-radius:20px;">Contact
-          Me</a>
+        <p style="font-size:14px;color:#6b7280;margin-bottom:16px;">I welcome inquiries from UK, EU, and international students for doctoral research in AI safety and autonomous systems.</p>
+        <a href="#prospective-students" class="tag tag-open" style="padding:8px 16px;border-radius:20px;">View Topics &amp; Funding ↓</a>
       </div>
     </div>
 
-    <!-- Past / Warwick
-  <div class="section-heading">
-    <div class="sec-label"><span class="bar"></span><span class="sec-label-text">Previous</span><span class="bar"></span></div>
-    <h2>University of Warwick</h2>
-  </div>
+    <!-- Prospective Students & Topics -->
+    <div id="prospective-students" style="scroll-margin-top: 80px;">
+      <div class="section-heading">
+        <div class="sec-label"><span class="bar"></span><span class="sec-label-text">Research Opportunities</span></div>
+        <h2>Doctoral Research Topics Open for Supervision</h2>
+        <p>I welcome PhD inquiries from motivated prospective students with backgrounds in Computer Science, Machine Learning, Robotics, or Electrical &amp; Electronic Engineering. Proposals can align with the following core themes or propose related investigations:</p>
+      </div>
 
-  <div class="inst-header" style="margin-bottom:24px;">
-    <div class="inst-dot" style="background:var(--qub-navy)"></div>
-    <div>
-      <div class="inst-name">WMG — Postdoctoral &amp; PhD Collaboration</div>
-      <div class="inst-period">2020–2025</div>
-    </div>
-  </div>
-
-  <div class="student-grid" style="margin-bottom:56px;">
-
-    <div class="student-card">
-      <div class="student-card-top">
-        <div class="student-avatar" style="background:#2d3a55;">TY</div>
-        <div>
-          <div class="student-name">T. A. Yılmaz</div>
-          <div class="student-degree">MSc Research</div>
+      <div class="topics-grid">
+        <div class="topic-card">
+          <div class="topic-num">TOPIC 01</div>
+          <h3>Run-Time Monitoring &amp; Introspection for 3D Perception</h3>
+          <p>Investigating neural activation dynamics, epistemic uncertainty estimation, and out-of-distribution (OOD) failure detection in deep LiDAR and camera networks deployed in dynamic driving environments.</p>
+        </div>
+        <div class="topic-card">
+          <div class="topic-num">TOPIC 02</div>
+          <h3>Compact &amp; Explainable Encodings for Automotive ECUs</h3>
+          <p>Designing lightweight activation compression layers and autoencoder-based latent representations capable of real-time introspective safety monitoring on resource-constrained automotive hardware.</p>
+        </div>
+        <div class="topic-card">
+          <div class="topic-num">TOPIC 03</div>
+          <h3>Resilient Cooperative Autonomy &amp; V2X Perception</h3>
+          <p>Developing multi-agent collaborative perception frameworks with spatial filtering and integrity monitoring to ensure fault tolerance in Connected and Automated Vehicles (CAVs).</p>
+        </div>
+        <div class="topic-card">
+          <div class="topic-num">TOPIC 04</div>
+          <h3>Sensor Robustness under Adverse Weather &amp; Degradation</h3>
+          <p>Quantifying and mitigating perception degradation in adverse operating conditions (rain, fog, sensor dirt, occlusion) through self-assessing multi-modal sensor fusion.</p>
         </div>
       </div>
-      <p class="student-thesis">"Hierarchical Human Activity Recognition with Fusion of Audio and Multiple Inertial Sensor Modalities"</p>
-      <div class="student-meta">
-        <span class="tag tag-completed">✓ Completed 2025</span>
-        <span class="tag">Co-Supervisor</span>
-        <span class="tag">Scientific Reports</span>
-      </div>
-    </div>
-  </div> -->
 
-    <!-- Expectations -->
-    <div class="section-heading">
-      <div class="sec-label"><span class="bar"></span><span class="sec-label-text">Working Together</span><span
-          class="bar"></span></div>
-      <h2>What to Expect</h2>
-    </div>
-    <div class="expect-grid">
-      <div class="expect-card">
-        <h3>🎓 What I Offer</h3>
-        <ul>
-          <li>Regular one-to-one supervision meetings (weekly or fortnightly)</li>
-          <li>Technical mentorship in DNN introspection, autonomous systems, and AI safety</li>
-          <li>Access to GPU compute resources and real automotive datasets</li>
-          <li>Guidance on publications and conference attendance</li>
-          <!-- <li>Network access via EU projects (EVENTS, Hi-Drive) and QUB collaborators</li> -->
-          <li>Constructive, timely feedback on writing and research ideas</li>
-        </ul>
+      <!-- Funding & Information for EU / International Applicants -->
+      <div class="section-heading">
+        <div class="sec-label"><span class="bar"></span><span class="sec-label-text">Funding &amp; Eligibility</span></div>
+        <h2>Information for UK, EU, and International Applicants</h2>
+        <p>Queen's University Belfast is a prestigious Russell Group institution offering competitive postgraduate research studentships and scholarships. Key pathways include:</p>
       </div>
-      <div class="expect-card">
-        <h3>💡 What I Look For</h3>
-        <ul>
-          <li>Background in machine learning, computer vision, or programming</li>
-          <li>Python proficiency (PyTorch or TensorFlow experience preferred)</li>
-          <li>Curiosity and willingness to engage deeply with literature</li>
-          <li>Self-motivation and ability to manage your own research timeline</li>
-          <li>Good written and spoken English</li>
-          <li>Interest in safety-critical applications — autonomous vehicles, robotics, or health</li>
-        </ul>
+
+      <div class="funding-grid">
+        <div class="funding-card highlight">
+          <h3>Republic of Ireland &amp; Common Travel Area (CTA)</h3>
+          <p>Under the UK-Ireland Common Travel Area agreement, <strong>Republic of Ireland (ROI) citizens pay Home (UK domestic) tuition fees</strong> at Queen's University Belfast and do not require a student visa. This provides a straightforward, cost-effective route for Irish and eligible EU residents.</p>
+        </div>
+
+        <div class="funding-card">
+          <h3>DfE Northern Ireland Postgraduate Studentships</h3>
+          <p>The Department for the Economy (DfE) funds competitive annual PhD studentships at QUB covering <strong>100% of approved tuition fees plus an annual tax-free living stipend</strong> (currently over £19,000/year). Open to eligible UK, ROI, and EU candidates meeting residency criteria.</p>
+        </div>
+
+        <div class="funding-card">
+          <h3>QUB International Scholarships &amp; External Grants</h3>
+          <p>International and EU candidates can apply for university-level tuition fee awards. I also actively support competitive candidates applying with external scholarships (e.g., home government sponsorships, national research councils, Marie Skłodowska-Curie networks, TÜBİTAK).</p>
+        </div>
+
+        <div class="funding-card">
+          <h3>Visiting Researchers &amp; Erasmus+ Exchanges</h3>
+          <p>I welcome doctoral students and Master's thesis interns from European institutions seeking 3–6 month collaborative research visits or lab placements in Belfast focused on AI safety and autonomous perception.</p>
+        </div>
       </div>
-    </div>
 
-    <div
-      style="text-align:center;margin-bottom:52px;margin-top:32px;padding:40px;background:var(--qub-light);border-radius:12px;">
-      <p style="font-size:16px;color:var(--qub-navy);line-height:1.6;">I am always looking for motivated PhD students.
-        If you are interested in my research areas, please reach out via email to discuss potential opportunities.</p>
-    </div>
+      <!-- Expectations & Supervision -->
+      <div class="section-heading">
+        <div class="sec-label"><span class="bar"></span><span class="sec-label-text">Supervision Details</span></div>
+        <h2>Supervision Approach &amp; Prerequisites</h2>
+      </div>
 
-    <!-- CTA -->
-    <div
-      style="background:var(--qub-navy);border-radius:14px;padding:40px 36px;display:flex;justify-content:center;align-items:center;text-align:center;">
-      <a href="mailto:yatbazhakan@gmail.com?subject=PhD Supervision Enquiry"
-        style="background:var(--qub-red);color:#fff;padding:13px 26px;border-radius:8px;font-weight:600;font-size:14px;white-space:nowrap;"
-        onmouseover="this.style.background='#a00d24'" onmouseout="this.style.background='#C8102E'">Contact Dr.
-        Yatbaz</a>
+      <div class="expect-grid">
+        <div class="expect-card">
+          <h3>Supervision Approach</h3>
+          <ul>
+            <li>Regular one-to-one supervision meetings (weekly or fortnightly)</li>
+            <li>Technical mentorship in DNN introspection, autonomous systems, and AI safety</li>
+            <li>Access to high-performance GPU compute clusters and benchmark datasets (nuScenes, KITTI, Waymo)</li>
+            <li>Guidance on peer-reviewed publications and international conference participation (CVPR, ICCV, ITSC, IV)</li>
+            <li>Constructive, timely feedback on research manuscripts and dissertation writing</li>
+          </ul>
+        </div>
+        <div class="expect-card">
+          <h3>Prerequisites &amp; What I Look For</h3>
+          <ul>
+            <li>Strong degree (First or Upper Second Class / equivalent) in Computer Science, Machine Learning, Robotics, or related fields</li>
+            <li>Solid Python proficiency and familiarity with deep learning frameworks (PyTorch preferred)</li>
+            <li>Curiosity and willingness to engage deeply with peer-reviewed literature</li>
+            <li>Self-motivation and ability to manage research milestones independently</li>
+            <li>Strong written and spoken communication skills in English</li>
+            <li>Genuine passion for safety-critical AI and autonomous perception</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Application Steps -->
+      <div class="section-heading">
+        <div class="sec-label"><span class="bar"></span><span class="sec-label-text">Application Process</span></div>
+        <h2>How to Inquire &amp; Apply</h2>
+        <p>To ensure a fast and constructive response, prospective applicants are encouraged to follow this three-step process:</p>
+      </div>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="process-num">1</div>
+          <div class="process-content">
+            <h3>Informal Email Inquiry</h3>
+            <p>Send an introductory email to <a href="mailto:yatbazhakan@gmail.com" style="color:var(--qub-red);font-weight:600;">yatbazhakan@gmail.com</a> with the subject line <code>[PhD Inquiry] Your Name - Proposed Area</code>. Please attach your CV (with GPA/degree class), academic transcripts, and a brief (1–2 page) summary of your research interests or proposal.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-num">2</div>
+          <div class="process-content">
+            <h3>Research Alignment &amp; Interview</h3>
+            <p>If there is strong alignment with ongoing lab research and upcoming studentship cycles, we will arrange a video call to discuss potential project scope, refine your research proposal, and identify the most suitable funding competition.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="process-num">3</div>
+          <div class="process-content">
+            <h3>Formal Application via QUB Direct</h3>
+            <p>Submit your formal application through the Queen's University Belfast Direct Admissions Portal, naming Dr. Hakan Yekta Yatbaz as your proposed primary supervisor. The formal application requires reference letters, verified degree certificates, and an agreed research proposal.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div style="background:var(--qub-navy);border-radius:14px;padding:44px 36px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-bottom:20px;">
+        <div>
+          <p style="font-size:11px;font-weight:700;color:var(--qub-red);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;">Ready to Discuss Your Research?</p>
+          <h3 style="font-family:'Playfair Display',serif;font-size:22px;color:#fff;margin-bottom:6px;">Inquire About PhD Supervision</h3>
+          <p style="font-size:14px;color:rgba(255,255,255,0.65);max-width:560px;">I welcome inquiries year-round for upcoming DfE and international scholarship admission rounds.</p>
+        </div>
+        <a href="mailto:yatbazhakan@gmail.com?subject=PhD%20Supervision%20Enquiry%20-%20[Your%20Name]"
+          style="background:var(--qub-red);color:#fff;padding:14px 28px;border-radius:8px;font-weight:600;font-size:14px;white-space:nowrap;transition:background .2s;"
+          onmouseover="this.style.background='#a00d24'" onmouseout="this.style.background='#C8102E'">
+          Contact Dr. Yatbaz →
+        </a>
+      </div>
     </div>
 
   </div>
 
   <footer>
     <a href="index.html">Home</a><span class="fdiv">·</span>
+    <a href="publications.html">Publications</a><span class="fdiv">·</span>
     <a href="teaching.html">Teaching</a><span class="fdiv">·</span>
     <a href="supervision.html">Supervision</a><span class="fdiv">·</span>
     <a href="index.html#contact">Contact</a><span class="fdiv">·</span>
