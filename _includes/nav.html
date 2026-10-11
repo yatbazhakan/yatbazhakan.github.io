@@ -1,0 +1,24 @@
+<header class="site-nav" id="top">
+  <div class="container nav-inner">
+    <a href="{{ '/' | relative_url }}" class="nav-brand" aria-label="Home">
+      <span class="nav-logo" aria-hidden="true">Q</span>
+      <span class="nav-brand-text">
+        <span class="nav-brand-sub">Queen's University Belfast</span>
+        <span class="nav-brand-name">{{ site.author.short_name }}</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="nav-links" aria-label="Main">
+      {%- for item in site.navigation %}
+        {%- assign item_url = item.url | relative_url -%}
+        {%- assign is_active = false -%}
+        {%- unless item.url contains '#' -%}
+          {%- if page.url == item.url -%}{%- assign is_active = true -%}{%- endif -%}
+        {%- endunless %}
+      <a href="{{ item_url }}" class="{% if item.highlight %}nav-cta{% endif %}{% if is_active %} active{% endif %}"{% if is_active %} aria-current="page"{% endif %}>{{ item.label }}</a>
+      {%- endfor %}
+    </nav>
+  </div>
+</header>

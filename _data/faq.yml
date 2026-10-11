@@ -1,0 +1,17 @@
+# PhD FAQ — rendered on /phd/ and emitted as FAQPage structured data for search engines.
+# Answers may contain simple HTML.
+
+- q: "Are fully funded PhD studentships available for Northern Ireland, UK, and Irish students?"
+  a: "Yes. The Department for the Economy (DfE) Northern Ireland funds competitive annual PhD studentships at Queen's University Belfast covering <strong>100% of approved tuition fees plus a tax-free living stipend</strong> (currently over £19,000 per year). Under the UK–Ireland Common Travel Area (CTA), citizens of the Republic of Ireland pay Home tuition fees and do not need a student visa."
+
+- q: "Can I apply while I am still finishing my undergraduate or Master's degree?"
+  a: "Yes. Applicants should hold <em>or expect to achieve</em> a First Class or Upper Second Class (2:1) Honours degree, or an equivalent Master's degree. Final-year students from Queen's, Ulster University, and universities across the island of Ireland and Great Britain are very welcome to get in touch before they graduate."
+
+- q: "What research areas are currently open for PhD supervision?"
+  a: "I welcome proposals aligned with four research strands: <strong>(1) Robust Sensing for AI in Autonomy</strong>, <strong>(2) Run-Time Monitoring &amp; Introspection</strong>, <strong>(3) Cooperative Autonomy</strong>, and <strong>(4) Explainable AI (XAI)</strong>. Interdisciplinary proposals combining machine learning, computer vision, and robotics are also encouraged."
+
+- q: "What academic background do I need?"
+  a: "A strong degree in Computer Science, Machine Learning, Robotics, Electrical &amp; Electronic Engineering, or a closely related discipline. Good Python skills and familiarity with a deep learning framework (PyTorch preferred) are essential."
+
+- q: "When should I get in touch?"
+  a: "DfE studentship competitions typically run through the autumn and winter, with deadlines usually between January and March for an autumn start. Informal enquiries are welcome year-round, and it is best to contact me at <a href=\"mailto:h.yatbaz@qub.ac.uk\">h.yatbaz@qub.ac.uk</a> several months before the deadline so we can develop a proposal together."

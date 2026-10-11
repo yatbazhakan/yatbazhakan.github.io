@@ -1,0 +1,18 @@
+# Recent news — newest first. The home page shows the first 6 entries.
+# `link` is optional.
+
+- date: "Oct 2026"
+  text: 'Gave an invited seminar for the IEEE QUB Student Branch: "Can We Trust AI in Autonomous Systems? From Perception to Run-Time Error Detection".'
+  link: "/#talks"
+
+- date: "2026"
+  text: "Appointed Associate Editor for Connected Mobility and Automation, Frontiers in Future Transportation."
+
+- date: "Sept 2025"
+  text: "Joined Queen's University Belfast as Lecturer in Autonomous Systems (School of EEECS)."
+
+- date: "Feb–Sept 2025"
+  text: "Postdoctoral Research Fellow at WMG, University of Warwick, working on the EU-funded EVENTS and Hi-Drive projects."
+
+- date: "Oct 2024"
+  text: "Submitted PhD thesis on run-time error detection for DNN-based perception in automated driving systems."

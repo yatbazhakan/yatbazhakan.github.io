@@ -4,7 +4,7 @@ Automatically update citation metrics and individual publication citation counts
 from Google Scholar (with fallback to OpenAlex) for Dr. Hakan Yekta Yatbaz.
 
 Writes:
-- citations.json (read by client-side JavaScript on index.html and publications.html)
+- _data/citations.json (read by Jekyll at build time via site.data.citations)
 - Updates hardcoded fallbacks in index.html and publications.html if needed.
 """
 
@@ -149,8 +149,8 @@ def update_citations():
         'papers_detail': data['papers']
     }
 
-    # Save citations.json in current directory
-    output_path = 'citations.json'
+    # Save to _data/citations.json (read by Jekyll at build time)
+    output_path = os.path.join('_data', 'citations.json')
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
     print(f"Saved live citation data to {output_path}")

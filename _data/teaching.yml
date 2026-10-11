@@ -1,0 +1,32 @@
+# Teaching history — newest institution first.
+
+- institution: "Queen's University Belfast"
+  period: "2025 — Present"
+  roles:
+    - title: "Module Lead: AI Ethics (MSc)"
+      badge: "Summer 2026"
+      description: "Designing and developing a new Master's level module on the ethical implications, trustworthiness, and safety of modern AI systems. The curriculum connects technical run-time introspection with regulatory frameworks for AI safety, including the EU AI Act and ISO 26262."
+
+- institution: "University of Warwick — WMG"
+  period: "Oct 2020 — Jul 2025"
+  roles:
+    - title: "Graduate Teaching Assistant"
+      badge: "5 years"
+      description: "Delivered laboratory sessions and seminars, and marked assignments across undergraduate and postgraduate engineering modules within WMG. Mentored students on capstone projects and provided technical guidance on Python, C++, and machine learning fundamentals."
+      items:
+        - "Lab sessions for perception and machine learning modules"
+        - "Mentoring of final-year and MSc capstone projects"
+        - "Assessment and feedback on programming assignments"
+        - "Technical guidance on Python, C++, and deep learning frameworks"
+
+- institution: "Middle East Technical University (METU NCC)"
+  period: "Sep 2018 — Oct 2020"
+  roles:
+    - title: "Graduate Teaching Assistant"
+      badge: "2 years"
+      description: "Conducted lab sessions and tutorials, developed assignments, and evaluated coursework for undergraduate modules."
+      items:
+        - "C Programming and Introduction to Programming"
+        - "Discrete Computational Structures"
+        - "Algorithms and Data Management"
+        - "Computer Engineering fundamentals"

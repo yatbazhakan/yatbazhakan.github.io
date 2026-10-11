@@ -1,0 +1,273 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Publications — single source of truth for the Publications page and the
+# "Selected Publications" list on the home page.
+#
+# Fields
+#   title     : exact paper title
+#   authors   : author list; "H. Y. Yatbaz" is automatically shown in bold
+#   venue     : venue string as it should be displayed
+#   year      : publication year (used for grouping, newest first)
+#   type      : journal | conference | thesis | chapter
+#   topic     : autonomous | sensing   (drives the topic filter)
+#   area      : short subject label shown as a tag
+#   selected  : true to feature on the home page
+#   key       : lowercase title with only a–z/0–9 (matches _data/citations.json,
+#               which is refreshed weekly by .github/workflows/update_citations.yml)
+#   citations : fallback count if the key is not found in citations.json
+#   links     : list of { label, url }
+#
+# To add a paper: copy an entry, edit it, keep the list roughly newest-first.
+# ─────────────────────────────────────────────────────────────────────────────
+
+- title: "ZhadigerAI: Software-as-a-Service AI Platform for Kazakh and English"
+  authors: "A. Baglanova, N. Fakhrutdinov, U. Azirakhmet, R. Kalimzhanov, Z. Babakhojayeva, H. Y. Yatbaz, A. Yazıcı"
+  venue: "32nd International Conference on Multimedia Modeling (MMM 2026) · Lecture Notes in Computer Science (LNCS), Springer Nature"
+  year: 2026
+  type: conference
+  topic: sensing
+  area: "AI Platforms / NLP"
+  key: zhadigeraisoftwareasaserviceaiplatformforkazakhandenglish
+  links:
+    - { label: "DOI", url: "https://doi.org/10.1007/978-981-95-6963-2_11" }
+
+- title: "Multi-Layer Self-Assessment with Filtering for 3D Object Detection in Autonomous Vehicles"
+  authors: "H. Y. Yatbaz, K. Koufos, M. Dianati, R. Woodman"
+  venue: "ACM Transactions on Intelligent Systems and Technology (TIST), Vol. 17, No. 2"
+  year: 2025
+  type: journal
+  topic: autonomous
+  area: "Autonomous Systems"
+  selected: true
+  key: multilayerselfassessmentwithfilteringfor3dobjectdetectioninautonomousvehicles
+  citations: 1
+  links:
+    - { label: "DOI", url: "https://doi.org/10.1145/3776551" }
+    - { label: "Code", url: "https://github.com/yatbazhakan/multi-layer-introspection" }
+
+- title: "Hierarchical Human Activity Recognition with Fusion of Audio and Multiple Inertial Sensor Modalities"
+  authors: "T. A. Yılmaz, H. Y. Yatbaz, E. Ever, A. Yazıcı"
+  venue: "Scientific Reports (Nature Portfolio), 15(1)"
+  year: 2025
+  type: journal
+  topic: sensing
+  area: "Multimodal Sensing"
+  key: hierarchicalhumanactivityrecognitionwithfusionofaudioandmultipleinertialsensormodalities
+  citations: 5
+  links:
+    - { label: "DOI", url: "https://doi.org/10.1038/s41598-025-29801-w" }
+
+- title: "Introspection of DNN-Based Perception Functions in Automated Driving Systems: State-of-the-Art and Open Research Challenges"
+  authors: "H. Y. Yatbaz, M. Dianati, R. Woodman"
+  venue: "IEEE Transactions on Intelligent Transportation Systems (T-ITS), Vol. 25, No. 5, pp. 3317–3336"
+  year: 2024
+  type: journal
+  topic: autonomous
+  area: "Autonomous Driving"
+  selected: true
+  key: introspectionofdnnbasedperceptionfunctionsinautomateddrivingsystemsstateoftheartandopenresearchchallenges
+  citations: 36
+  links:
+    - { label: "DOI", url: "https://doi.org/10.1109/TITS.2023.3315070" }
+
+- title: "Run-Time Introspection of 2D Object Detection in Automated Driving Systems Using Learning Representations"
+  authors: "H. Y. Yatbaz, M. Dianati, K. Koufos, R. Woodman"
+  venue: "IEEE Transactions on Intelligent Vehicles (T-IV), Vol. 9, No. 5, pp. 4880–4892"
+  year: 2024
+  type: journal
+  topic: autonomous
+  area: "Autonomous Driving"
+  selected: true
+  key: runtimeintrospectionof2dobjectdetectioninautomateddrivingsystemsusinglearningrepresentations
+  citations: 12
+  links:
+    - { label: "DOI", url: "https://doi.org/10.1109/TIV.2024.3385531" }
+    - { label: "arXiv", url: "https://arxiv.org/abs/2403.01172" }
+    - { label: "PDF", url: "https://arxiv.org/pdf/2403.01172" }
+
+- title: "Run-Time Monitoring of 3D Object Detection in Automated Driving Systems Using Early Layer Neural Activation Patterns"
+  authors: "H. Y. Yatbaz, M. Dianati, K. Koufos, R. Woodman"
+  venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW), SAIAD Workshop"
+  year: 2024
+  type: conference
+  topic: autonomous
+  area: "Autonomous Driving"
+  selected: true
+  key: runtimemonitoringof3dobjectdetectioninautomateddrivingsystemsusingearlylayerneuralactivationpatterns
+  citations: 9
+  links:
+    - { label: "DOI", url: "https://doi.org/10.1109/CVPRW63382.2024.00356" }
+    - { label: "arXiv", url: "https://arxiv.org/abs/2404.07685" }
+    - { label: "PDF (CVF)", url: "https://openaccess.thecvf.com/content/CVPR2024W/SAIAD/papers/Yatbaz_Run-time_Monitoring_of_3D_Object_Detection_in_Automated_Driving_Systems_CVPRW_2024_paper.pdf" }
+
+- title: "Integrity Monitoring of 3D Object Detection in Automated Driving Systems using Raw Activation Patterns and Spatial Filtering"
+  authors: "H. Y. Yatbaz, M. Dianati, K. Koufos, R. Woodman"
+  venue: "27th IEEE International Conference on Intelligent Transportation Systems (ITSC), Edmonton, Canada"
+  year: 2024
+  type: conference
+  topic: autonomous
+  area: "Autonomous Driving"
+  selected: true
+  key: integritymonitoringof3dobjectdetectioninautomateddrivingsystemsusingrawactivationpatternsandspatialfiltering
+  citations: 3
+  links:
+    - { label: "DOI", url: "https://doi.org/10.1109/ITSC58415.2024.10920125" }
+    - { label: "arXiv", url: "https://arxiv.org/abs/2405.07600" }
+    - { label: "PDF", url: "https://arxiv.org/pdf/2405.07600" }
+
+- title: "Runtime Error Detection for Deep Neural Network-Based Object Detection for Perception in Automated Driving Systems"
+  authors: "H. Y. Yatbaz (Supervised by Prof. Mehrdad Dianati, Dr. Roger Woodman)"
+  venue: "PhD Thesis · WMG, University of Warwick, UK"
+  year: 2024
+  type: thesis
+  topic: autonomous
+  area: "Autonomous Driving"
+  key: runtimeerrordetectionfordeepneuralnetworkbasedobjectdetectionforperceptioninautomateddrivingsystems
+  links:
+    - { label: "Warwick WRAP", url: "https://wrap.warwick.ac.uk/" }
+
+- title: "A Smart E-Health Framework for Monitoring the Health of the Elderly and Disabled"
+  authors: "A. Yazıcı, D. Zh. Zhumabekova, A. Nurakhmetova, Z. Yergaliyev, H. Y. Yatbaz, Z. Makisheva, M. I. Lewis, E. Ever"
+  venue: "Internet of Things (Elsevier), Vol. 24, Art. 100971"
+  year: 2023
+  type: journal
+  topic: sensing
+  area: "E-Health / IoT"
+  key: asmartehealthframeworkformonitoringthehealthoftheelderlyanddisabled
+  citations: 50
+  links:
+    - { label: "DOI", url: "https://doi.org/10.1016/j.iot.2023.100971" }
+
+- title: "Introspection of 2D Object Detection using Processed Neural Activation Patterns in Automated Driving Systems"
+  authors: "H. Y. Yatbaz, M. Dianati, K. Koufos, R. Woodman"
+  venue: "IEEE/CVF International Conference on Computer Vision Workshops (ICCVW), ROAD++ Workshop, Paris, France"
+  year: 2023
+  type: conference
+  topic: autonomous
+  area: "Autonomous Driving"
+  selected: true
+  key: introspectionof2dobjectdetectionusingprocessedneuralactivationpatternsinautomateddrivingsystems
+  citations: 7
+  links:
+    - { label: "DOI", url: "https://doi.org/10.1109/ICCVW60793.2023.00437" }
+    - { label: "IEEE Xplore", url: "https://ieeexplore.ieee.org/document/10350926" }
+    - { label: "ResearchGate", url: "https://www.researchgate.net/publication/374828135_Introspection_of_2D_Object_Detection_using_Processed_Neural_Activation_Patterns_in_Automated_Driving_Systems" }
+
+- title: "An Effective Forest Fire Detection Framework Using Heterogeneous Wireless Multimedia Sensor Networks"
+  authors: "B. Kizilkaya, E. Ever, H. Y. Yatbaz, A. Yazıcı"
+  venue: "ACM Transactions on Multimedia Computing, Communications, and Applications (TOMM), Vol. 18, No. 4, Art. 108"
+  year: 2022
+  type: journal
+  topic: sensing
+  area: "Wireless Sensing"
+  selected: true
+  key: aneffectiveforestfiredetectionframeworkusingheterogeneouswirelessmultimediasensornetworks
+  citations: 111
+  links:
+    - { label: "DOI", url: "https://doi.org/10.1145/3473037" }
+
+- title: "Prediction of Punching Shear Strength of Slab-Column Connections: A Comprehensive Evaluation of Machine Learning and Deep Learning Based Approaches"
+  authors: "S. Derogar, C. Ince, H. Y. Yatbaz, E. Ever"
+  venue: "Mechanics of Advanced Materials and Structures (Taylor & Francis), Vol. 31, No. 17, pp. 3888–3904"
+  year: 2022
+  type: journal
+  topic: sensing
+  area: "Structural ML"
+  key: predictionofpunchingshearstrengthofslabcolumnconnectionsacomprehensiveevaluationofmachinelearninganddeeplearningbasedapproaches
+  citations: 37
+  links:
+    - { label: "DOI", url: "https://doi.org/10.1080/15376494.2022.2134950" }
+
+- title: "Detecting Hazardous Events: A Framework for Automated Vehicle Safety Systems"
+  authors: "D. Xiao, W. G. Geiger, H. Y. Yatbaz, M. Dianati, R. Woodman"
+  venue: "25th IEEE International Conference on Intelligent Transportation Systems (ITSC), Macau, China"
+  year: 2022
+  type: conference
+  topic: autonomous
+  area: "Autonomous Driving"
+  key: detectinghazardouseventsaframeworkforautomatedvehiclesafetysystems
+  citations: 17
+  links:
+    - { label: "DOI", url: "https://doi.org/10.1109/ITSC55140.2022.9921988" }
+
+- title: "Critical Analysis of Validation Methods for Machine Learning Models Used in E-Health Applications"
+  authors: "H. Y. Yatbaz, A. Yazıcı, E. Ever"
+  venue: "International Conference on Information Science and Communications Technologies (ICISCT), Tashkent, Uzbekistan"
+  year: 2022
+  type: conference
+  topic: sensing
+  area: "E-Health / ML"
+  key: criticalanalysisofvalidationmethodsformachinelearningmodelsusedinehealthapplications
+  citations: 2
+  links:
+    - { label: "DOI", url: "https://doi.org/10.1109/ICISCT55600.2022.10146901" }
+
+- title: "Activity Recognition and Anomaly Detection in E-Health Applications Using Color-Coded Representation and Lightweight CNN Architectures"
+  authors: "H. Y. Yatbaz, E. Ever, A. Yazıcı"
+  venue: "IEEE Sensors Journal, Vol. 21, No. 11, pp. 12799–12810"
+  year: 2021
+  type: journal
+  topic: sensing
+  area: "E-Health / CNN"
+  key: activityrecognitionandanomalydetectioninehealthapplicationsusingcolorcodedrepresentationandlightweightcnnarchitectures
+  citations: 35
+  links:
+    - { label: "DOI", url: "https://doi.org/10.1109/JSEN.2021.3061458" }
+
+- title: "Deep Learning Based Stress Prediction From Offline Signatures"
+  authors: "H. Y. Yatbaz, M. Erbilek"
+  venue: "8th International Workshop on Biometrics and Forensics (IWBF), Porto, Portugal"
+  year: 2020
+  type: conference
+  topic: sensing
+  area: "Biometrics / Forensics"
+  key: deeplearningbasedstresspredictionfromofflinesignatures
+  citations: 9
+  links:
+    - { label: "DOI", url: "https://doi.org/10.1109/IWBF49977.2020.9107942" }
+
+- title: "Exploring Activity Transitions in the STA-based Activity Recognition"
+  authors: "S. Eraslan, H. Y. Yatbaz, E. Ever, Y. Yeşilada"
+  venue: "28th Signal Processing and Communications Applications Conference (SIU), Gaziantep, Turkey"
+  year: 2020
+  type: conference
+  topic: sensing
+  area: "Signal Processing"
+  key: exploringactivitytransitionsinthestabasedactivityrecognition
+  citations: 3
+  links:
+    - { label: "DOI", url: "https://doi.org/10.1109/SIU49456.2020.9302074" }
+
+- title: "Statistical Analysis for Sensory E-Health Applications: Opportunities and Challenges"
+  authors: "H. Y. Yatbaz, A. C. Tasıran"
+  venue: "Book chapter in Sensory Data Analysis for Health Monitoring, Institution of Engineering and Technology (IET), pp. 165–186"
+  year: 2020
+  type: chapter
+  topic: sensing
+  area: "Sensory Analytics"
+  key: statisticalanalysisforsensoryehealthapplicationsopportunitiesandchallenges
+  links:
+    - { label: "DOI", url: "https://doi.org/10.1049/pbce128e_ch7" }
+
+- title: "Activity Recognition Using Binary Sensors for Elderly People Living Alone: Scanpath Trend Analysis Approach"
+  authors: "H. Y. Yatbaz, S. Eraslan, Y. Yeşilada, E. Ever"
+  venue: "IEEE Sensors Journal, Vol. 19, No. 18, pp. 8249–8260"
+  year: 2019
+  type: journal
+  topic: sensing
+  area: "Ambient Sensing / IoT"
+  key: activityrecognitionusingbinarysensorsforelderlypeoplelivingalonescanpathtrendanalysisapproach
+  citations: 29
+  links:
+    - { label: "DOI", url: "https://doi.org/10.1109/JSEN.2019.2915026" }
+
+- title: "Hybrid Approach for Disaster Recovery using P2P Communications in Android"
+  authors: "H. Y. Yatbaz, B. Cinar, A. Gökdemir, E. Ever, F. M. Al-Turjman, H. X. Nguyen, A. Yazıcı"
+  venue: "43rd IEEE Conference on Local Computer Networks Workshops (LCN Workshops), Chicago, USA"
+  year: 2018
+  type: conference
+  topic: sensing
+  area: "Mobile Networks"
+  key: hybridapproachfordisasterrecoveryusingp2pcommunicationsinandroid
+  citations: 5
+  links:
+    - { label: "DOI", url: "https://doi.org/10.1109/LCNW.2018.8628555" }

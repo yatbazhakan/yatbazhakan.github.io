@@ -1,0 +1,84 @@
+{%- assign author = site.author -%}
+{%- if page.seo_title -%}
+  {%- assign full_title = page.seo_title -%}
+{%- elsif page.title -%}
+  {%- assign full_title = page.title | append: " | " | append: site.title -%}
+{%- else -%}
+  {%- assign full_title = site.title -%}
+{%- endif -%}
+{%- assign desc = page.description | default: site.description | strip_newlines | strip -%}
+{%- assign canonical = page.url | replace: 'index.html', '' | absolute_url -%}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ full_title }}</title>
+  <meta name="description" content="{{ desc | escape }}">
+  {%- if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords | escape }}">
+  {%- endif %}
+  <meta name="author" content="{{ author.name }}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ canonical }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:title" content="{{ full_title | escape }}">
+  <meta property="og:description" content="{{ desc | escape }}">
+  <meta property="og:image" content="{{ author.photo | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title }} · {{ author.institution }}">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ full_title | escape }}">
+  <meta name="twitter:description" content="{{ desc | escape }}">
+  <meta name="twitter:image" content="{{ author.photo | absolute_url }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+  {%- comment -%} Person schema on every page; pages can add more via `jsonld:` front matter. {%- endcomment -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "{{ '/#person' | absolute_url }}",
+    "name": {{ author.name | jsonify }},
+    "jobTitle": {{ author.title | jsonify }},
+    "url": "{{ '/' | absolute_url }}",
+    "image": "{{ author.photo | absolute_url }}",
+    "email": "mailto:{{ author.email }}",
+    "worksFor": {
+      "@type": "CollegeOrUniversity",
+      "name": "Queen's University Belfast",
+      "alternateName": "QUB",
+      "department": "School of Electronics, Electrical Engineering and Computer Science (EEECS)",
+      "url": "https://www.qub.ac.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ashby Building, Stranmillis Road",
+        "addressLocality": "Belfast",
+        "addressRegion": "Northern Ireland",
+        "postalCode": "BT9 5AH",
+        "addressCountry": "GB"
+      }
+    },
+    "hasOccupation": [
+      { "@type": "Occupation", "name": "Lecturer in Autonomous Systems & PhD Supervisor", "occupationalCategory": "Academic / University Lecturer" },
+      {%- for e in site.data.service.editorial %}
+      { "@type": "Occupation", "name": {{ e.role | append: " (" | append: e.section | append: ", " | append: e.venue | append: ")" | jsonify }}, "occupationalCategory": "Academic Editorial Board" }{% unless forloop.last %},{% endunless %}
+      {%- endfor %}
+    ],
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University of Warwick" },
+      { "@type": "CollegeOrUniversity", "name": "Middle East Technical University" }
+    ],
+    "sameAs": [ {{ author.scholar | jsonify }}, {{ author.linkedin | jsonify }}, {{ author.github | jsonify }} ],
+    "knowsAbout": [
+      {%- for r in site.data.research %}{{ r.title | jsonify }}, {% endfor -%}
+      "Autonomous Systems", "AI Safety", "DNN Introspection", "3D Object Detection", "LiDAR Perception", "Automated Driving Systems"
+    ]
+  }
+  </script>
+  {%- if page.jsonld %}
+  {% include {{ page.jsonld }} %}
+  {%- endif %}

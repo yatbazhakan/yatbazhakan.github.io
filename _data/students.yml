@@ -1,0 +1,26 @@
+# Supervised students — shown on the PhD page.
+# status: current | completed
+
+- name: "Tin Yu"
+  degree: "MSc in Artificial Intelligence"
+  level: "MSc Dissertation"
+  project: "Compact and Explainable Activation Encodings for Run-time Monitoring of 3D Object Detection under Domain Shift"
+  status: completed
+
+- name: "Joel Anderson"
+  degree: "BSc Computer Science"
+  level: "Graduation Project"
+  project: "Development of an AI Driven Web Application Assisting Students with Exam Preparation"
+  status: completed
+
+- name: "Yu-Zhi Wong"
+  degree: "BSc Computer Science"
+  level: "Graduation Project"
+  project: "Feature Lens: A Tool for Visualising and Comparing Neural Representations in Object Detection"
+  status: completed
+
+- name: "Jamal Salimov"
+  degree: "BSc Computer Science"
+  level: "Graduation Project"
+  project: "Vision Introspector: A GUI Tool for Analysing Object Detection in Driving Images"
+  status: completed

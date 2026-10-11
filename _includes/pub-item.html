@@ -1,0 +1,41 @@
+{%- comment -%}
+  Renders one publication.  Usage: {% include pub-item.html pub=p %}
+  Citation counts come from _data/citations.json (weekly auto-update), falling back to pub.citations.
+{%- endcomment -%}
+{%- assign pub = include.pub -%}
+{%- assign cites = site.data.citations.papers[pub.key] -%}
+{%- if cites == nil -%}{%- assign cites = pub.citations -%}{%- endif -%}
+{%- case pub.type -%}
+  {%- when 'journal' -%}{%- assign type_label = 'Journal' -%}
+  {%- when 'conference' -%}{%- assign type_label = 'Conference' -%}
+  {%- when 'thesis' -%}{%- assign type_label = 'PhD Thesis' -%}
+  {%- when 'chapter' -%}{%- assign type_label = 'Book Chapter' -%}
+  {%- else -%}{%- assign type_label = pub.type | capitalize -%}
+{%- endcase -%}
+<article class="pub" data-type="{{ pub.type }}" data-topic="{{ pub.topic }}">
+  <div class="pub-main">
+    <h3 class="pub-title">
+      {%- if pub.links and pub.links[0] -%}
+        <a href="{{ pub.links[0].url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+      {%- else -%}{{ pub.title }}{%- endif -%}
+    </h3>
+    <p class="pub-authors">{{ pub.authors | escape | replace: 'H. Y. Yatbaz', '<strong>H. Y. Yatbaz</strong>' }}</p>
+    <p class="pub-venue">{{ pub.venue | escape }}</p>
+    <div class="pub-tags">
+      <span class="tag tag-{{ pub.type }}">{{ type_label }}</span>
+      {%- if cites and cites > 0 %}
+      <span class="tag tag-cites">{{ cites }} citation{% if cites != 1 %}s{% endif %}</span>
+      {%- endif %}
+      {%- if pub.area %}
+      <span class="tag tag-area{% if pub.topic == 'autonomous' %} tag-area-core{% endif %}">{{ pub.area }}</span>
+      {%- endif %}
+    </div>
+  </div>
+  {%- if pub.links %}
+  <div class="pub-links">
+    {%- for l in pub.links %}
+    <a href="{{ l.url }}" target="_blank" rel="noopener" class="pub-link">{{ l.label }}</a>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+</article>
