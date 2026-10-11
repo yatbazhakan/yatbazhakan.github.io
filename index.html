@@ -176,7 +176,6 @@
             <Hero tweaks={tweaks} />
             <About tweaks={tweaks} citationData={citationData} />
             <Research />
-            <EUProjects />
             <PhDSection tweaks={tweaks} />
             <Publications tweaks={tweaks} citationData={citationData} />
             <News />
@@ -358,7 +357,7 @@
                 Academic Profile &amp; Research Focus
               </h2>
               <p style={{ color: '#4b5563', lineHeight: 1.85, marginBottom: 16, fontSize: 15 }}>
-                I am a Lecturer (Assistant Professor) in Autonomous Systems at the School of Electronics, Electrical Engineering and Computer Science (EEECS), Queen's University Belfast. My research focuses on developing safe, reliable, and trustworthy AI for intelligent transport systems, with two primary areas: <strong>run-time monitoring and introspection</strong> of LiDAR-based perception under uncertainty, and <strong>safe, resilient cooperative autonomy</strong> for Connected and Automated Vehicles (CAVs).
+                I am a Lecturer (Assistant Professor) in Autonomous Systems at the School of Electronics, Electrical Engineering and Computer Science (EEECS), Queen's University Belfast. My research focuses on safe, reliable, and trustworthy AI for autonomous and intelligent systems, spanning four core strands: <strong>robust sensing for AI</strong>, <strong>run-time monitoring and introspection</strong>, <strong>cooperative autonomy</strong>, and <strong>explainable AI (XAI)</strong>.
               </p>
               <p style={{ color: '#4b5563', lineHeight: 1.85, marginBottom: 30, fontSize: 15 }}>
                 Prior to joining QUB, I was a Postdoctoral Research Fellow at WMG, University of Warwick (Feb–Sept 2025), working on EU-funded projects (EVENTS and Hi-Drive) integrating self-assessment frameworks into real-world automated driving pipelines. I completed my PhD in Engineering at Warwick (supervised by Dr. Roger Woodman and Prof. Mehrdad Dianati) and hold an MSc and BSc in Computer Engineering from Middle East Technical University (METU NCC).
@@ -399,21 +398,37 @@
       );
     }
 
-    /* ── RESEARCH ── */
+    /* ── RESEARCH STRANDS ── */
     function Research() {
       const areas = [
-        { num: '01', title: 'AI Safety for Autonomous Driving', desc: 'Developing run-time monitoring and introspection frameworks that detect failures in DNN-based perception before they lead to safety-critical incidents.' },
-        { num: '02', title: 'DNN Introspection & Integrity Monitoring', desc: 'Analysing neural activation patterns to assess the reliability and integrity of deep learning models operating in dynamic real-world environments.' },
-        { num: '03', title: 'LiDAR-based 3D Object Detection', desc: 'Advancing point-cloud perception pipelines for automated vehicles, including multi-layer self-assessment and spatial filtering techniques.' },
-        { num: '04', title: 'IoT & E-Health Systems', desc: 'Designing sensor-based activity recognition and anomaly detection systems for healthcare monitoring of elderly and vulnerable populations.' },
+        {
+          num: '01',
+          title: 'Robust Sensing for AI',
+          desc: 'Developing multi-modal perception pipelines resilient against adverse environmental conditions, sensor degradations, noise, and domain shifts in real-world deployments.'
+        },
+        {
+          num: '02',
+          title: 'Run-Time Monitoring & Introspection',
+          desc: 'Designing introspection frameworks and neural activation monitors to detect perception failures, out-of-distribution inputs, and integrity risks before safety incidents occur.'
+        },
+        {
+          num: '03',
+          title: 'Cooperative Autonomy',
+          desc: 'Investigating resilient collaborative perception, V2X coordination, and distributed decision-making for Connected and Automated Vehicles (CAVs) and multi-agent systems.'
+        },
+        {
+          num: '04',
+          title: 'Explainable AI (XAI)',
+          desc: 'Creating compact activation encodings, transparent latent representations, and interpretable introspection models to make complex neural perception accountable and explainable.'
+        },
       ];
       return (
         <section id="research" style={{ background: 'var(--qub-light)', padding: '96px 24px' }}>
           <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: 56 }}>
-              <SectionLabel color="var(--qub-red)" center>Research</SectionLabel>
+              <SectionLabel color="var(--qub-red)" center>Research Strands</SectionLabel>
               <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', fontWeight: 700, color: 'var(--qub-navy)', lineHeight: 1.2 }}>
-                Research Interests
+                Core Research Strands
               </h2>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 24 }}>
@@ -435,10 +450,10 @@
     /* ── PHD SECTION ── */
     function PhDSection({ tweaks }) {
       const topics = [
+        'Robust Sensing for AI',
         'Run-Time Monitoring & Introspection',
-        'LiDAR 3D Perception',
-        'Cooperative Autonomy & CAVs',
-        'Adverse Weather Robustness',
+        'Cooperative Autonomy',
+        'Explainable AI (XAI)',
       ];
       return (
         <section id="phd-opportunities" style={{ background: 'var(--qub-navy)', padding: '96px 24px', position: 'relative', overflow: 'hidden' }}>
@@ -574,81 +589,7 @@
       );
     }
 
-    /* ── EU PROJECTS ── */
-    function EUProjects() {
-      const projects = [
-        {
-          name: 'Hi-Drive',
-          logo: 'EU',
-          period: 'Feb–Sept 2025',
-          role: 'Postdoctoral Research Fellow',
-          org: 'WMG, University of Warwick (Completed)',
-          desc: 'Horizon Europe project developing a comprehensive validation framework for highly automated driving systems. Contributed self-assessment and run-time monitoring components for perception reliability.',
-          url: 'https://www.hi-drive.eu',
-          partners: '36 Partners',
-          funded: 'Horizon Europe',
-        },
-        {
-          name: 'EVENTS',
-          logo: 'EU',
-          period: '2021–2024',
-          role: 'Doctoral Researcher',
-          org: 'WMG, University of Warwick (Completed)',
-          desc: 'EU-funded project focused on edge and cloud computing for connected automated vehicles. Led work on event detection and V2X-based hazard monitoring for safety-critical scenarios.',
-          url: 'https://events-project.eu',
-          partners: '14 Partners',
-          funded: 'Horizon 2020',
-        },
-      ];
-      return (
-        <section id="projects" style={{ background: 'var(--qub-light)', padding: '80px 24px' }}>
-          <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 40, flexWrap: 'wrap', gap: 12 }}>
-              <div>
-                <SectionLabel color="var(--qub-red)">Past Projects</SectionLabel>
-                <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(1.8rem,3vw,2.4rem)', fontWeight: 700, color: 'var(--qub-navy)', lineHeight: 1.2 }}>
-                  EU Research Projects
-                </h2>
-              </div>
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 24 }}>
-              {projects.map(p => (
-                <div key={p.name} style={{ background: '#fff', borderRadius: 14, overflow: 'hidden', boxShadow: '0 2px 12px rgba(0,0,0,.05)', transition: 'transform .2s, box-shadow .2s' }}
-                  onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 12px 36px rgba(0,0,0,.1)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.boxShadow = '0 2px 12px rgba(0,0,0,.05)'; }}>
-                  {/* Header */}
-                  <div style={{ background: 'var(--qub-navy)', padding: '24px 28px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                    <div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6 }}>
-                        <span style={{ background: '#003399', color: '#FFD700', fontSize: 10, fontWeight: 800, padding: '3px 8px', borderRadius: 4, letterSpacing: '.05em' }}>EU</span>
-                        <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: 12 }}>{p.funded}</span>
-                      </div>
-                      <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 700, color: '#fff', letterSpacing: '0.02em' }}>{p.name}</h3>
-                    </div>
-                    <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', fontWeight: 500, textAlign: 'right', lineHeight: 1.4 }}>{p.period}</span>
-                  </div>
-                  {/* Body */}
-                  <div style={{ padding: '24px 28px' }}>
-                    <div style={{ display: 'flex', gap: 8, marginBottom: 14 }}>
-                      <span style={{ fontSize: 11, fontWeight: 600, padding: '3px 10px', borderRadius: 8, background: 'rgba(200,16,46,0.07)', color: 'var(--qub-red)' }}>{p.role}</span>
-                      <span style={{ fontSize: 11, fontWeight: 600, padding: '3px 10px', borderRadius: 8, background: 'var(--qub-light)', color: '#6b7280' }}>{p.partners}</span>
-                    </div>
-                    <p style={{ fontSize: 13, color: '#4b5563', lineHeight: 1.75, marginBottom: 16 }}>{p.desc}</p>
-                    <p style={{ fontSize: 12, color: '#9ca3af', marginBottom: 16 }}>{p.org}</p>
-                    <a href={p.url} target="_blank" rel="noreferrer"
-                      style={{ fontSize: 12, fontWeight: 600, color: 'var(--qub-red)', border: '1px solid rgba(200,16,46,0.25)', padding: '6px 14px', borderRadius: 6, display: 'inline-block', transition: 'all .2s' }}
-                      onMouseEnter={e => { e.target.style.background = 'var(--qub-red)'; e.target.style.color = '#fff'; }}
-                      onMouseLeave={e => { e.target.style.background = 'transparent'; e.target.style.color = 'var(--qub-red)'; }}>
-                      Project Website →
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      );
-    }
+
 
 
     function News() {
