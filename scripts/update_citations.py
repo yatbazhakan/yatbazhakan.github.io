@@ -17,7 +17,7 @@ from datetime import datetime
 
 SCHOLAR_USER_ID = "5Q596f4AAAAJ"
 OPENALEX_AUTHOR_ID = "A5010032068"
-CONTACT_EMAIL = "yatbazhakan@gmail.com"
+CONTACT_EMAIL = "h.yatbaz@qub.ac.uk"
 
 def normalize_title(title):
     """Normalize a title for fuzzy matching."""
