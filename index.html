@@ -47,11 +47,18 @@
         "addressCountry": "GB"
       }
     },
-    "hasOccupation": {
-      "@type": "Occupation",
-      "name": "Lecturer in Autonomous Systems & PhD Supervisor",
-      "occupationalCategory": "Academic / University Lecturer"
-    },
+    "hasOccupation": [
+      {
+        "@type": "Occupation",
+        "name": "Lecturer in Autonomous Systems & PhD Supervisor",
+        "occupationalCategory": "Academic / University Lecturer"
+      },
+      {
+        "@type": "Occupation",
+        "name": "Associate Editor (Connected Mobility and Automation, Frontiers in Future Transportation)",
+        "occupationalCategory": "Academic Editorial Board"
+      }
+    ],
     "alumniOf": [
       {
         "@type": "CollegeOrUniversity",
@@ -379,7 +386,7 @@
                 I am a Lecturer (Assistant Professor) in Autonomous Systems at the School of Electronics, Electrical Engineering and Computer Science (EEECS), Queen's University Belfast. My research focuses on safe, reliable, and trustworthy AI for autonomous and intelligent systems, spanning four core strands: <strong>robust sensing for AI in autonomy</strong>, <strong>run-time monitoring and introspection</strong>, <strong>cooperative autonomy</strong>, and <strong>explainable AI (XAI)</strong>.
               </p>
               <p style={{ color: '#4b5563', lineHeight: 1.85, marginBottom: 30, fontSize: 15 }}>
-                Prior to joining QUB, I was a Postdoctoral Research Fellow at WMG, University of Warwick (Feb–Sept 2025), working on EU-funded projects (EVENTS and Hi-Drive) integrating self-assessment frameworks into real-world automated driving pipelines. I completed my PhD in Engineering at Warwick (supervised by Dr. Roger Woodman and Prof. Mehrdad Dianati) and hold an MSc and BSc in Computer Engineering from Middle East Technical University (METU NCC).
+                Prior to joining QUB, I was a Postdoctoral Research Fellow at WMG, University of Warwick (Feb–Sept 2025), working on EU-funded projects (EVENTS and Hi-Drive) integrating self-assessment frameworks into real-world automated driving pipelines. I completed my PhD in Engineering at Warwick (supervised by Dr. Roger Woodman and Prof. Mehrdad Dianati) and hold an MSc and BSc in Computer Engineering from Middle East Technical University (METU NCC). I also serve as an <strong>Associate Editor</strong> for <em>Connected Mobility and Automation</em> in <em>Frontiers in Future Transportation</em>.
               </p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 {[['Google Scholar', tweaks.scholarUrl], ['LinkedIn', tweaks.linkedinUrl], ['GitHub', tweaks.githubUrl]].map(([label, url]) => (
@@ -614,6 +621,7 @@
 
     function News() {
       const items = [
+        { date: '2026', text: 'Appointed Associate Editor for Connected Mobility and Automation in Frontiers in Future Transportation.' },
         { date: 'Sept 2025', text: 'Started as a Lecturer in Autonomous Systems at Queen\'s University Belfast!' },
         { date: 'Feb–Sept 2025', text: 'Postdoctoral Research Fellow at WMG, University of Warwick.' },
         { date: 'Oct 2024', text: 'Submitted PhD Thesis: Run-time monitoring of perception module in automated driving systems.' },
@@ -646,29 +654,37 @@
     function AcademicServices() {
       return (
         <section id="services" style={{ background: 'var(--qub-light)', padding: '72px 24px' }}>
-          <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40 }}>
-            <div style={{ background: '#fff', borderRadius: 12, padding: '32px 28px', borderTop: '3px solid var(--qub-red)' }}>
-              <SectionLabel color="var(--qub-red)">Service</SectionLabel>
+          <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 32 }}>
+            <div style={{ background: '#fff', borderRadius: 12, padding: '32px 28px', borderTop: '3px solid var(--qub-red)', display: 'flex', flexDirection: 'column' }}>
+              <SectionLabel color="var(--qub-red)">Editorial</SectionLabel>
+              <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, fontWeight: 700, color: 'var(--qub-navy)', marginBottom: 16 }}>Editorial Appointments</h3>
+              <div style={{ background: 'rgba(200,16,46,0.04)', border: '1px solid rgba(200,16,46,0.15)', borderRadius: 8, padding: '16px 14px' }}>
+                <div style={{ fontSize: 11.5, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.5, color: 'var(--qub-red)', marginBottom: 4 }}>Associate Editor</div>
+                <div style={{ fontSize: 14.5, fontWeight: 600, color: 'var(--qub-navy)', marginBottom: 4 }}>Connected Mobility and Automation</div>
+                <div style={{ fontSize: 13, color: '#4b5563', fontStyle: 'italic' }}>Frontiers in Future Transportation</div>
+              </div>
+            </div>
+            <div style={{ background: '#fff', borderRadius: 12, padding: '32px 28px', borderTop: '3px solid #2563eb' }}>
+              <SectionLabel color="#2563eb">Peer Review</SectionLabel>
               <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, fontWeight: 700, color: 'var(--qub-navy)', marginBottom: 16 }}>Journal Reviewer</h3>
-              {['IEEE Transactions on Fuzzy Systems', 'IEEE Sensors Journal', 'Springer Scientific Reports', 'Springer Signal, Image and Video Processing'].map(j => (
-                <div key={j} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '7px 0', borderBottom: '1px solid var(--qub-border)', fontSize: 13.5, color: '#374151' }}>
-                  <span style={{ width: 5, height: 5, borderRadius: '50%', background: 'var(--qub-red)', flexShrink: 0 }}></span>
+              {['IEEE Transactions on Intelligent Transportation Systems', 'IEEE Transactions on Intelligent Vehicles', 'IEEE Transactions on Fuzzy Systems', 'IEEE Sensors Journal', 'Springer Scientific Reports'].map(j => (
+                <div key={j} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '7px 0', borderBottom: '1px solid var(--qub-border)', fontSize: 13, color: '#374151' }}>
+                  <span style={{ width: 5, height: 5, borderRadius: '50%', background: '#2563eb', flexShrink: 0 }}></span>
                   {j}
                 </div>
               ))}
             </div>
             <div style={{ background: '#fff', borderRadius: 12, padding: '32px 28px', borderTop: '3px solid var(--qub-navy)' }}>
-              <SectionLabel color="var(--qub-red)">Memberships</SectionLabel>
+              <SectionLabel color="var(--qub-navy)">Affiliations</SectionLabel>
               <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, fontWeight: 700, color: 'var(--qub-navy)', marginBottom: 16 }}>Professional Affiliations</h3>
               {['Queen\'s University Belfast (Lecturer in Autonomous Systems)', 'Member, IEEE (Intelligent Transportation Systems Society)', 'Associate Fellow, Advance HE (PR307078)'].map(m => (
-                <div key={m} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '7px 0', borderBottom: '1px solid var(--qub-border)', fontSize: 13.5, color: '#374151' }}>
+                <div key={m} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '7px 0', borderBottom: '1px solid var(--qub-border)', fontSize: 13, color: '#374151' }}>
                   <span style={{ width: 5, height: 5, borderRadius: '50%', background: 'var(--qub-navy)', flexShrink: 0 }}></span>
                   {m}
                 </div>
               ))}
             </div>
           </div>
-          <style>{`@media(max-width:640px){ #services > div { grid-template-columns: 1fr !important; } }`}</style>
         </section>
       );
     }
