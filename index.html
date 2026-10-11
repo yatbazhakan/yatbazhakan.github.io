@@ -621,6 +621,7 @@
 
     function News() {
       const items = [
+        { date: '09 Oct 2026', text: 'Delivered an invited seminar for the IEEE QUB Student Branch: "Can We Trust AI in Autonomous Systems? From Perception to Run-Time Error Detection", exploring trustworthy AI, machine-learning safety, reliable perception, and run-time error detection for autonomous systems.' },
         { date: '2026', text: 'Appointed Associate Editor for Connected Mobility and Automation in Frontiers in Future Transportation.' },
         { date: 'Sept 2025', text: 'Started as a Lecturer in Autonomous Systems at Queen\'s University Belfast!' },
         { date: 'Feb–Sept 2025', text: 'Postdoctoral Research Fellow at WMG, University of Warwick.' },
@@ -654,7 +655,7 @@
     function AcademicServices() {
       return (
         <section id="services" style={{ background: 'var(--qub-light)', padding: '72px 24px' }}>
-          <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 32 }}>
+          <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 28 }}>
             <div style={{ background: '#fff', borderRadius: 12, padding: '32px 28px', borderTop: '3px solid var(--qub-red)', display: 'flex', flexDirection: 'column' }}>
               <SectionLabel color="var(--qub-red)">Editorial</SectionLabel>
               <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, fontWeight: 700, color: 'var(--qub-navy)', marginBottom: 16 }}>Editorial Appointments</h3>
@@ -662,6 +663,22 @@
                 <div style={{ fontSize: 11.5, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.5, color: 'var(--qub-red)', marginBottom: 4 }}>Associate Editor</div>
                 <div style={{ fontSize: 14.5, fontWeight: 600, color: 'var(--qub-navy)', marginBottom: 4 }}>Connected Mobility and Automation</div>
                 <div style={{ fontSize: 13, color: '#4b5563', fontStyle: 'italic' }}>Frontiers in Future Transportation</div>
+              </div>
+            </div>
+            <div style={{ background: '#fff', borderRadius: 12, padding: '32px 28px', borderTop: '3px solid #0284c7', display: 'flex', flexDirection: 'column' }}>
+              <SectionLabel color="#0284c7">Keynotes &amp; Seminars</SectionLabel>
+              <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, fontWeight: 700, color: 'var(--qub-navy)', marginBottom: 16 }}>Invited Talks</h3>
+              <div style={{ background: 'rgba(2,132,199,0.04)', border: '1px solid rgba(2,132,199,0.15)', borderRadius: 8, padding: '16px 14px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
+                  <span style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.5, color: '#0284c7' }}>IEEE QUB Student Branch</span>
+                  <span style={{ fontSize: 11, color: '#6b7280', fontWeight: 600 }}>09 Oct 2026</span>
+                </div>
+                <div style={{ fontSize: 13.5, fontWeight: 600, color: 'var(--qub-navy)', marginBottom: 6, lineHeight: 1.35 }}>
+                  Can We Trust AI in Autonomous Systems? From Perception to Run-Time Error Detection
+                </div>
+                <div style={{ fontSize: 12, color: '#4b5563', lineHeight: 1.5 }}>
+                  Explored key challenges in trustworthy AI, machine-learning safety, reliable perception, and run-time error detection for autonomous systems.
+                </div>
               </div>
             </div>
             <div style={{ background: '#fff', borderRadius: 12, padding: '32px 28px', borderTop: '3px solid #2563eb' }}>
