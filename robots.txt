@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yatbazhakan.com/sitemap.xml
+Sitemap: https://hakanyatbaz.com/sitemap.xml
