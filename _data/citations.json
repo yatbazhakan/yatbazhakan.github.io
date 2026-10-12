@@ -1,121 +1,108 @@
 {
-  "updated_at": "2026-10-11T21:21:14.392997Z",
-  "source": "Google Scholar",
+  "updated_at": "2026-10-12T11:37:30.942038Z",
+  "source": "OpenAlex (Fallback)",
   "stats": {
-    "citations": 371,
-    "citations_recent": 360,
-    "h_index": 9,
-    "h_index_recent": 9,
-    "i10_index": 8,
-    "i10_index_recent": 8,
-    "publications": 21
+    "citations": 288,
+    "h_index": 8,
+    "i10_index": 7,
+    "publications": 23
   },
   "papers": {
-    "aneffectiveforestfiredetectionframeworkusingheterogeneouswirelessmultimediasensornetworks": 111,
-    "asmartehealthframeworkformonitoringthehealthoftheelderlyanddisabled": 50,
-    "predictionofpunchingshearstrengthofslabcolumnconnectionsacomprehensiveevaluationofmachinelearninganddeeplearningbasedapproaches": 37,
-    "introspectionofdnnbasedperceptionfunctionsinautomateddrivingsystemsstateoftheartandopenresearchchallenges": 36,
-    "activityrecognitionandanomalydetectioninehealthapplicationsusingcolorcodedrepresentationandlightweightcnnarchitectures": 35,
-    "activityrecognitionusingbinarysensorsforelderlypeoplelivingalonescanpathtrendanalysisapproach": 29,
-    "detectinghazardouseventsaframeworkforautomatedvehiclesafetysystems": 17,
-    "runtimeintrospectionof2dobjectdetectioninautomateddrivingsystemsusinglearningrepresentations": 12,
-    "runtimemonitoringof3dobjectdetectioninautomateddrivingsystemsusingearlylayerneuralactivationpatterns": 9,
-    "deeplearningbasedstresspredictionfromofflinesignatures": 9,
-    "introspectionof2dobjectdetectionusingprocessedneuralactivationpatternsinautomateddrivingsystems": 7,
-    "hierarchicalhumanactivityrecognitionwithfusionofaudioandmultipleinertialsensormodalities": 5,
+    "aneffectiveforestfiredetectionframeworkusingheterogeneouswirelessmultimediasensornetworks": 78,
+    "asmartehealthframeworkformonitoringthehealthoftheelderlyanddisabled": 43,
+    "introspectionofdnnbasedperceptionfunctionsinautomateddrivingsystemsstateoftheartandopenresearchchallenges": 28,
+    "activityrecognitionandanomalydetectioninehealthapplicationsusingcolorcodedrepresentationandlightweightcnnarchitectures": 32,
+    "predictionofpunchingshearstrengthofslabcolumnconnectionsacomprehensiveevaluationofmachinelearninganddeeplearningbasedapproaches": 31,
+    "activityrecognitionusingbinarysensorsforelderlypeoplelivingalonescanpathtrendanalysisapproach": 26,
+    "detectinghazardouseventsaframeworkforautomatedvehiclesafetysystems": 14,
+    "hierarchicalhumanactivityrecognitionwithfusionofaudioandmultipleinertialsensormodalities": 1,
+    "deeplearningbasedstresspredictionfromofflinesignatures": 8,
+    "runtimeintrospectionof2dobjectdetectioninautomateddrivingsystemsusinglearningrepresentations": 0,
     "hybridapproachfordisasterrecoveryusingp2pcommunicationsinandroid": 5,
-    "integritymonitoringof3dobjectdetectioninautomateddrivingsystemsusingrawactivationpatternsandspatialfiltering": 3,
-    "exploringactivitytransitionsinthestabasedactivityrecognition": 3,
-    "criticalanalysisofvalidationmethodsformachinelearningmodelsusedinehealthapplications": 2,
+    "introspectionof2dobjectdetectionusingprocessedneuralactivationpatternsinautomateddrivingsystems": 3,
+    "runtimemonitoringof3dobjectdetectioninautomateddrivingsystemsusingearlylayerneuralactivationpatterns": 0,
     "multilayerselfassessmentwithfilteringfor3dobjectdetectioninautonomousvehicles": 1,
-    "zhadigeraisoftwareasaserviceaiplatformforkazakhandenglish": 0,
-    "runtimeerrordetectionfordeepneuralnetworkbasedobjectdetectionforperceptioninautomateddrivingsystems": 0,
+    "criticalanalysisofvalidationmethodsformachinelearningmodelsusedinehealthapplications": 2,
+    "exploringactivitytransitionsinthestabasedactivityrecognition": 2,
     "statisticalanalysisforsensoryehealthapplicationsopportunitiesandchallenges": 0,
-    "colourcodingbasednoveldatarepresentationandlightweightconvolutionalneuralnetworkarchitectureforhierarchicalanomalydetectiononehealthapplications": 0
+    "integritymonitoringof3dobjectdetectioninautomateddrivingsystemsusingrawactivationpatternsandspatialfiltering": 0,
+    "zhadigeraisoftwareasaserviceaiplatformforkazakhandenglish": 0
   },
   "papers_detail": {
     "aneffectiveforestfiredetectionframeworkusingheterogeneouswirelessmultimediasensornetworks": {
-      "raw_title": "An effective forest fire detection framework using heterogeneous wireless multimedia sensor networks",
-      "citations": 111
+      "raw_title": "An Effective Forest Fire Detection Framework Using Heterogeneous Wireless Multimedia Sensor Networks",
+      "citations": 78
     },
     "asmartehealthframeworkformonitoringthehealthoftheelderlyanddisabled": {
       "raw_title": "A smart e-health framework for monitoring the health of the elderly and disabled",
-      "citations": 50
-    },
-    "predictionofpunchingshearstrengthofslabcolumnconnectionsacomprehensiveevaluationofmachinelearninganddeeplearningbasedapproaches": {
-      "raw_title": "Prediction of punching shear strength of slab-column connections: A comprehensive evaluation of machine learning and deep learning based approaches",
-      "citations": 37
+      "citations": 43
     },
     "introspectionofdnnbasedperceptionfunctionsinautomateddrivingsystemsstateoftheartandopenresearchchallenges": {
       "raw_title": "Introspection of DNN-Based Perception Functions in Automated Driving Systems: State-of-the-Art and Open Research Challenges",
-      "citations": 36
+      "citations": 28
     },
     "activityrecognitionandanomalydetectioninehealthapplicationsusingcolorcodedrepresentationandlightweightcnnarchitectures": {
-      "raw_title": "Activity recognition and anomaly detection in E-health applications using color-coded representation and lightweight CNN architectures",
-      "citations": 35
+      "raw_title": "Activity Recognition and Anomaly Detection in E-Health Applications Using Color-Coded Representation and Lightweight CNN Architectures",
+      "citations": 32
+    },
+    "predictionofpunchingshearstrengthofslabcolumnconnectionsacomprehensiveevaluationofmachinelearninganddeeplearningbasedapproaches": {
+      "raw_title": "Prediction of punching shear strength of slab-column connections: A comprehensive evaluation of machine learning and deep learning based approaches",
+      "citations": 31
     },
     "activityrecognitionusingbinarysensorsforelderlypeoplelivingalonescanpathtrendanalysisapproach": {
-      "raw_title": "Activity recognition using binary sensors for elderly people living alone: Scanpath trend analysis approach",
-      "citations": 29
+      "raw_title": "Activity Recognition Using Binary Sensors for Elderly People Living Alone: Scanpath Trend Analysis Approach",
+      "citations": 26
     },
     "detectinghazardouseventsaframeworkforautomatedvehiclesafetysystems": {
-      "raw_title": "Detecting hazardous events: A framework for automated vehicle safety systems",
-      "citations": 17
-    },
-    "runtimeintrospectionof2dobjectdetectioninautomateddrivingsystemsusinglearningrepresentations": {
-      "raw_title": "Run-time introspection of 2d object detection in automated driving systems using learning representations",
-      "citations": 12
-    },
-    "runtimemonitoringof3dobjectdetectioninautomateddrivingsystemsusingearlylayerneuralactivationpatterns": {
-      "raw_title": "Run-time monitoring of 3D object detection in automated driving systems using early layer neural activation patterns",
-      "citations": 9
-    },
-    "deeplearningbasedstresspredictionfromofflinesignatures": {
-      "raw_title": "Deep learning based stress prediction from offline signatures",
-      "citations": 9
-    },
-    "introspectionof2dobjectdetectionusingprocessedneuralactivationpatternsinautomateddrivingsystems": {
-      "raw_title": "Introspection of 2d object detection using processed neural activation patterns in automated driving systems",
-      "citations": 7
+      "raw_title": "Detecting Hazardous Events: A Framework for Automated Vehicle Safety Systems",
+      "citations": 14
     },
     "hierarchicalhumanactivityrecognitionwithfusionofaudioandmultipleinertialsensormodalities": {
-      "raw_title": "Hierarchical human activity recognition with fusion of audio and multiple inertial sensor modalities",
-      "citations": 5
+      "raw_title": "Hierarchical Human Activity Recognition with Fusion of Audio and Multiple Inertial Sensor Modalities",
+      "citations": 1
+    },
+    "deeplearningbasedstresspredictionfromofflinesignatures": {
+      "raw_title": "Deep Learning Based Stress Prediction From Offline Signatures",
+      "citations": 8
+    },
+    "runtimeintrospectionof2dobjectdetectioninautomateddrivingsystemsusinglearningrepresentations": {
+      "raw_title": "Run-time Introspection of 2D Object Detection in Automated Driving Systems Using Learning Representations",
+      "citations": 0
     },
     "hybridapproachfordisasterrecoveryusingp2pcommunicationsinandroid": {
-      "raw_title": "Hybrid approach for disaster recovery using P2P communications in android",
+      "raw_title": "Hybrid Approach for Disaster Recovery using P2P Communications in Android",
       "citations": 5
     },
-    "integritymonitoringof3dobjectdetectioninautomateddrivingsystemsusingrawactivationpatternsandspatialfiltering": {
-      "raw_title": "Integrity Monitoring of 3D Object Detection in Automated Driving Systems using Raw Activation Patterns and Spatial Filtering",
+    "introspectionof2dobjectdetectionusingprocessedneuralactivationpatternsinautomateddrivingsystems": {
+      "raw_title": "Introspection of 2D Object Detection using Processed Neural Activation Patterns in Automated Driving Systems",
       "citations": 3
     },
-    "exploringactivitytransitionsinthestabasedactivityrecognition": {
-      "raw_title": "Exploring activity transitions in the STA-based activity recognition",
-      "citations": 3
-    },
-    "criticalanalysisofvalidationmethodsformachinelearningmodelsusedinehealthapplications": {
-      "raw_title": "Critical analysis of validation methods for machine learning models used in e-health applications",
-      "citations": 2
+    "runtimemonitoringof3dobjectdetectioninautomateddrivingsystemsusingearlylayerneuralactivationpatterns": {
+      "raw_title": "Run-time Monitoring of 3D Object Detection in Automated Driving Systems Using Early Layer Neural Activation Patterns",
+      "citations": 0
     },
     "multilayerselfassessmentwithfilteringfor3dobjectdetectioninautonomousvehicles": {
       "raw_title": "Multi-Layer Self-Assessment with Filtering for 3D Object Detection in Autonomous Vehicles",
       "citations": 1
     },
-    "zhadigeraisoftwareasaserviceaiplatformforkazakhandenglish": {
-      "raw_title": "ZhadigerAI: Software-as-a-Service AI Platform for Kazakh and English",
-      "citations": 0
+    "criticalanalysisofvalidationmethodsformachinelearningmodelsusedinehealthapplications": {
+      "raw_title": "Critical Analysis of Validation Methods for Machine Learning Models Used in E-health Applications",
+      "citations": 2
     },
-    "runtimeerrordetectionfordeepneuralnetworkbasedobjectdetectionforperceptioninautomateddrivingsystems": {
-      "raw_title": "Runtime error detection for deep neural network-based object detection for perception in automated driving systems",
-      "citations": 0
+    "exploringactivitytransitionsinthestabasedactivityrecognition": {
+      "raw_title": "Exploring Activity Transitions in the STA-based Activity Recognition",
+      "citations": 2
     },
     "statisticalanalysisforsensoryehealthapplicationsopportunitiesandchallenges": {
       "raw_title": "Statistical analysis for sensory E-Health applications: opportunities and challenges",
       "citations": 0
     },
-    "colourcodingbasednoveldatarepresentationandlightweightconvolutionalneuralnetworkarchitectureforhierarchicalanomalydetectiononehealthapplications": {
-      "raw_title": "Colour coding based novel data representation and lightweight convolutional neural network architecture for hierarchical anomaly detection on ehealth applications",
+    "integritymonitoringof3dobjectdetectioninautomateddrivingsystemsusingrawactivationpatternsandspatialfiltering": {
+      "raw_title": "Integrity Monitoring of 3D Object Detection in Automated Driving Systems using Raw Activation Patterns and Spatial Filtering",
+      "citations": 0
+    },
+    "zhadigeraisoftwareasaserviceaiplatformforkazakhandenglish": {
+      "raw_title": "ZhadigerAI: Software-as-a-Service AI Platform for Kazakh and English",
       "citations": 0
     }
   }
