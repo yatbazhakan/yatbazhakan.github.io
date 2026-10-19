@@ -1,10 +1,7 @@
 {%- comment -%}
-  Renders one publication.  Usage: {% include pub-item.html pub=p %}
-  Citation counts come from _data/citations.json (weekly auto-update), falling back to pub.citations.
+  Renders one publication. Usage: {% include pub-item.html pub=p %}
 {%- endcomment -%}
 {%- assign pub = include.pub -%}
-{%- assign cites = site.data.citations.papers[pub.key] -%}
-{%- if cites == nil -%}{%- assign cites = pub.citations -%}{%- endif -%}
 {%- case pub.type -%}
   {%- when 'journal' -%}{%- assign type_label = 'Journal' -%}
   {%- when 'conference' -%}{%- assign type_label = 'Conference' -%}
@@ -23,9 +20,6 @@
     <p class="pub-venue">{{ pub.venue | escape }}</p>
     <div class="pub-tags">
       <span class="tag tag-{{ pub.type }}">{{ type_label }}</span>
-      {%- if cites and cites > 0 %}
-      <span class="tag tag-cites">{{ cites }} citation{% if cites != 1 %}s{% endif %}</span>
-      {%- endif %}
       {%- if pub.area %}
       <span class="tag tag-area{% if pub.topic == 'autonomous' %} tag-area-core{% endif %}">{{ pub.area }}</span>
       {%- endif %}

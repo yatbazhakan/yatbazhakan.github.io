@@ -5,7 +5,6 @@ keywords: "Hakan Yatbaz, Hakan Yekta Yatbaz, Queen's University Belfast, Autonom
 body_class: home
 ---
 {%- assign a = site.author -%}
-{%- assign stats = site.data.citations.stats -%}
 
 <!-- ── HERO ── -->
 <section class="hero">
@@ -45,13 +44,6 @@ body_class: home
       </div>
     </div>
     <div>
-      <div class="stat-grid">
-        <div class="stat"><div class="stat-n">{{ stats.citations | default: 371 }}</div><div class="stat-l">Citations</div></div>
-        <div class="stat"><div class="stat-n">{{ stats.publications | default: 21 }}</div><div class="stat-l">Publications</div></div>
-        <div class="stat"><div class="stat-n">{{ stats.h_index | default: 9 }}</div><div class="stat-l">h-index</div></div>
-        <div class="stat"><div class="stat-n">{{ stats.i10_index | default: 8 }}</div><div class="stat-l">i10-index</div></div>
-      </div>
-      <p class="stat-note">Google Scholar, updated weekly.</p>
       <div class="panel-dark">
         <p class="panel-label">Current Appointment &amp; Credentials</p>
         <ul class="dot-list dot-list-light">
@@ -62,6 +54,15 @@ body_class: home
           {%- endfor %}
           <li>Associate Fellow, Advance HE (PR307078)</li>
           <li>Member, IEEE (ITS Society)</li>
+          <li>PhD in Engineering, University of Warwick</li>
+        </ul>
+      </div>
+      <div class="panel-box" style="margin-top: 20px;">
+        <h3 class="panel-title">Peer Review &amp; Editorial Service</h3>
+        <ul class="bullet-list">
+          {%- for r in site.data.service.reviewer %}
+          <li>{{ r }}</li>
+          {%- endfor %}
         </ul>
       </div>
     </div>

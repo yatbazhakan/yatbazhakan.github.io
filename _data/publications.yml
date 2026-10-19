@@ -11,9 +11,7 @@
 #   topic     : autonomous | sensing   (drives the topic filter)
 #   area      : short subject label shown as a tag
 #   selected  : true to feature on the home page
-#   key       : lowercase title with only a–z/0–9 (matches _data/citations.json,
-#               which is refreshed weekly by .github/workflows/update_citations.yml)
-#   citations : fallback count if the key is not found in citations.json
+#   key       : unique publication identifier
 #   links     : list of { label, url }
 #
 # To add a paper: copy an entry, edit it, keep the list roughly newest-first.

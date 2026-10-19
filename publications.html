@@ -8,7 +8,6 @@ permalink: /publications.html
 body_class: pubs-page
 ---
 {%- assign a = site.author -%}
-{%- assign stats = site.data.citations.stats -%}
 
 <div class="page-hero">
   <div class="container page-hero-inner">
@@ -18,12 +17,9 @@ body_class: pubs-page
       <span>Publications</span>
     </nav>
     <h1 class="page-title">Publications</h1>
-    <div class="hero-stats">
-      <div class="stat"><div class="stat-n">{{ stats.publications | default: 21 }}</div><div class="stat-l">Publications</div></div>
-      <div class="stat"><div class="stat-n">{{ stats.citations | default: 371 }}</div><div class="stat-l">Citations</div></div>
-      <div class="stat"><div class="stat-n">{{ stats.h_index | default: 9 }}</div><div class="stat-l">h-index</div></div>
-      <div class="stat"><div class="stat-n">{{ stats.i10_index | default: 8 }}</div><div class="stat-l">i10-index</div></div>
-      <a class="btn btn-ghost btn-sm" href="{{ a.scholar }}" target="_blank" rel="noopener">Google Scholar ↗</a>
+    <p class="page-lead">Peer-reviewed journal articles, conference proceedings, and doctoral research in AI safety, run-time monitoring, and autonomous systems.</p>
+    <div class="hero-actions">
+      <a class="btn btn-ghost btn-sm" href="{{ a.scholar }}" target="_blank" rel="noopener">Google Scholar Profile ↗</a>
     </div>
   </div>
 </div>
