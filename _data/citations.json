@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-12T11:37:30.942038Z",
+  "updated_at": "2026-10-19T09:32:58.969647Z",
   "source": "OpenAlex (Fallback)",
   "stats": {
-    "citations": 288,
+    "citations": 289,
     "h_index": 8,
     "i10_index": 7,
-    "publications": 23
+    "publications": 19
   },
   "papers": {
     "aneffectiveforestfiredetectionframeworkusingheterogeneouswirelessmultimediasensornetworks": 78,
@@ -15,15 +15,15 @@
     "predictionofpunchingshearstrengthofslabcolumnconnectionsacomprehensiveevaluationofmachinelearninganddeeplearningbasedapproaches": 31,
     "activityrecognitionusingbinarysensorsforelderlypeoplelivingalonescanpathtrendanalysisapproach": 26,
     "detectinghazardouseventsaframeworkforautomatedvehiclesafetysystems": 14,
-    "hierarchicalhumanactivityrecognitionwithfusionofaudioandmultipleinertialsensormodalities": 1,
+    "hierarchicalhumanactivityrecognitionwithfusionofaudioandmultipleinertialsensormodalities": 4,
     "deeplearningbasedstresspredictionfromofflinesignatures": 8,
-    "runtimeintrospectionof2dobjectdetectioninautomateddrivingsystemsusinglearningrepresentations": 0,
-    "hybridapproachfordisasterrecoveryusingp2pcommunicationsinandroid": 5,
+    "runtimeintrospectionof2dobjectdetectioninautomateddrivingsystemsusinglearningrepresentations": 6,
     "introspectionof2dobjectdetectionusingprocessedneuralactivationpatternsinautomateddrivingsystems": 3,
-    "runtimemonitoringof3dobjectdetectioninautomateddrivingsystemsusingearlylayerneuralactivationpatterns": 0,
+    "hybridapproachfordisasterrecoveryusingp2pcommunicationsinandroid": 5,
+    "runtimemonitoringof3dobjectdetectioninautomateddrivingsystemsusingearlylayerneuralactivationpatterns": 5,
     "multilayerselfassessmentwithfilteringfor3dobjectdetectioninautonomousvehicles": 1,
+    "exploringactivitytransitionsinthestabasedactivityrecognition": 3,
     "criticalanalysisofvalidationmethodsformachinelearningmodelsusedinehealthapplications": 2,
-    "exploringactivitytransitionsinthestabasedactivityrecognition": 2,
     "statisticalanalysisforsensoryehealthapplicationsopportunitiesandchallenges": 0,
     "integritymonitoringof3dobjectdetectioninautomateddrivingsystemsusingrawactivationpatternsandspatialfiltering": 0,
     "zhadigeraisoftwareasaserviceaiplatformforkazakhandenglish": 0
@@ -58,39 +58,39 @@
       "citations": 14
     },
     "hierarchicalhumanactivityrecognitionwithfusionofaudioandmultipleinertialsensormodalities": {
-      "raw_title": "Hierarchical Human Activity Recognition with Fusion of Audio and Multiple Inertial Sensor Modalities",
-      "citations": 1
+      "raw_title": "Hierarchical human activity recognition with fusion of audio and multiple inertial sensor modalities",
+      "citations": 4
     },
     "deeplearningbasedstresspredictionfromofflinesignatures": {
       "raw_title": "Deep Learning Based Stress Prediction From Offline Signatures",
       "citations": 8
     },
     "runtimeintrospectionof2dobjectdetectioninautomateddrivingsystemsusinglearningrepresentations": {
-      "raw_title": "Run-time Introspection of 2D Object Detection in Automated Driving Systems Using Learning Representations",
-      "citations": 0
-    },
-    "hybridapproachfordisasterrecoveryusingp2pcommunicationsinandroid": {
-      "raw_title": "Hybrid Approach for Disaster Recovery using P2P Communications in Android",
-      "citations": 5
+      "raw_title": "Run-Time Introspection of 2D Object Detection in Automated Driving Systems Using Learning Representations",
+      "citations": 6
     },
     "introspectionof2dobjectdetectionusingprocessedneuralactivationpatternsinautomateddrivingsystems": {
       "raw_title": "Introspection of 2D Object Detection using Processed Neural Activation Patterns in Automated Driving Systems",
       "citations": 3
     },
+    "hybridapproachfordisasterrecoveryusingp2pcommunicationsinandroid": {
+      "raw_title": "Hybrid Approach for Disaster Recovery using P2P Communications in Android",
+      "citations": 5
+    },
     "runtimemonitoringof3dobjectdetectioninautomateddrivingsystemsusingearlylayerneuralactivationpatterns": {
       "raw_title": "Run-time Monitoring of 3D Object Detection in Automated Driving Systems Using Early Layer Neural Activation Patterns",
-      "citations": 0
+      "citations": 5
     },
     "multilayerselfassessmentwithfilteringfor3dobjectdetectioninautonomousvehicles": {
       "raw_title": "Multi-Layer Self-Assessment with Filtering for 3D Object Detection in Autonomous Vehicles",
       "citations": 1
     },
-    "criticalanalysisofvalidationmethodsformachinelearningmodelsusedinehealthapplications": {
-      "raw_title": "Critical Analysis of Validation Methods for Machine Learning Models Used in E-health Applications",
-      "citations": 2
-    },
     "exploringactivitytransitionsinthestabasedactivityrecognition": {
       "raw_title": "Exploring Activity Transitions in the STA-based Activity Recognition",
+      "citations": 3
+    },
+    "criticalanalysisofvalidationmethodsformachinelearningmodelsusedinehealthapplications": {
+      "raw_title": "Critical Analysis of Validation Methods for Machine Learning Models Used in E-health Applications",
       "citations": 2
     },
     "statisticalanalysisforsensoryehealthapplicationsopportunitiesandchallenges": {
