@@ -1,17 +1,20 @@
 # PhD FAQ — rendered on /phd/ and emitted as FAQPage structured data for search engines.
 # Answers may contain simple HTML.
 
-- q: "Are fully funded PhD studentships available for Northern Ireland, UK, and Irish students?"
-  a: "Yes. The Department for the Economy (DfE) Northern Ireland funds competitive annual PhD studentships at Queen's University Belfast covering <strong>100% of approved tuition fees plus a tax-free living stipend</strong> (currently over £19,000 per year). Under the UK–Ireland Common Travel Area (CTA), citizens of the Republic of Ireland pay Home tuition fees and do not need a student visa."
+- q: "Is there a guaranteed, fully funded PhD studentship available right now for Home-fee (UK, Irish, Settled Status, or ILR) students?"
+  a: "Yes. I hold a <strong>directly allocated 3-year DfE Northern Ireland PhD studentship</strong> at Queen's University Belfast covering <strong>100% of Home tuition fees plus a tax-free, NI-free living stipend</strong> (~£19,237–£20,780 per year, equivalent to a ~£25k–£27k taxed salary, plus paid teaching/demonstrating top-ups). It is open to <strong>UK/NI nationals</strong>, <strong>Republic of Ireland citizens (under the Common Travel Area)</strong>, and candidates holding <strong>EU Settled Status, Indefinite Leave to Remain (ILR), or eligible 3-year UK residency</strong> — without entering a school-wide quota lottery."
 
-- q: "Can I apply while I am still finishing my undergraduate or Master's degree?"
-  a: "Yes. Applicants should hold <em>or expect to achieve</em> a First Class or Upper Second Class (2:1) Honours degree, or an equivalent Master's degree. Final-year students from Queen's, Ulster University, and universities across the island of Ireland and Great Britain are very welcome to get in touch before they graduate."
+- q: "I am working as a graduate software engineer or studying Physics / Maths / Mechanical Engineering. Should I apply?"
+  a: "Absolutely. Graduate software and data engineers in Belfast, Great Britain, or Ireland who want to move from routine enterprise development into frontier AI, 3D vision, and robotics R&amp;D make outstanding PhD researchers. Similarly, graduates in <strong>Physics, Applied Mathematics, and Mechanical/Aerospace Engineering</strong> who have strong Python and linear algebra skills are strongly encouraged to reach out — you do not need a Computer Science degree title or prior autonomous driving experience."
 
-- q: "What research areas are currently open for PhD supervision?"
-  a: "I welcome proposals aligned with four research strands: <strong>(1) Robust Sensing for AI in Autonomy</strong>, <strong>(2) Run-Time Monitoring &amp; Introspection</strong>, <strong>(3) Cooperative Autonomy</strong>, and <strong>(4) Explainable AI (XAI)</strong>. Interdisciplinary proposals combining machine learning, computer vision, and robotics are also encouraged."
+- q: "Do I need to write a formal research proposal before emailing you?"
+  a: "<strong>No.</strong> Many great candidates hold back because they think they need a polished 2-page research proposal before making contact. Simply email <a href=\"mailto:h.yatbaz@qub.ac.uk\">h.yatbaz@qub.ac.uk</a> with the subject line <code>[PhD Inquiry - HOME]</code> and your CV/transcript for a casual 15-minute coffee in the Ashby Building or a quick Teams chat. We will shape the formal proposal together once we find a topic you love."
 
-- q: "What academic background do I need?"
-  a: "A strong degree in Computer Science, Machine Learning, Robotics, Electrical &amp; Electronic Engineering, or a closely related discipline. Good Python skills and familiarity with a deep learning framework (PyTorch preferred) are essential."
+- q: "How competitive is funding for International (Overseas fee status) applicants?"
+  a: "International fee-waiver scholarships in the School of EEECS are extremely competitive (typically <strong>≤5 awards across 30+ academics</strong>). To win a School international nomination slot, you must hold a top Master's degree and already have <strong>published or accepted peer-reviewed papers</strong> (e.g., IEEE/ACM transactions or leading vision/robotics conferences). I also enthusiastically support strong international candidates applying with external fellowships (e.g., CSC, TÜBİTAK, MSCA, or home-government sponsorships)."
 
-- q: "When should I get in touch?"
-  a: "DfE studentship competitions typically run through the autumn and winter, with deadlines usually between January and March for an autumn start. Informal enquiries are welcome year-round, and it is best to contact me at <a href=\"mailto:h.yatbaz@qub.ac.uk\">h.yatbaz@qub.ac.uk</a> several months before the deadline so we can develop a proposal together."
+- q: "Can I apply while I am still finishing my undergraduate (BSc/MEng) or Master's (MSc) degree?"
+  a: "Yes. Final-year undergraduate and Master's students expecting a First Class or strong 2:1 degree from Queen's, Ulster University, universities across the Republic of Ireland (TCD, UCD, DCU, University of Galway, UCC, UL, Maynooth), and Great Britain are encouraged to get in touch early so we can reserve your spot ahead of graduation."
+
+- q: "What will my day-to-day setup look like in your group?"
+  a: "You will step into a working PyTorch codebase on Day 1 with pre-processed autonomous driving datasets (<code>nuScenes</code>, <code>Argoverse 2</code>, <code>KITTI</code>), high-performance GPU clusters, and access to QUB's instrumented autonomous research vehicle. We meet weekly 1-on-1 to design experiments and co-author papers for top venues (<code>CVPR</code>, <code>ICRA</code>, <code>CoRL</code>, <code>IEEE T-ITS</code>, <code>IEEE T-IV</code>), and I actively support paid summer industry research internships."
