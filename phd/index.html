@@ -11,88 +11,133 @@ body_class: phd-page
 ---
 {%- assign a = site.author -%}
 
-<div class="page-hero">
-  <div class="container page-hero-inner">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <span class="sep" aria-hidden="true">›</span>
-      <span>PhD Opportunities &amp; Supervision</span>
-    </nav>
-    <div class="hero-tag">Doctoral Supervision · Queen's University Belfast</div>
-    <h1 class="page-title">PhD in Autonomous Systems &amp; AI</h1>
-    <p class="page-lead">Doctoral supervision and fully funded DfE studentships in the School of Electronics, Electrical Engineering and Computer Science (EEECS). Welcoming enquiries from Northern Ireland, Great Britain, the Republic of Ireland (Common Travel Area), and international candidates.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#funding">DfE Funding &amp; CTA Home Fees ↓</a>
-      <a class="btn btn-ghost" href="#strands">Research Strands ↓</a>
-      <a class="btn btn-ghost" href="#apply">How to Apply ↓</a>
-      <a class="btn btn-ghost" href="#faq">Admissions FAQ ↓</a>
+<!-- ==================== SUBHERO ==================== -->
+<section class="subhero wrap" aria-labelledby="phd-hero-title">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <span class="sep" aria-hidden="true">/</span>
+    <span>PhD &amp; Collaborate</span>
+  </nav>
+  <p class="kicker">Doctoral Supervision &middot; Queen's University Belfast (EEECS)</p>
+  <h1 id="phd-hero-title" class="subhero__title">PhD in Autonomous Systems &amp; AI Safety</h1>
+  <p class="subhero__deck">
+    Doctoral supervision and fully funded <strong>DfE Northern Ireland studentships</strong> in the School of Electronics, Electrical Engineering and Computer Science (EEECS). Welcoming enquiries from Northern Ireland, Great Britain, the <strong>Republic of Ireland (Common Travel Area)</strong>, and international candidates.
+  </p>
+  <div class="subhero__ctas">
+    <a class="btn btn--primary" href="#funding">DfE funding &amp; CTA Home fees &darr;</a>
+    <a class="btn btn--ghost" href="#strands">Research strands &darr;</a>
+    <a class="btn btn--ghost" href="#apply">How to apply &darr;</a>
+    <a class="btn btn--ghost" href="#faq">Admissions FAQ &darr;</a>
+  </div>
+</section>
+
+<!-- ==================== 01. FUNDING & ELIGIBILITY ==================== -->
+<section id="funding" class="section wrap" aria-labelledby="funding-heading">
+  <div class="section-head">
+    <span class="section-num">01 &mdash; Funding &amp; eligibility</span>
+    <h2 id="funding-heading" class="section-title">Fully funded PhD studentships (DfE &amp; CTA)</h2>
+    <p class="section-sub">Queen's University Belfast is a Russell Group research institution with competitive annual doctoral funding routes</p>
+  </div>
+
+  <div class="hang">
+    <aside class="hang__margin">
+      <p class="margin-note">Republic of Ireland &amp; UK citizens qualify for domestic Home fee rates under the Common Travel Area.</p>
+    </aside>
+    <div class="teaser-grid">
+      <article class="card-progress">
+        <div class="card-progress__top">
+          <span class="badge badge--accent">Key Eligibility Advantage</span>
+          <span class="card-progress__where">Common Travel Area (CTA)</span>
+        </div>
+        <h3 class="card-progress__title">Republic of Ireland &amp; Common Travel Area</h3>
+        <p class="card-progress__body">
+          Under the UK&ndash;Ireland Common Travel Area agreement, <strong>Republic of Ireland (ROI) citizens pay domestic UK Home tuition fees</strong> at Queen's University Belfast and do not require a student visa. This provides a direct, cost-effective route for Irish and eligible EU residents.
+        </p>
+      </article>
+
+      <article class="card-progress">
+        <div class="card-progress__top">
+          <span class="badge badge--live"><span class="dot" aria-hidden="true"></span> Annual competition</span>
+          <span class="card-progress__where">Department for the Economy (NI)</span>
+        </div>
+        <h3 class="card-progress__title">DfE Northern Ireland Postgraduate Studentships</h3>
+        <p class="card-progress__body">
+          The Department for the Economy (DfE) funds competitive annual PhD studentships covering <strong>100% of approved tuition fees plus an annual tax-free living stipend</strong> (currently over &pound;19,000/year). Open to eligible UK, ROI, and EU candidates meeting residency criteria.
+        </p>
+      </article>
+
+      <article class="card-progress">
+        <div class="card-progress__top">
+          <span class="badge">Early preparation</span>
+          <span class="card-progress__where">BSc / MEng / MSc</span>
+        </div>
+        <h3 class="card-progress__title">Final-Year Students &amp; Early Inquiries</h3>
+        <p class="card-progress__body">
+          You do not need to wait until your degree is finished to get in touch. Final-year undergraduate and Master's students expecting a First or 2:1 are encouraged to contact me during autumn/winter so we can prepare a strong proposal ahead of competition deadlines.
+        </p>
+      </article>
+
+      <article class="card-progress">
+        <div class="card-progress__top">
+          <span class="badge">Global applicants</span>
+          <span class="card-progress__where">International &amp; External</span>
+        </div>
+        <h3 class="card-progress__title">International &amp; External Scholarships</h3>
+        <p class="card-progress__body">
+          International candidates can apply for university-level tuition fee awards. I also actively support strong candidates applying with external scholarships (e.g., home government sponsorships, national research councils, Marie Sk&#322;odowska-Curie networks, T&Uuml;B&#304;TAK).
+        </p>
+      </article>
     </div>
   </div>
-</div>
+</section>
 
-<div class="container page-content">
+<!-- ==================== 02. RESEARCH STRANDS ==================== -->
+<section id="strands" class="section wrap" aria-labelledby="strands-heading">
+  <div class="section-head">
+    <span class="section-num">02 &mdash; Doctoral topics</span>
+    <h2 id="strands-heading" class="section-title">Research strands open for supervision</h2>
+    <p class="section-sub">Four core agendas &mdash; interdisciplinary proposals across machine learning, computer vision, and robotics are welcome</p>
+  </div>
 
-  <!-- ── FUNDING & ELIGIBILITY ── -->
-  <section id="funding" class="content-block">
-    <div class="section-head">
-      <p class="eyebrow">Funding &amp; Eligibility</p>
-      <h2 class="section-title">Fully Funded PhD Studentships (DfE Northern Ireland &amp; CTA)</h2>
-      <p class="section-intro">Queen's University Belfast is a Russell Group research institution. Doctoral researchers in the School of EEECS have access to competitive annual funding competitions:</p>
-    </div>
-
-    <div class="funding-grid">
-      <div class="funding-card highlight">
-        <div class="funding-badge">Key Eligibility Advantage</div>
-        <h3>Republic of Ireland &amp; Common Travel Area (CTA)</h3>
-        <p>Under the UK–Ireland Common Travel Area agreement, <strong>Republic of Ireland (ROI) citizens pay domestic UK Home tuition fees</strong> at Queen's University Belfast and do not require a student visa. This provides a direct, cost-effective route for Irish and eligible EU residents.</p>
-      </div>
-
-      <div class="funding-card">
-        <h3>DfE Northern Ireland Postgraduate Studentships</h3>
-        <p>The Department for the Economy (DfE) funds competitive annual PhD studentships covering <strong>100% of approved tuition fees plus an annual tax-free living stipend</strong> (currently over £19,000/year). Open to eligible UK, ROI, and EU candidates meeting residency criteria.</p>
-      </div>
-
-      <div class="funding-card">
-        <h3>Final-Year Students &amp; Early Inquiries</h3>
-        <p>You do not need to wait until your degree is finished to get in touch. Final-year undergraduate and Master's students expecting a First or 2:1 are encouraged to contact me during autumn/winter so we can prepare a strong proposal ahead of competition deadlines.</p>
-      </div>
-
-      <div class="funding-card">
-        <h3>International &amp; External Scholarships</h3>
-        <p>International candidates can apply for university-level tuition fee awards. I also actively support strong candidates applying with external scholarships (e.g., home government sponsorships, national research councils, Marie Skłodowska-Curie networks, TÜBİTAK).</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── RESEARCH STRANDS ── -->
-  <section id="strands" class="content-block">
-    <div class="section-head">
-      <p class="eyebrow">Doctoral Topics</p>
-      <h2 class="section-title">Research Strands Open for Supervision</h2>
-      <p class="section-intro">I welcome PhD proposals aligned with four core research strands. Interdisciplinary proposals combining machine learning, computer vision, and robotics are also welcome:</p>
-    </div>
-
-    <div class="strands-grid">
+  <div class="hang">
+    <aside class="hang__margin">
+      <p class="margin-note">Each strand connects directly to ongoing projects and open-source benchmarks.</p>
+    </aside>
+    <div class="problems">
       {%- for r in site.data.research %}
-      <div class="strand-card">
-        <div class="strand-num">STRAND {{ r.num }}</div>
-        <h3 class="strand-title">{{ r.title }}</h3>
-        <p>{{ r.phd }}</p>
-      </div>
+      <article class="problem">
+        <span class="problem__idx">{{ r.roman }}</span>
+        <div class="problem__body">
+          <h3 class="problem__q">{{ r.title }}</h3>
+          <p class="problem__why">{{ r.phd }}</p>
+          {%- if r.tags %}
+          <p class="problem__tags">
+            {%- for t in r.tags %}
+            <span class="tag">{{ t }}</span>
+            {%- endfor %}
+          </p>
+          {%- endif %}
+        </div>
+      </article>
       {%- endfor %}
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ── SUPERVISION APPROACH & PREREQUISITES ── -->
-  <section id="approach" class="content-block">
-    <div class="section-head">
-      <p class="eyebrow">Mentorship</p>
-      <h2 class="section-title">Supervision Approach &amp; Prerequisites</h2>
-    </div>
+<!-- ==================== 03. SUPERVISION & EXPECTATIONS ==================== -->
+<section id="approach" class="section wrap" aria-labelledby="approach-heading">
+  <div class="section-head">
+    <span class="section-num">03 &mdash; Mentorship</span>
+    <h2 id="approach-heading" class="section-title">Supervision approach &amp; prerequisites</h2>
+  </div>
 
-    <div class="two-col-grid">
-      <div class="panel-box">
-        <h3 class="panel-title">What You Can Expect From Me</h3>
+  <div class="hang">
+    <aside class="hang__margin">
+      <p class="margin-note">Hands-on mentorship with dedicated compute and top-tier venue targets.</p>
+    </aside>
+    <div class="about-grid">
+      <article class="about-block">
+        <h3 class="about-block__title">What you can expect from me</h3>
         <ul class="bullet-list">
           <li><strong>Regular one-to-one supervision:</strong> Weekly or fortnightly meetings with dedicated focus on your research progress and career goals.</li>
           <li><strong>Technical mentorship:</strong> Hands-on guidance in DNN introspection, neural activations, LiDAR 3D object detection, and AI safety.</li>
@@ -100,10 +145,10 @@ body_class: phd-page
           <li><strong>Publication strategy:</strong> Active support in submitting to leading peer-reviewed venues (IEEE T-ITS, IEEE T-IV, CVPR, ICCV, ITSC).</li>
           <li><strong>Timely, constructive feedback:</strong> Thorough reviews of paper drafts, dissertation chapters, and presentation slides.</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="panel-box">
-        <h3 class="panel-title">What I Look For in Candidates</h3>
+      <article class="about-block">
+        <h3 class="about-block__title">What I look for in candidates</h3>
         <ul class="bullet-list">
           <li><strong>Strong academic background:</strong> A First Class or Upper Second Class (2:1) Honours degree (or equivalent Master's) in Computer Science, Machine Learning, Robotics, or Electrical &amp; Electronic Engineering.</li>
           <li><strong>Programming proficiency:</strong> Strong Python skills and hands-on familiarity with deep learning frameworks (PyTorch strongly preferred).</li>
@@ -111,104 +156,117 @@ body_class: phd-page
           <li><strong>Communication skills:</strong> Clear written and spoken English, essential for research manuscripts and conference presentations.</li>
           <li><strong>Safety-critical focus:</strong> Genuine motivation to work on trustworthy and robust AI for real-world automated systems.</li>
         </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 04. HOW TO APPLY ==================== -->
+<section id="apply" class="section wrap" aria-labelledby="apply-heading">
+  <div class="section-head">
+    <span class="section-num">04 &mdash; Application process</span>
+    <h2 id="apply-heading" class="section-title">How to inquire &amp; apply</h2>
+    <p class="section-sub">A transparent three-step route from initial email to formal QUB Direct submission</p>
+  </div>
+
+  <div class="hang">
+    <aside class="hang__margin">
+      <p class="margin-note">Use the subject prefix so your inquiry is routed and reviewed promptly.</p>
+    </aside>
+    <div>
+      <div class="problems">
+        <article class="problem">
+          <span class="problem__idx">1</span>
+          <div class="problem__body">
+            <h3 class="problem__q">Informal Email Inquiry</h3>
+            <p class="problem__why">
+              Send an email to <a href="mailto:{{ a.email }}">{{ a.email }}</a> with the subject line <code>[PhD Inquiry] Your Name &mdash; Proposed Strand</code>. Please attach:
+            </p>
+            <ul class="bullet-list">
+              <li>Your current CV (including degree grades, GPA, and graduation date)</li>
+              <li>Academic transcripts (undergraduate and postgraduate)</li>
+              <li>A brief summary (1&ndash;2 paragraphs or 1 page) of your research interests and why you want to work on this topic</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="problem">
+          <span class="problem__idx">2</span>
+          <div class="problem__body">
+            <h3 class="problem__q">Discussion &amp; Proposal Alignment</h3>
+            <p class="problem__why">
+              If there is strong research alignment, we will arrange an online video call to discuss your interests, refine a project outline, and determine the most suitable funding competition (DfE, university scholarships, or external awards).
+            </p>
+          </div>
+        </article>
+
+        <article class="problem">
+          <span class="problem__idx">3</span>
+          <div class="problem__body">
+            <h3 class="problem__q">Formal Application via QUB Direct</h3>
+            <p class="problem__why">
+              Submit your formal application through the Queen's University Belfast Direct Admissions Portal, naming Dr. Hakan Yekta Yatbaz as your proposed primary supervisor. The formal application requires reference letters, verified degree certificates, and the agreed research proposal.
+            </p>
+          </div>
+        </article>
       </div>
-    </div>
-  </section>
 
-  <!-- ── HOW TO APPLY ── -->
-  <section id="apply" class="content-block">
-    <div class="section-head">
-      <p class="eyebrow">Application Process</p>
-      <h2 class="section-title">How to Inquire &amp; Apply</h2>
-      <p class="section-intro">To ensure a quick and productive review, please follow this three-step process:</p>
-    </div>
-
-    <div class="steps-list">
-      <div class="step-card">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <h3>Informal Email Inquiry</h3>
-          <p>Send an email to <a href="mailto:{{ a.email }}">{{ a.email }}</a> with the subject line <code>[PhD Inquiry] Your Name — Proposed Strand</code>.</p>
-          <p>Please attach:</p>
-          <ul class="sub-list">
-            <li>Your current CV (including degree grades, GPA, and graduation date)</li>
-            <li>Academic transcripts (undergraduate and postgraduate)</li>
-            <li>A brief summary (1–2 paragraphs or 1 page) of your research interests and why you want to work on this topic</li>
-          </ul>
+      <div class="collab__contact">
+        <div class="collab__email">
+          <span class="collab__label">Direct inquiry</span>
+          <a href="mailto:{{ a.email }}?subject=%5BPhD%20Inquiry%5D%20" class="collab__addr">{{ a.email }}</a>
+          <button class="icon-btn" type="button" data-copy="{{ a.email }}" aria-label="Copy email address">
+            <svg class="i i--sm" aria-hidden="true"><use href="#i-copy"/></svg>
+          </button>
         </div>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <h3>Discussion &amp; Proposal Alignment</h3>
-          <p>If there is strong research alignment, we will arrange an online video call to discuss your interests, refine a project outline, and determine the most suitable funding competition (DfE, university scholarships, or external awards).</p>
-        </div>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <h3>Formal Application via QUB Direct</h3>
-          <p>Submit your formal application through the Queen's University Belfast Direct Admissions Portal, naming Dr. Hakan Yekta Yatbaz as your proposed primary supervisor. The formal application requires reference letters, verified degree certificates, and the agreed research proposal.</p>
-        </div>
+        <p class="collab__office">Computer Science Building, 16A Malone Road, Belfast BT9 5BN, Northern Ireland, UK</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ── FAQ ── -->
-  <section id="faq" class="content-block">
-    <div class="section-head">
-      <p class="eyebrow">Common Questions</p>
-      <h2 class="section-title">Frequently Asked Questions</h2>
-    </div>
+<!-- ==================== 05. ADMISSIONS FAQ ==================== -->
+<section id="faq" class="section wrap" aria-labelledby="faq-heading">
+  <div class="section-head">
+    <span class="section-num">05 &mdash; Common questions</span>
+    <h2 id="faq-heading" class="section-title">Frequently asked questions</h2>
+  </div>
 
-    <div class="faq-accordion">
+  <div class="hang">
+    <aside class="hang__margin">
+      <p class="margin-note">Click any question to expand details on funding, eligibility, and timelines.</p>
+    </aside>
+    <div class="faq-list">
       {%- for f in site.data.faq %}
-      <details class="faq-item">
-        <summary class="faq-question">{{ f.q }}</summary>
+      <details class="faq-item"{% if forloop.first %} open{% endif %}>
+        <summary>{{ f.q }}</summary>
         <div class="faq-answer">{{ f.a }}</div>
       </details>
       {%- endfor %}
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ── SUPERVISED STUDENTS TRACK RECORD ── -->
-  <section id="supervision-track-record" class="content-block">
-    <div class="section-head">
-      <p class="eyebrow">Track Record</p>
-      <h2 class="section-title">Student Supervision &amp; Mentorship</h2>
-      <p class="section-intro">Supervising postgraduate dissertation and undergraduate graduation projects at Queen's University Belfast across AI safety, computer vision, and autonomous systems:</p>
-    </div>
-
-    <div class="students-grid">
-      {%- for s in site.data.students %}
-      <div class="student-card">
-        <div class="student-header">
-          <div class="student-avatar" aria-hidden="true">{{ s.name | split: ' ' | first | slice: 0 }}{{ s.name | split: ' ' | last | slice: 0 }}</div>
-          <div>
-            <h3 class="student-name">{{ s.name }}</h3>
-            <div class="student-degree">{{ s.degree }} · {{ s.level }}</div>
-          </div>
-        </div>
-        <p class="student-project">"{{ s.project }}"</p>
-        <div class="student-tags">
-          <span class="tag tag-completed">Completed</span>
-          <span class="tag">Supervisor</span>
-        </div>
-      </div>
-      {%- endfor %}
-    </div>
-  </section>
-
-  <!-- ── CTA BANNER ── -->
-  <div class="cta-banner">
-    <div>
-      <p class="cta-eyebrow">Ready to discuss your research?</p>
-      <h3 class="cta-title">Start a PhD Inquiry with Dr. Yatbaz</h3>
-      <p class="cta-desc">Inquiries are welcomed year-round for upcoming DfE and international scholarship rounds.</p>
-    </div>
-    <a class="btn btn-primary btn-lg" href="mailto:{{ a.email }}?subject=%5BPhD%20Inquiry%5D%20">Send an Inquiry →</a>
+<!-- ==================== 06. SUPERVISED STUDENTS ==================== -->
+<section id="supervision-track-record" class="section wrap" aria-labelledby="students-heading">
+  <div class="section-head">
+    <span class="section-num">06 &mdash; Track record</span>
+    <h2 id="students-heading" class="section-title">Student supervision &amp; mentorship</h2>
+    <p class="section-sub">Postgraduate dissertation and undergraduate graduation projects supervised at Queen's University Belfast</p>
   </div>
 
-</div>
+  <div class="hang">
+    <aside class="hang__margin">
+      <p class="margin-note">MSc and BSc research projects spanning activation encoding, feature visualisation, and driving introspection.</p>
+    </aside>
+    <div class="students-grid">
+      {%- for s in site.data.students %}
+      <article class="student-card">
+        <div class="student-card__meta">{{ s.degree }} &middot; {{ s.level }} &middot; {{ s.status | capitalize }}</div>
+        <h3 class="student-card__name">{{ s.name }}</h3>
+        <p class="student-card__proj">&ldquo;{{ s.project }}&rdquo;</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

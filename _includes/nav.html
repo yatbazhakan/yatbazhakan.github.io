@@ -1,24 +1,46 @@
-<header class="site-nav" id="top">
-  <div class="container nav-inner">
-    <a href="{{ '/' | relative_url }}" class="nav-brand" aria-label="Home">
-      <span class="nav-logo" aria-hidden="true">Q</span>
-      <span class="nav-brand-text">
-        <span class="nav-brand-sub">Queen's University Belfast</span>
-        <span class="nav-brand-name">{{ site.author.short_name }}</span>
-      </span>
+<header class="site-header" data-header>
+  <div class="site-header__inner wrap">
+    <a class="wordmark" href="{{ '/' | relative_url }}">
+      <svg class="logomark" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false">
+        <rect class="logomark__cell" x="1.625" y="1.625" width="4.75" height="4.75" rx="1"/>
+        <rect class="logomark__cell logomark__cell--on" x="9" y="1" width="6" height="6" rx="1"/>
+        <rect class="logomark__cell" x="1.625" y="9.625" width="4.75" height="4.75" rx="1"/>
+        <rect class="logomark__cell" x="9.625" y="9.625" width="4.75" height="4.75" rx="1"/>
+      </svg>
+      <span class="wordmark__name">{{ site.author.display_name | default: site.author.name }}</span>
     </a>
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="nav-links" id="nav-links" aria-label="Main">
-      {%- for item in site.navigation %}
-        {%- assign item_url = item.url | relative_url -%}
-        {%- assign is_active = false -%}
-        {%- unless item.url contains '#' -%}
-          {%- if page.url == item.url -%}{%- assign is_active = true -%}{%- endif -%}
-        {%- endunless %}
-      <a href="{{ item_url }}" class="{% if item.highlight %}nav-cta{% endif %}{% if is_active %} active{% endif %}"{% if is_active %} aria-current="page"{% endif %}>{{ item.label }}</a>
-      {%- endfor %}
+
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="site-nav__list" id="site-menu" data-menu-panel>
+        {%- for item in site.navigation %}
+          {%- assign item_url = item.url -%}
+          {%- if page.url == '/' and item_url contains '/#' -%}
+            {%- assign href = item_url | replace: '/#', '#' -%}
+          {%- else -%}
+            {%- assign href = item_url | relative_url -%}
+          {%- endif -%}
+          {%- assign is_active = false -%}
+          {%- unless item.url contains '#' -%}
+            {%- if page.url == item.url -%}{%- assign is_active = true -%}{%- endif -%}
+          {%- endunless %}
+        <li>
+          <a class="site-nav__link{% if item.highlight %} site-nav__link--cta{% endif %}" href="{{ href }}"{% if is_active %} aria-current="page"{% endif %}>{{ item.label }}</a>
+        </li>
+        {%- endfor %}
+      </ul>
     </nav>
+
+    <div class="site-header__tools">
+      <button class="btn-icon theme-toggle" type="button" data-theme-toggle aria-label="Theme: Auto (follows system). Switch to light">
+        <svg class="icon theme-toggle__icon theme-toggle__icon--auto" width="18" height="18" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#contrast' | relative_url }}"/></svg>
+        <svg class="icon theme-toggle__icon theme-toggle__icon--light" width="18" height="18" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#sun' | relative_url }}"/></svg>
+        <svg class="icon theme-toggle__icon theme-toggle__icon--dark" width="18" height="18" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#moon' | relative_url }}"/></svg>
+      </button>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu">
+        <svg class="icon menu-toggle__open" width="18" height="18" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#menu' | relative_url }}"/></svg>
+        <svg class="icon menu-toggle__close" width="18" height="18" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#x' | relative_url }}"/></svg>
+        <span>Menu</span>
+      </button>
+    </div>
   </div>
 </header>

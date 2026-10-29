@@ -1,5 +1,6 @@
 {%- comment -%}
-  Renders one publication. Usage: {% include pub-item.html pub=p %}
+  Renders one publication in the editorial style.
+  Usage: {% include pub-item.html pub=p %}
 {%- endcomment -%}
 {%- assign pub = include.pub -%}
 {%- case pub.type -%}
@@ -9,27 +10,52 @@
   {%- when 'chapter' -%}{%- assign type_label = 'Book Chapter' -%}
   {%- else -%}{%- assign type_label = pub.type | capitalize -%}
 {%- endcase -%}
-<article class="pub" data-type="{{ pub.type }}" data-topic="{{ pub.topic }}">
-  <div class="pub-main">
-    <h3 class="pub-title">
+<article class="pub" id="pub-{{ pub.key }}"
+  {%- if pub.thread %} data-thread{% endif %}
+  data-key="{{ pub.key }}"
+  data-short="{{ pub.short | default: pub.title }}"
+  data-date="{{ pub.date | default: pub.year }}"
+  data-lane="{{ pub.lane | default: 'sensing' }}"
+  data-tags="{{ pub.tags | default: pub.topic }}"
+  {%- if pub.first_author %} data-first-author{% endif %}
+  {%- if pub.flagship %} data-flagship{% endif %}
+  data-venue="{{ pub.short_venue | default: pub.venue }}"
+  data-note="{{ pub.tldr | escape }}"
+  data-href="#pub-{{ pub.key }}">
+  <div class="pub__body">
+    <p class="pub__meta">
+      <span class="venue">{{ pub.short_venue | default: pub.year }}</span>
+      <span class="tag">{{ type_label }}</span>
+      {%- if pub.area %}<span class="tag{% if pub.flagship %} tag--accent{% endif %}">{{ pub.area }}</span>{% endif %}
+    </p>
+    <h4 class="pub__title">
       {%- if pub.links and pub.links[0] -%}
         <a href="{{ pub.links[0].url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
       {%- else -%}{{ pub.title }}{%- endif -%}
-    </h3>
-    <p class="pub-authors">{{ pub.authors | escape | replace: 'H. Y. Yatbaz', '<strong>H. Y. Yatbaz</strong>' }}</p>
-    <p class="pub-venue">{{ pub.venue | escape }}</p>
-    <div class="pub-tags">
-      <span class="tag tag-{{ pub.type }}">{{ type_label }}</span>
-      {%- if pub.area %}
-      <span class="tag tag-area{% if pub.topic == 'autonomous' %} tag-area-core{% endif %}">{{ pub.area }}</span>
+    </h4>
+    <p class="pub__authors">{{ pub.authors | escape | replace: 'H. Y. Yatbaz', '<b class="me">H. Y. Yatbaz</b>' }}</p>
+    <p class="pub__venue-full">{{ pub.venue | escape }}</p>
+    {%- if pub.tldr %}
+    <p class="pub__tldr">{{ pub.tldr }}</p>
+    {%- endif %}
+    <div class="pub__links">
+      {%- if pub.links %}
+        {%- for l in pub.links %}
+        <a class="pill" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>
+        {%- endfor %}
+      {%- endif %}
+      {%- if pub.bibtex %}
+      <details class="bib">
+        <summary class="pill">BibTeX</summary>
+        <div class="code-wrap">
+          <pre class="code"><code>{{ pub.bibtex | strip | escape }}</code></pre>
+          <button class="btn-icon code-copy" type="button" aria-label="Copy BibTeX for {{ pub.short | default: pub.title | escape }}">
+            <svg class="icon copy-btn__copy" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#copy' | relative_url }}"/></svg>
+            <svg class="icon copy-btn__done" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#check' | relative_url }}"/></svg>
+          </button>
+        </div>
+      </details>
       {%- endif %}
     </div>
   </div>
-  {%- if pub.links %}
-  <div class="pub-links">
-    {%- for l in pub.links %}
-    <a href="{{ l.url }}" target="_blank" rel="noopener" class="pub-link">{{ l.label }}</a>
-    {%- endfor %}
-  </div>
-  {%- endif %}
 </article>

@@ -8,8 +8,10 @@
 {%- endif -%}
 {%- assign desc = page.description | default: site.description | strip_newlines | strip -%}
 {%- assign canonical = page.url | replace: 'index.html', '' | absolute_url -%}
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Theme boot: runs before any stylesheet so a saved theme never flashes. Keep it first. -->
+  <script>try{const t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){};document.documentElement.classList.add('js')</script>
   <title>{{ full_title }}</title>
   <meta name="description" content="{{ desc | escape }}">
   {%- if page.keywords %}
@@ -18,6 +20,15 @@
   <meta name="author" content="{{ author.name }}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{{ canonical }}">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#FAF8F4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)">
+
+  <!-- Fonts: preload primary variable faces -->
+  <link rel="preload" href="{{ '/assets/fonts/newsreader-latin-opsz-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/inter-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/css/tokens.css?v=20261029' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css?v=20261029' | relative_url }}">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ canonical }}">
@@ -31,12 +42,6 @@
   <meta name="twitter:description" content="{{ desc | escape }}">
   <meta name="twitter:image" content="{{ author.photo | absolute_url }}">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-
-  {%- comment -%} Person schema on every page; pages can add more via `jsonld:` front matter. {%- endcomment -%}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -82,3 +87,7 @@
   {%- if page.jsonld %}
   {% include {{ page.jsonld }} %}
   {%- endif %}
+
+  <script type="module" src="{{ '/assets/js/site.js?v=20261029' | relative_url }}"></script>
+  <script type="module" src="{{ '/assets/js/throughline.js?v=20261029' | relative_url }}"></script>
+  <script type="module" src="{{ '/assets/js/career.js?v=20261029' | relative_url }}"></script>

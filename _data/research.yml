@@ -1,21 +1,53 @@
-# Research strands — used on the home page (`summary`) and the PhD page (`phd`).
+# Research strands — used on the home page (Throughline legend, Vision band, Collaborate) and the PhD page (`phd`).
 
 - num: "01"
+  roman: "I"
+  lane: "sensing"
+  lane_label: "Sensing"
   title: "Robust Sensing for AI in Autonomy"
+  short_desc: "Multi-modal perception and sensor fusion that stay reliable under adverse weather, noise, and degradation."
   summary: "Multi-modal perception pipelines that stay reliable under adverse weather, sensor degradation, noise, and domain shift in real-world deployments."
   phd: "Quantifying and mitigating perception degradation in adverse operating conditions (weather, sensor noise, occlusion, degradation) and domain shifts through resilient multi-modal sensor fusion and adaptive processing."
+  tags:
+    - "Multi-modal fusion"
+    - "LiDAR & camera"
+    - "Adverse weather"
 
 - num: "02"
+  roman: "II"
+  lane: "introspection"
+  lane_label: "Introspection"
   title: "Run-Time Monitoring & Introspection"
+  short_desc: "Self-assessment and activation monitors that detect perception failures before they become safety incidents."
   summary: "Introspection frameworks and neural activation monitors that detect perception failures and out-of-distribution inputs before they become safety incidents."
   phd: "Investigating neural activation dynamics, epistemic uncertainty estimation, and real-time failure detection so that deep learning perception operates reliably and safely under out-of-distribution conditions."
+  tags:
+    - "DNN introspection"
+    - "3D object detection"
+    - "AI safety"
 
 - num: "03"
-  title: "Cooperative Autonomy"
-  summary: "Resilient collaborative perception, V2X coordination, and distributed decision-making for connected and automated vehicles and multi-agent systems."
-  phd: "Developing multi-agent collaborative perception frameworks, spatial filtering, and resilient coordination mechanisms for fault tolerance in connected and automated vehicles (CAVs) and multi-agent systems."
-
-- num: "04"
-  title: "Explainable AI (XAI)"
+  roman: "III"
+  lane: "xai"
+  lane_label: "Representations"
+  title: "Explainable AI & Activation Representations"
+  short_desc: "Compact neural activation encodings and early-layer patterns that make deep perception transparent."
   summary: "Compact activation encodings and interpretable latent representations that make neural perception transparent and accountable."
   phd: "Designing compact, explainable neural activation encodings and interpretable latent representations for real-time introspective safety monitoring, transparency, and accountability in autonomous and intelligent systems."
+  tags:
+    - "Explainable AI"
+    - "Activation patterns"
+    - "Latent representations"
+
+- num: "04"
+  roman: "IV"
+  lane: "autonomy"
+  lane_label: "Autonomy"
+  title: "Cooperative & Trustworthy Autonomy"
+  short_desc: "Spatial filtering, collaborative V2X perception, and resilient decision-making for connected autonomous systems."
+  summary: "Resilient collaborative perception, V2X coordination, and distributed decision-making for connected and automated vehicles and multi-agent systems."
+  phd: "Developing multi-agent collaborative perception frameworks, spatial filtering, and resilient coordination mechanisms for fault tolerance in connected and automated vehicles (CAVs) and multi-agent systems."
+  tags:
+    - "Cooperative perception"
+    - "Connected vehicles"
+    - "Spatial filtering"

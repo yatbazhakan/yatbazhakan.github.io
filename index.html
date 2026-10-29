@@ -1,210 +1,602 @@
 ---
 seo_title: "Dr. Hakan Yekta Yatbaz | Autonomous Systems & AI | Queen's University Belfast"
-description: "Dr. Hakan Yekta Yatbaz, Lecturer in Autonomous Systems at Queen's University Belfast (School of EEECS). Research in AI safety, robust sensing, run-time monitoring, and cooperative autonomy. Funded PhD studentships (DfE Northern Ireland) available."
+description: "Dr. Hakan Yekta Yatbaz, Lecturer (Assistant Professor) in Autonomous Systems at Queen's University Belfast (School of EEECS). Research in AI safety, robust sensing, run-time monitoring, explainable AI, and cooperative autonomy. Funded PhD studentships available."
 keywords: "Hakan Yatbaz, Hakan Yekta Yatbaz, Queen's University Belfast, Autonomous Systems, AI Safety, Run-time Monitoring, Robust Sensing, Cooperative Autonomy, Explainable AI, QUB EEECS, PhD Belfast, Funded PhD Northern Ireland"
 body_class: home
 ---
 {%- assign a = site.author -%}
 
-<!-- ── HERO ── -->
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <p class="eyebrow eyebrow-light">{{ a.department }}</p>
-      <h1 class="hero-title">{{ a.name }}</h1>
-      <p class="hero-role">{{ a.title }} · <span>{{ a.institution }}</span></p>
-      <p class="hero-tagline">Safe, reliable, and trustworthy AI for autonomous systems: perception that knows when it is failing.</p>
+<!-- ===== HERO ("Cover") ===== -->
+<section class="hero wrap" id="top" aria-labelledby="hero-title">
+  <div class="hero__grid">
+    <figure class="plate plate--portrait hero__portrait">
+      <div class="plate__mat">
+        <img src="{{ a.photo | relative_url }}"
+             width="500" height="666" fetchpriority="high" decoding="async"
+             alt="Portrait of {{ a.name }}">
+      </div>
+    </figure>
+
+    <div class="hero__text">
+      <p class="kicker hero__overline">{{ a.role_overline }} · <a href="https://www.qub.ac.uk/">{{ a.institution }}</a></p>
+      <h1 class="hero__title" id="hero-title">{{ a.display_name | default: a.name }}</h1>
+      <p class="hero__deck">I build <em>introspective</em> perception for autonomous systems that know when they are failing.</p>
+      <span class="hero__rule" aria-hidden="true"></span>
+      <p class="hero__bio">
+        I am a Lecturer (Assistant Professor) in Autonomous Systems in the <a href="https://www.qub.ac.uk/schools/eeecs/">School of EEECS at Queen's University Belfast</a>.
+        My research focuses on making AI in autonomous and intelligent systems safe, reliable, and trustworthy across robust sensing, run-time monitoring and introspection, explainable representations, and cooperative autonomy.
+        Before joining Queen's, I was a Postdoctoral Research Fellow at <a href="https://warwick.ac.uk/fac/sci/wmg/">WMG, University of Warwick</a> (working on the EU-funded EVENTS and Hi-Drive projects), where I also completed my PhD advised by <a href="https://scholar.google.com/citations?user=sF8B3bAAAAAJ">Dr.&nbsp;Roger Woodman</a> and <a href="https://scholar.google.com/citations?user=p3v_I8EAAAAJ">Prof.&nbsp;Mehrdad Dianati</a>.
+      </p>
+
+      <ul class="link-row">
+        <li><a href="mailto:{{ a.email }}"><svg class="icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#mail' | relative_url }}"/></svg>Email</a></li>
+        <li><a href="{{ a.scholar }}" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#scholar' | relative_url }}"/></svg>Google Scholar</a></li>
+        <li><a href="{{ a.github }}" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#github' | relative_url }}"/></svg>GitHub</a></li>
+        <li><a href="{{ a.linkedin }}" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#linkedin' | relative_url }}"/></svg>LinkedIn</a></li>
+        <li><a href="#collaborate"><svg class="icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#map-pin' | relative_url }}"/></svg>{{ a.office }}</a></li>
+      </ul>
+
+      <div class="hero__ctas">
+        <a class="btn" href="{{ '/phd/' | relative_url }}">PhD opportunities<svg class="icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#arrow-right' | relative_url }}"/></svg></a>
+        <a class="btn btn--ghost" href="#work">Selected work<svg class="icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#arrow-down' | relative_url }}"/></svg></a>
+      </div>
+
       {%- if a.open_to_phd %}
-      <a class="hero-badge" href="{{ '/phd/' | relative_url }}"><span class="dot"></span>Recruiting PhD students: funded places for NI, UK &amp; Irish applicants</a>
+      <div class="now">
+        <a class="now__link" href="{{ '/phd/' | relative_url }}">
+          <span class="now__label"><span class="now__dot" aria-hidden="true"></span>Recruiting</span>
+          <span class="now__text">Funded PhD studentships (DfE Northern Ireland &amp; UK/Irish Common Travel Area Home fees)<svg class="icon" width="14" height="14" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#arrow-right' | relative_url }}"/></svg></span>
+        </a>
+      </div>
       {%- endif %}
-      <div class="btn-row">
-        <a class="btn btn-primary" href="{{ '/phd/' | relative_url }}">PhD Opportunities</a>
-        <a class="btn btn-ghost" href="{{ '/publications.html' | relative_url }}">Publications</a>
-        <a class="btn btn-link" href="#contact">Get in touch →</a>
-      </div>
-    </div>
-    <div class="hero-photo">
-      <img src="{{ a.photo | relative_url }}" alt="Portrait of {{ a.name }}" width="250" height="333">
     </div>
   </div>
 </section>
 
-<!-- ── ABOUT ── -->
-<section id="about" class="section">
-  <div class="container two-col">
-    <div>
-      <p class="eyebrow">About</p>
-      <h2 class="section-title">Academic Profile &amp; Research Focus</h2>
-      <p class="lead">I am a Lecturer (Assistant Professor) in Autonomous Systems in the School of Electronics, Electrical Engineering and Computer Science (EEECS) at Queen's University Belfast. My research is about making AI in autonomous and intelligent systems safe, reliable, and trustworthy, across four strands: <strong>robust sensing for AI in autonomy</strong>, <strong>run-time monitoring and introspection</strong>, <strong>cooperative autonomy</strong>, and <strong>explainable AI</strong>.</p>
-      <p class="lead">Before joining QUB, I was a Postdoctoral Research Fellow at WMG, University of Warwick (Feb–Sept 2025), working on the EU-funded EVENTS and Hi-Drive projects, integrating self-assessment into real-world automated driving pipelines. I completed my PhD in Engineering at Warwick (supervised by Dr. Roger Woodman and Prof. Mehrdad Dianati) and hold an MSc and BSc in Computer Engineering from Middle East Technical University (METU NCC). I serve as an <strong>Associate Editor</strong> for <em>Connected Mobility and Automation</em> in <em>Frontiers in Future Transportation</em>.</p>
-      <div class="chip-row">
-        <a class="chip" href="{{ a.scholar }}" target="_blank" rel="noopener">Google Scholar ↗</a>
-        <a class="chip" href="{{ a.linkedin }}" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a class="chip" href="{{ a.github }}" target="_blank" rel="noopener">GitHub ↗</a>
-      </div>
-    </div>
-    <div>
-      <div class="panel-dark">
-        <p class="panel-label">Current Appointment &amp; Credentials</p>
-        <ul class="dot-list dot-list-light">
-          <li>Lecturer in Autonomous Systems, Queen's University Belfast</li>
-          <li>School of EEECS, Queen's University Belfast</li>
-          {%- for e in site.data.service.editorial %}
-          <li>{{ e.role }}, {{ e.venue }}</li>
+
+<!-- ===== 01 NEWS ===== -->
+<section class="section" id="news" aria-labelledby="news-title">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="kicker section-head__kicker">01 - News</p>
+      <h2 class="section-head__title" id="news-title">Recent</h2>
+    </header>
+    <div class="hang">
+      <div class="hang__main">
+        <ol class="news">
+          {%- for n in site.data.news limit: 5 %}
+          <li class="news__item">
+            <span class="news__date">{{ n.date }}</span>
+            <p>{% if n.link %}<a href="{{ n.link | relative_url }}">{{ n.text }}</a>{% else %}{{ n.text }}{% endif %}</p>
+          </li>
           {%- endfor %}
-          <li>Associate Fellow, Advance HE (PR307078)</li>
-          <li>Member, IEEE (ITS Society)</li>
-          <li>PhD in Engineering, University of Warwick</li>
-        </ul>
-      </div>
-      <div class="panel-box" style="margin-top: 20px;">
-        <h3 class="panel-title">Peer Review &amp; Editorial Service</h3>
-        <ul class="bullet-list">
-          {%- for r in site.data.service.reviewer %}
-          <li>{{ r }}</li>
-          {%- endfor %}
-        </ul>
+          <li class="news__item">
+            <span class="news__date">Oct 2025</span>
+            <p><a href="#pub-tist2025multilayer"><b>Multi-Layer Self-Assessment with Filtering for 3D Object Detection</b></a> published in <i>ACM Transactions on Intelligent Systems and Technology (TIST)</i>.</p>
+          </li>
+        </ol>
+        <details class="news__more">
+          <summary>Earlier news</summary>
+          <ol class="news">
+            <li class="news__item">
+              <span class="news__date">Sept 2024</span>
+              <p><a href="#pub-itsc2024integrity"><b>Integrity Monitoring of 3D Object Detection using Spatial Filtering</b></a> presented at IEEE ITSC 2024 (Edmonton, Canada).</p>
+            </li>
+            <li class="news__item">
+              <span class="news__date">Jun 2024</span>
+              <p><a href="#pub-cvprw2024earlylayer"><b>Early-Layer Neural Activation Monitoring for 3D Detection</b></a> presented at IEEE/CVF CVPRW 2024 (SAIAD Workshop).</p>
+            </li>
+            <li class="news__item">
+              <span class="news__date">May 2024</span>
+              <p><a href="#pub-tiv2024representations"><b>Run-Time Introspection of 2D Object Detection Using Learning Representations</b></a> published in <i>IEEE Transactions on Intelligent Vehicles (T-IV)</i>.</p>
+            </li>
+            <li class="news__item">
+              <span class="news__date">Feb 2024</span>
+              <p><a href="#pub-tits2024survey"><b>Survey on Introspection of DNN-Based Perception in Automated Driving</b></a> published in <i>IEEE Transactions on Intelligent Transportation Systems (T-ITS)</i>.</p>
+            </li>
+          </ol>
+        </details>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── RESEARCH ── -->
-<section id="research" class="section section-alt">
-  <div class="container">
-    <div class="section-head center">
-      <p class="eyebrow">Research</p>
-      <h2 class="section-title">Core Research Strands</h2>
+
+<!-- ===== 02 THROUGHLINE ===== -->
+<section class="section section--compact" id="throughline" aria-labelledby="throughline-title">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="kicker section-head__kicker">02 - Throughline</p>
+      <h2 class="section-head__title" id="throughline-title">Sensing under noise, introspection at run time, representations that explain, autonomy that cooperates.</h2>
+      <p class="section-head__deck">Each dot is a paper: from multimodal anomaly sensing to neural activation monitoring, and next, resilient cooperative autonomy.</p>
+    </header>
+
+    <div class="throughline" id="throughline-figure" data-throughline
+         data-open-label="Your PhD?"
+         data-open-href="{{ '/phd/' | relative_url }}"
+         data-open-note="Funded PhD studentships at Queen's University Belfast across four research strands in safe & trustworthy autonomy.">
+      <ol class="throughline__fallback">
+        {%- assign thread_pubs = site.data.publications | where: "thread", true | reverse -%}
+        {%- for p in thread_pubs %}
+        <li data-lane="{{ p.lane }}"><span class="tf__year">{{ p.year }}</span> <a href="#pub-{{ p.key }}">{{ p.short }}</a> <span class="tf__meta">{{ p.short_venue }} · {{ p.lane | capitalize }}</span></li>
+        {%- endfor %}
+        <li data-lane="autonomy" data-status="in-progress"><span class="tf__year">2026</span> <a href="#research">Cooperative Autonomy</a> <span class="tf__meta">Direction · Autonomy</span></li>
+        <li data-lane="autonomy" data-status="open"><span class="tf__year">Next</span> <a href="{{ '/phd/' | relative_url }}">Your PhD?</a> <span class="tf__meta">See open problems</span></li>
+      </ol>
     </div>
-    <div class="card-grid">
+    <p class="throughline__hint">Hover, tap or tab to a dot. Accent dots mark flagship works.</p>
+
+    <ul class="throughline__legend">
       {%- for r in site.data.research %}
-      <div class="card card-accent">
-        <div class="card-num">{{ r.num }}</div>
-        <h3 class="card-title">{{ r.title }}</h3>
-        <p>{{ r.summary }}</p>
-      </div>
-      {%- endfor %}
-    </div>
-  </div>
-</section>
-
-<!-- ── PHD CALL-OUT ── -->
-<section id="phd-opportunities" class="section section-dark">
-  <div class="container center narrow">
-    <p class="eyebrow">Prospective PhD Students</p>
-    <h2 class="section-title light">Funded PhD Research in Belfast</h2>
-    <p class="lead light">I am looking for motivated PhD students, especially from Northern Ireland, the rest of the UK, and the Republic of Ireland. DfE Northern Ireland studentships cover <strong>full tuition fees plus a tax-free stipend</strong>, and Irish citizens pay Home fees under the Common Travel Area. Final-year undergraduates and Master's students are welcome to get in touch before graduating.</p>
-    <div class="pill-row">
-      {%- for r in site.data.research %}<span class="pill">{{ r.title }}</span>{% endfor -%}
-    </div>
-    <div class="btn-row center">
-      <a class="btn btn-primary" href="{{ '/phd/' | relative_url }}">Topics, Funding &amp; How to Apply →</a>
-      <a class="btn btn-ghost" href="mailto:{{ a.email }}?subject=%5BPhD%20Inquiry%5D%20">Email an enquiry</a>
-    </div>
-  </div>
-</section>
-
-<!-- ── SELECTED PUBLICATIONS ── -->
-<section id="publications" class="section">
-  <div class="container">
-    <div class="section-head split">
-      <div>
-        <p class="eyebrow">Publications</p>
-        <h2 class="section-title">Selected Publications</h2>
-      </div>
-      <div class="btn-row">
-        <a class="btn btn-primary btn-sm" href="{{ '/publications.html' | relative_url }}">All publications →</a>
-        <a class="btn btn-outline btn-sm" href="{{ a.scholar }}" target="_blank" rel="noopener">Google Scholar ↗</a>
-      </div>
-    </div>
-    <div class="pub-list">
-      {%- assign selected = site.data.publications | where: "selected", true -%}
-      {%- for p in selected %}
-      {% include pub-item.html pub=p %}
-      {%- endfor %}
-    </div>
-  </div>
-</section>
-
-<!-- ── NEWS ── -->
-<section id="news" class="section section-alt">
-  <div class="container news-grid">
-    <div>
-      <p class="eyebrow">Latest</p>
-      <h2 class="section-title">Recent News</h2>
-    </div>
-    <ul class="news-list">
-      {%- for n in site.data.news limit: 6 %}
-      <li>
-        <span class="news-date">{{ n.date }}</span>
-        <span class="news-text">{% if n.link %}<a href="{{ n.link | relative_url }}">{{ n.text }}</a>{% else %}{{ n.text }}{% endif %}</span>
+      <li class="lane" data-lane="{{ r.lane }}">
+        <p class="kicker lane__name">{{ r.lane_label }}</p>
+        <p class="lane__text">{{ r.short_desc }}</p>
       </li>
       {%- endfor %}
     </ul>
   </div>
 </section>
 
-<!-- ── TALKS & SERVICE ── -->
-<section id="talks" class="section">
-  <div class="container">
-    <div class="section-head">
-      <p class="eyebrow">Talks &amp; Service</p>
-      <h2 class="section-title">Invited Talks &amp; Academic Service</h2>
-    </div>
-    <div class="talk-list">
-      {%- for t in site.data.talks %}
-      <div class="talk">
-        <div class="talk-meta"><span class="talk-host">{{ t.host }}</span><span class="talk-date">{{ t.date }}</span></div>
-        <h3 class="talk-title">{% if t.url %}<a href="{{ t.url }}" target="_blank" rel="noopener">{{ t.title }}</a>{% else %}{{ t.title }}{% endif %}</h3>
-        {%- if t.format %}<p class="talk-format">{{ t.format }}</p>{% endif %}
-        <p class="talk-summary">{{ t.summary }}</p>
-      </div>
-      {%- endfor %}
-    </div>
-    <div class="card-grid card-grid-3" id="services">
-      <div class="card card-accent">
-        <p class="eyebrow">Editorial</p>
-        <h3 class="card-title">Editorial Appointments</h3>
-        {%- for e in site.data.service.editorial %}
-        <div class="callout">
-          <div class="callout-label">{{ e.role }}</div>
-          <div class="callout-title">{{ e.section }}</div>
-          <div class="callout-sub">{{ e.venue }}</div>
+
+<!-- ===== 03 EXPERIENCE (education + work) ===== -->
+<section class="section section--compact" id="experience" aria-labelledby="experience-title">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="kicker section-head__kicker">03 - Experience</p>
+      <h2 class="section-head__title" id="experience-title">Education and experience</h2>
+    </header>
+    <div class="career-block">
+      <div class="career" data-career data-from="2013" data-to="2027">
+        <div class="career__canvas">
+          <div class="career__lane" data-lane="edu">
+            <h3 class="career__lane-name">Education</h3>
+            <ol class="career__list">
+              <li class="career__item" data-start="2013.7" data-end="2020.7" data-side="above">
+                <span class="career__badge" aria-hidden="true"><img src="{{ '/assets/img/logos/metu.svg' | relative_url }}" alt="" width="20" height="20" loading="lazy" decoding="async"></span>
+                <span class="career__text"><b class="career__org">Middle East Technical University</b><span class="career__role">B.Sc. &amp; M.Sc. in Computer Engineering</span><span class="career__years">2013–2020</span></span>
+              </li>
+              <li class="career__item" data-start="2020.75" data-end="2024.85" data-side="above">
+                <span class="career__badge" aria-hidden="true"><img src="{{ '/assets/img/logos/warwick.svg' | relative_url }}" alt="" width="20" height="20" loading="lazy" decoding="async"></span>
+                <span class="career__text"><b class="career__org">University of Warwick <span class="career__sub">(WMG)</span></b><span class="career__role">Ph.D. in Engineering (Autonomous Systems)</span><span class="career__years">2020–2024</span></span>
+              </li>
+            </ol>
+          </div>
+          <div class="career__lane" data-lane="work">
+            <h3 class="career__lane-name">Work</h3>
+            <ol class="career__list">
+              <li class="career__item" data-start="2018.7" data-end="2020.75" data-side="below">
+                <span class="career__badge" aria-hidden="true"><img src="{{ '/assets/img/logos/metu.svg' | relative_url }}" alt="" width="20" height="20" loading="lazy" decoding="async"></span>
+                <span class="career__text"><b class="career__org">METU NCC</b><span class="career__role">Graduate Teaching Assistant</span><span class="career__years">2018–2020</span></span>
+              </li>
+              <li class="career__item" data-start="2020.75" data-end="2025.5" data-side="below" data-align="before">
+                <span class="career__badge" aria-hidden="true"><img src="{{ '/assets/img/logos/warwick.svg' | relative_url }}" alt="" width="20" height="20" loading="lazy" decoding="async"></span>
+                <span class="career__text"><b class="career__org">University of Warwick</b><span class="career__role">Graduate Teaching Assistant</span><span class="career__years">2020–2025</span></span>
+              </li>
+              <li class="career__item" data-start="2025.1" data-end="2025.7" data-side="above" data-overlap>
+                <span class="career__badge" aria-hidden="true"><img src="{{ '/assets/img/logos/warwick.svg' | relative_url }}" alt="" width="20" height="20" loading="lazy" decoding="async"></span>
+                <span class="career__text"><b class="career__org">WMG, University of Warwick</b><span class="career__role">Postdoctoral Research Fellow (EVENTS &amp; Hi-Drive)</span><span class="career__years">Feb–Sept 2025</span></span>
+              </li>
+              <li class="career__item" data-start="2025.7" data-end="now" data-side="below" data-current>
+                <span class="career__badge" aria-hidden="true"><img src="{{ '/assets/img/logos/qub.svg' | relative_url }}" alt="" width="20" height="20" loading="lazy" decoding="async"></span>
+                <span class="career__text"><b class="career__org">Queen's University Belfast</b><span class="career__role">Lecturer (Assistant Professor) in Autonomous Systems</span><span class="career__years">Sept 2025–now</span></span>
+              </li>
+            </ol>
+          </div>
         </div>
-        {%- endfor %}
-      </div>
-      <div class="card card-accent card-accent-blue">
-        <p class="eyebrow eyebrow-blue">Peer Review</p>
-        <h3 class="card-title">Journal Reviewer</h3>
-        <ul class="dot-list">
-          {%- for j in site.data.service.reviewer %}<li>{{ j }}</li>{% endfor -%}
-        </ul>
-      </div>
-      <div class="card card-accent card-accent-navy">
-        <p class="eyebrow eyebrow-navy">Affiliations</p>
-        <h3 class="card-title">Professional Affiliations</h3>
-        <ul class="dot-list">
-          {%- for m in site.data.service.affiliations %}<li>{{ m }}</li>{% endfor -%}
-        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── CONTACT ── -->
-<section id="contact" class="section section-alt">
-  <div class="container center narrow">
-    <p class="eyebrow">Contact</p>
-    <h2 class="section-title">Get in Touch</h2>
-    <p class="lead">I welcome enquiries about PhD supervision, research collaboration, invited talks, and academic visits.</p>
-    <div class="contact-grid">
-      <a class="contact-card" href="mailto:{{ a.email }}"><span class="contact-label">Email</span><span class="contact-val">{{ a.email }}</span></a>
-      <div class="contact-card"><span class="contact-label">Office</span><span class="contact-val">{{ a.office }}</span></div>
-      <a class="contact-card" href="https://www.qub.ac.uk" target="_blank" rel="noopener"><span class="contact-label">Institution</span><span class="contact-val">Queen's University Belfast</span></a>
+
+<!-- ===== 04 SELECTED WORK: three flagship feature spreads + open source ===== -->
+<section class="section" id="work" aria-labelledby="work-title">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="kicker section-head__kicker">04 - Selected work</p>
+      <h2 class="section-head__title" id="work-title">Three flagship works, opened up.</h2>
+      <p class="section-head__deck">Architectures, key findings, and code for run-time perception monitoring and self-assessment in automated driving.</p>
+    </header>
+
+    <!-- Plate I: Multi-Layer Self-Assessment (ACM TIST 2025) -->
+    <article class="feature" aria-labelledby="feature-tist25">
+      <figure class="plate plate--schematic feature__plate reveal">
+        <div class="plate__head"><span class="plate__num">Plate I</span><span class="badge badge--schematic">Architecture schematic</span></div>
+        <div class="plate__mat">
+          <svg class="schematic__svg" viewBox="0 0 560 250" role="img" aria-label="Multi-Layer Self-Assessment pipeline: 3D LiDAR point cloud feeds backbone layers L1, L2, L3; spatial filter masks safety-critical ROI; multi-layer activations fuse to predict frame-level perception error.">
+            <defs>
+              <marker id="arr-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" class="sx-head"/></marker>
+              <marker id="arr-acc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" class="sx-head-acc"/></marker>
+            </defs>
+            <!-- LiDAR Input -->
+            <rect x="16" y="42" width="92" height="74" rx="4" class="sx-box"/>
+            <text x="62" y="72" text-anchor="middle" class="sx-label sx-label--box">3D LiDAR</text>
+            <text x="62" y="90" text-anchor="middle" class="sx-label sx-label--muted">Point Cloud</text>
+            <!-- 3D Backbone stages -->
+            <rect x="142" y="34" width="72" height="90" rx="4" class="sx-box"/>
+            <text x="178" y="64" text-anchor="middle" class="sx-label sx-label--box">Stage 1</text>
+            <text x="178" y="82" text-anchor="middle" class="sx-label sx-label--muted">Early</text>
+            <text x="178" y="100" text-anchor="middle" class="sx-label sx-label--mono">F₁</text>
+
+            <rect x="236" y="34" width="72" height="90" rx="4" class="sx-box"/>
+            <text x="272" y="64" text-anchor="middle" class="sx-label sx-label--box">Stage 2</text>
+            <text x="272" y="82" text-anchor="middle" class="sx-label sx-label--muted">Mid</text>
+            <text x="272" y="100" text-anchor="middle" class="sx-label sx-label--mono">F₂</text>
+
+            <rect x="330" y="34" width="72" height="90" rx="4" class="sx-box"/>
+            <text x="366" y="64" text-anchor="middle" class="sx-label sx-label--box">Stage 3</text>
+            <text x="366" y="82" text-anchor="middle" class="sx-label sx-label--muted">Deep</text>
+            <text x="366" y="100" text-anchor="middle" class="sx-label sx-label--mono">F₃</text>
+
+            <!-- 3D Detection Head -->
+            <rect x="436" y="46" width="108" height="66" rx="4" class="sx-box"/>
+            <text x="490" y="74" text-anchor="middle" class="sx-label sx-label--box">3D Boxes</text>
+            <text x="490" y="92" text-anchor="middle" class="sx-label sx-label--muted">Blind to OOD</text>
+
+            <!-- Forward arrows -->
+            <line x1="108" y1="79" x2="140" y2="79" class="sx-line" marker-end="url(#arr-ink)"/>
+            <line x1="214" y1="79" x2="234" y2="79" class="sx-line" marker-end="url(#arr-ink)"/>
+            <line x1="308" y1="79" x2="328" y2="79" class="sx-line" marker-end="url(#arr-ink)"/>
+            <line x1="402" y1="79" x2="434" y2="79" class="sx-line" marker-end="url(#arr-ink)"/>
+
+            <!-- Multi-layer tap flows -->
+            <path d="M178,124 L178,166 L248,166" class="sx-flow"/>
+            <path d="M272,124 L272,166" class="sx-flow"/>
+            <path d="M366,124 L366,166 L296,166" class="sx-flow"/>
+
+            <!-- Spatial ROI Filter & Multi-Layer Introspector -->
+            <rect x="142" y="166" width="260" height="58" rx="4" class="sx-box--acc"/>
+            <text x="272" y="191" text-anchor="middle" class="sx-label sx-label--acc">Multi-Layer Spatial Filtering &amp; Fusion</text>
+            <text x="272" y="209" text-anchor="middle" class="sx-label sx-label--muted">Ego-corridor ROI + cross-layer activation monitor</text>
+
+            <!-- Integrity Output -->
+            <line x1="402" y1="195" x2="434" y2="195" class="sx-flow" marker-end="url(#arr-acc)"/>
+            <rect x="436" y="166" width="108" height="58" rx="4" class="sx-box--strong"/>
+            <text x="490" y="191" text-anchor="middle" class="sx-label sx-label--acc">Integrity Alert</text>
+            <text x="490" y="209" text-anchor="middle" class="sx-label sx-label--muted">Error Flagged</text>
+          </svg>
+        </div>
+        <figcaption class="plate__cap">Multi-layer activation extraction across early, middle, and deep 3D backbone stages combined with spatial ego-corridor filtering to flag silent 3D detection failures at run time. <span class="plate__src">ACM TIST 2025.</span></figcaption>
+      </figure>
+
+      <div class="feature__text">
+        <p class="kicker feature__kicker">Plate I · ACM TIST 2025 · 3D LiDAR Introspection</p>
+        <h3 class="feature__title" id="feature-tist25">Multi-Layer Self-Assessment</h3>
+        <p class="feature__subtitle">Filtering and cross-layer activation monitoring for 3D object detection</p>
+        <p class="feature__deck">Deep 3D object detectors can fail silently when encountering adverse weather, sparse point clouds, or out-of-distribution road scenes. Instead of relying on a single late feature map or miscalibrated confidence scores, this framework extracts activation signatures across multiple backbone depths and applies spatial ego-corridor filtering so the safety monitor focuses on hazards that matter to the vehicle's trajectory.</p>
+        <dl class="stats">
+          <div class="stat"><dt class="stat__label">Backbone feature hierarchy</dt><dd class="stat__fig"><span class="stat__value">Multi</span><span class="stat__unit">Layer</span></dd></div>
+          <div class="stat"><dt class="stat__label">Safety-critical ROI focus</dt><dd class="stat__fig"><span class="stat__value">Spatial</span><span class="stat__unit">Filter</span></dd></div>
+          <div class="stat"><dt class="stat__label">Published in</dt><dd class="stat__fig"><span class="stat__value">ACM</span><span class="stat__unit">TIST '25</span></dd></div>
+        </dl>
+        <div class="feature__links">
+          <a class="link-arrow link-arrow--down" href="#pub-tist2025multilayer">See publication entry<svg class="icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#arrow-down' | relative_url }}"/></svg></a>
+          <span class="feature__pills">
+            <a class="pill" href="https://doi.org/10.1145/3776551" target="_blank" rel="noopener"><svg class="icon" width="14" height="14" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#file-text' | relative_url }}"/></svg>Paper (DOI)</a>
+            <a class="pill" href="https://github.com/yatbazhakan/multi-layer-introspection" target="_blank" rel="noopener"><svg class="icon" width="14" height="14" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#code-xml' | relative_url }}"/></svg>Code</a>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Plate II: IEEE T-ITS 2024 Survey (flipped layout) -->
+    <article class="feature feature--flip" aria-labelledby="feature-tits24">
+      <figure class="plate plate--schematic feature__plate reveal">
+        <div class="plate__head"><span class="plate__num">Plate II</span><span class="badge badge--schematic">Taxonomy schematic</span></div>
+        <div class="plate__mat">
+          <svg class="schematic__svg" viewBox="0 0 560 250" role="img" aria-label="Taxonomy of DNN perception introspection in automated driving: Input-level, Feature/Activation-level, and Output-level monitors feeding run-time safety mitigation.">
+            <rect x="20" y="24" width="156" height="62" rx="4" class="sx-box"/>
+            <text x="98" y="50" text-anchor="middle" class="sx-label sx-label--box">1. Input-Level</text>
+            <text x="98" y="68" text-anchor="middle" class="sx-label sx-label--muted">Sensor &amp; domain shift</text>
+
+            <rect x="202" y="24" width="156" height="62" rx="4" class="sx-box--acc"/>
+            <text x="280" y="50" text-anchor="middle" class="sx-label sx-label--acc">2. Activation-Level</text>
+            <text x="280" y="68" text-anchor="middle" class="sx-label sx-label--muted">Internal latent patterns</text>
+
+            <rect x="384" y="24" width="156" height="62" rx="4" class="sx-box"/>
+            <text x="462" y="50" text-anchor="middle" class="sx-label sx-label--box">3. Output-Level</text>
+            <text x="462" y="68" text-anchor="middle" class="sx-label sx-label--muted">Uncertainty &amp; temporal</text>
+
+            <path d="M98,86 L98,136 L280,136" class="sx-line"/>
+            <path d="M280,86 L280,148" class="sx-flow" marker-end="url(#arr-acc)"/>
+            <path d="M462,86 L462,136 L280,136" class="sx-line"/>
+
+            <rect x="110" y="152" width="340" height="70" rx="4" class="sx-box--strong"/>
+            <text x="280" y="180" text-anchor="middle" class="sx-label sx-label--box">Run-Time Safety &amp; Fallback Decision</text>
+            <text x="280" y="200" text-anchor="middle" class="sx-label sx-label--quote">"Detecting when a perception network does not know what it does not know."</text>
+          </svg>
+        </div>
+        <figcaption class="plate__cap">Unified taxonomy of DNN perception introspection in automated driving, contrasting input reconstruction, internal activation monitoring, and output uncertainty estimation. <span class="plate__src">IEEE T-ITS 2024.</span></figcaption>
+      </figure>
+
+      <div class="feature__text">
+        <p class="kicker feature__kicker">Plate II · IEEE T-ITS 2024 · Survey &amp; Taxonomy</p>
+        <h3 class="feature__title" id="feature-tits24">Introspection of DNN Perception</h3>
+        <p class="feature__subtitle">State-of-the-art and open research challenges in automated driving</p>
+        <p class="feature__deck">How can an automated vehicle tell that its deep neural perception pipeline is making a critical mistake without ground-truth labels at run time? This work synthesises the field of DNN introspection across 2D/3D detection and segmentation, formalising failure triggers, evaluation metrics, and the latency–reliability trade-offs required for safety-critical deployment.</p>
+        <dl class="stats">
+          <div class="stat"><dt class="stat__label">Google Scholar citations</dt><dd class="stat__fig"><span class="stat__value">36+</span><span class="stat__unit">Citations</span></dd></div>
+          <div class="stat"><dt class="stat__label">IEEE ITS Society flagship</dt><dd class="stat__fig"><span class="stat__value">T-ITS</span><span class="stat__unit">2024</span></dd></div>
+        </dl>
+        <div class="feature__links">
+          <a class="link-arrow link-arrow--down" href="#pub-tits2024survey">See publication entry<svg class="icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#arrow-down' | relative_url }}"/></svg></a>
+          <span class="feature__pills">
+            <a class="pill" href="https://doi.org/10.1109/TITS.2023.3315070" target="_blank" rel="noopener"><svg class="icon" width="14" height="14" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#file-text' | relative_url }}"/></svg>Paper (IEEE Xplore)</a>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Plate III: Early-Layer & Representation Introspection (IEEE T-IV 2024 & CVPRW 2024) -->
+    <article class="feature" aria-labelledby="feature-tiv24">
+      <figure class="plate plate--schematic feature__plate reveal">
+        <div class="plate__head"><span class="plate__num">Plate III</span><span class="badge badge--schematic">Method schematic</span></div>
+        <div class="plate__mat">
+          <svg class="schematic__svg" viewBox="0 0 560 250" role="img" aria-label="Comparison between late-layer confidence and early-layer activation representation learning for detecting missed objects.">
+            <rect x="20" y="34" width="140" height="72" rx="4" class="sx-box--acc"/>
+            <text x="90" y="62" text-anchor="middle" class="sx-label sx-label--acc">Early Activations</text>
+            <text x="90" y="82" text-anchor="middle" class="sx-label sx-label--muted">High spatial fidelity</text>
+
+            <line x1="160" y1="70" x2="206" y2="70" class="sx-flow" marker-end="url(#arr-acc)"/>
+
+            <rect x="208" y="34" width="164" height="72" rx="4" class="sx-box--strong"/>
+            <text x="290" y="62" text-anchor="middle" class="sx-label sx-label--box">Representation Encoder</text>
+            <text x="290" y="82" text-anchor="middle" class="sx-label sx-label--muted">Compact latent embedding</text>
+
+            <line x1="372" y1="70" x2="414" y2="70" class="sx-flow" marker-end="url(#arr-acc)"/>
+
+            <rect x="416" y="34" width="124" height="72" rx="4" class="sx-box--acc"/>
+            <text x="478" y="62" text-anchor="middle" class="sx-label sx-label--acc">Early Detection</text>
+            <text x="478" y="82" text-anchor="middle" class="sx-label sx-label--muted">Low-latency alert</text>
+
+            <!-- Bottom comparison -->
+            <rect x="20" y="142" width="520" height="72" rx="4" class="sx-box"/>
+            <text x="280" y="170" text-anchor="middle" class="sx-label sx-label--box">Key Insight (IEEE T-IV &amp; CVPRW SAIAD 2024)</text>
+            <text x="280" y="192" text-anchor="middle" class="sx-label sx-label--muted">Early backbone layers retain structural cues of missed objects that deeper layers suppress.</text>
+          </svg>
+        </div>
+        <figcaption class="plate__cap">Learning compact representations from early and intermediate neural activation patterns enables faster, more reliable error detection than waiting for final detector layers. <span class="plate__src">IEEE T-IV 2024 &amp; CVPRW 2024.</span></figcaption>
+      </figure>
+
+      <div class="feature__text">
+        <p class="kicker feature__kicker">Plate III · IEEE T-IV 2024 &amp; CVPRW 2024 · Activation Representations</p>
+        <h3 class="feature__title" id="feature-tiv24">Early-Layer &amp; Representation Introspection</h3>
+        <p class="feature__subtitle">Detecting 2D and 3D perception errors before final-layer suppression</p>
+        <p class="feature__deck">Prior introspection methods almost exclusively inspect the penultimate layer of a detector—where features of missed objects have already been attenuated. Across our <i>IEEE T-IV</i> and <i>CVPRW SAIAD</i> papers, we demonstrated that early-layer neural activations and learned representation embeddings capture rich failure cues while cutting monitoring latency.</p>
+        <dl class="stats">
+          <div class="stat"><dt class="stat__label">2D &amp; 3D object detection</dt><dd class="stat__fig"><span class="stat__value">2D/3D</span><span class="stat__unit">Vision &amp; LiDAR</span></dd></div>
+          <div class="stat"><dt class="stat__label">Activation tap depth</dt><dd class="stat__fig"><span class="stat__value">Early</span><span class="stat__unit">Backbone</span></dd></div>
+        </dl>
+        <div class="feature__links">
+          <a class="link-arrow link-arrow--down" href="#pub-tiv2024representations">See publication entries<svg class="icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#arrow-down' | relative_url }}"/></svg></a>
+          <span class="feature__pills">
+            <a class="pill" href="https://doi.org/10.1109/TIV.2024.3385531" target="_blank" rel="noopener"><svg class="icon" width="14" height="14" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#file-text' | relative_url }}"/></svg>IEEE T-IV</a>
+            <a class="pill" href="https://openaccess.thecvf.com/content/CVPR2024W/SAIAD/papers/Yatbaz_Run-time_Monitoring_of_3D_Object_Detection_in_Automated_Driving_Systems_CVPRW_2024_paper.pdf" target="_blank" rel="noopener"><svg class="icon" width="14" height="14" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#file-text' | relative_url }}"/></svg>CVPRW PDF</a>
+            <a class="pill" href="https://arxiv.org/abs/2403.01172" target="_blank" rel="noopener">arXiv</a>
+          </span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Open source & code -->
+    <div class="oss">
+      <h3 class="kicker oss__title">Code &amp; open research</h3>
+      <ul class="oss__grid">
+        <li class="oss__card">
+          <p class="kicker oss__kicker">Open source</p>
+          <h4 class="oss__name"><a href="https://github.com/yatbazhakan/multi-layer-introspection" target="_blank" rel="noopener">multi-layer-introspection</a></h4>
+          <p>Reference implementation for multi-layer self-assessment and spatial filtering in 3D LiDAR object detection (ACM TIST 2025).</p>
+          <p class="oss__url"><svg class="icon" width="14" height="14" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#github' | relative_url }}"/></svg>github.com/<wbr>yatbazhakan/<wbr>multi-layer-introspection</p>
+        </li>
+        <li class="oss__card">
+          <p class="kicker oss__kicker">Preprints &amp; papers</p>
+          <h4 class="oss__name"><a href="{{ a.scholar }}" target="_blank" rel="noopener">Google Scholar profile</a></h4>
+          <p>Full citation record, open-access preprints, and bibliometric indices across autonomous driving and intelligent sensing.</p>
+          <p class="oss__url"><svg class="icon" width="14" height="14" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#scholar' | relative_url }}"/></svg>scholar.google.com</p>
+        </li>
+        <li class="oss__card">
+          <p class="kicker oss__kicker">Repositories</p>
+          <h4 class="oss__name"><a href="{{ a.github }}" target="_blank" rel="noopener">GitHub (@yatbazhakan)</a></h4>
+          <p>Codebases, experimental scripts, and reproducibility packages for DNN introspection and sensor analytics.</p>
+          <p class="oss__url"><svg class="icon" width="14" height="14" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#github' | relative_url }}"/></svg>github.com/<wbr>yatbazhakan</p>
+        </li>
+      </ul>
     </div>
-    <div class="btn-row center">
-      <a class="btn btn-primary" href="mailto:{{ a.email }}?subject=Academic%20Enquiry">Send an email</a>
-      <a class="btn btn-outline" href="{{ '/phd/#apply' | relative_url }}">How to apply for a PhD</a>
+  </div>
+</section>
+
+
+<!-- ===== 05 PUBLICATIONS ===== -->
+<section class="section" id="publications" aria-labelledby="publications-title">
+  <div class="wrap">
+    <header class="section-head section-head--row reveal">
+      <p class="kicker section-head__kicker">05 - Publications</p>
+      <h2 class="section-head__title" id="publications-title">Publications</h2>
+      <a class="section-head__aside link-quiet" href="{{ a.scholar }}" target="_blank" rel="noopener">Full list on Google Scholar<svg class="icon" width="14" height="14" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#arrow-up-right' | relative_url }}"/></svg></a>
+    </header>
+
+    <div class="hang">
+      <div class="hang__main pub-controls" data-pub-controls>
+        <div class="chips" role="group" aria-label="Filter publications by topic">
+          <button class="chip" type="button" data-topic="all" aria-pressed="true">All <span class="chip__count" data-count>{{ site.data.publications | size }}</span></button>
+          <button class="chip" type="button" data-topic="introspection" aria-pressed="false">Run-time introspection <span class="chip__count" data-count>8</span></button>
+          <button class="chip" type="button" data-topic="autonomous" aria-pressed="false">Autonomous driving <span class="chip__count" data-count>8</span></button>
+          <button class="chip" type="button" data-topic="sensing" aria-pressed="false">Multimodal &amp; IoT sensing <span class="chip__count" data-count>12</span></button>
+          <button class="chip" type="button" data-topic="journal" aria-pressed="false">Journal articles <span class="chip__count" data-count>9</span></button>
+        </div>
+        <div class="pub-controls__row">
+          <button class="switch" type="button" role="switch" aria-checked="false" data-first-author-switch>
+            <span class="switch__track" aria-hidden="true"><span class="switch__thumb"></span></span>
+            <span class="switch__label">First-author only</span>
+          </button>
+          <p class="pub-controls__status" aria-live="polite" data-pub-status>Showing {{ site.data.publications | size }} of {{ site.data.publications | size }} publications</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubs" data-pub-list>
+      {%- assign current_year = nil -%}
+      {%- for p in site.data.publications %}
+        {%- if p.year != current_year -%}
+          {%- if current_year != nil %}</div></div>{% endif -%}
+          {%- assign current_year = p.year -%}
+          <div class="pub-year hang" data-year="{{ current_year }}">
+            <h3 class="pub-year__label hang__margin">{{ current_year }}</h3>
+            <div class="hang__main pub-year__items">
+        {%- endif -%}
+        {% include pub-item.html pub=p %}
+      {%- endfor -%}
+      {%- if current_year != nil %}</div></div>{% endif -%}
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== 06 VISION & RESEARCH STRANDS (the only tinted band) ===== -->
+<section class="section band" id="research" aria-labelledby="research-title">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="kicker section-head__kicker">06 - Research vision</p>
+      <h2 class="section-head__title" id="research-title">Next: perception that knows its limits in shared spaces.</h2>
+      <p class="section-head__deck">Where the thread leads: from single-vehicle neural activation monitors to self-assessing, cooperative multi-agent autonomy.</p>
+    </header>
+
+    <div class="teaser-grid">
+      {%- for r in site.data.research %}
+      <article class="card-progress card-progress--teaser" id="strand-{{ r.lane }}" aria-labelledby="strand-{{ r.lane }}-title"
+        {%- if r.lane == 'autonomy' %}
+        data-thread data-key="coop-autonomy" data-short="Cooperative Autonomy" data-date="2026-09" data-lane="autonomy" data-status="in-progress"
+        data-venue="Direction" data-note="{{ r.summary }}" data-href="{{ '/phd/#strands' | relative_url }}"
+        {%- endif %}>
+        <p class="status-pill">Strand {{ r.num }} · {{ r.lane_label }}</p>
+        <h3 class="card-progress__title" id="strand-{{ r.lane }}-title">{{ r.title }}</h3>
+        <p class="card-progress__text">{{ r.summary }}</p>
+        <p class="card-progress__cta">
+          <a class="link-arrow" href="{{ '/phd/#strands' | relative_url }}">PhD project scope<span class="visually-hidden">: {{ r.title }}</span><svg class="icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#arrow-right' | relative_url }}"/></svg></a>
+        </p>
+      </article>
+      {%- endfor %}
+    </div>
+
+    <p class="teaser__more"><a class="link-arrow" href="{{ '/phd/' | relative_url }}">Explore funded PhD studentships &amp; project proposals<svg class="icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#arrow-right' | relative_url }}"/></svg></a></p>
+  </div>
+</section>
+
+
+<!-- ===== 07 COLLABORATE & PHD SUPERVISION ===== -->
+<section class="section" id="collaborate" aria-labelledby="collaborate-title">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="kicker section-head__kicker">07 - PhD &amp; Collaborate</p>
+      <h2 class="section-head__title" id="collaborate-title">Open problems. Let's work on them together.</h2>
+      <p class="section-head__deck">I am recruiting motivated PhD students (DfE Northern Ireland funded studentships &amp; UK/Irish Common Travel Area Home fees) and welcoming academic and industry collaborations. If one of these is your problem too, write to me.</p>
+    </header>
+
+    <ol class="problems problems--teaser">
+      {%- for r in site.data.research %}
+      <li class="problem">
+        <span class="problem__num" aria-hidden="true">{{ r.roman }}</span>
+        <div class="problem__body">
+          <h3 class="problem__title">
+            <a href="{{ '/phd/#strands' | relative_url }}">{{ r.title }}<svg class="icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#arrow-right' | relative_url }}"/></svg></a>
+          </h3>
+          <ul class="tags">
+            {%- for t in r.tags %}<li class="tag">{{ t }}</li>{% endfor -%}
+          </ul>
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+
+    <div class="hang">
+      <div class="hang__main">
+        <div class="ways">
+          <h3 class="kicker ways__title">Ways to work together</h3>
+          <div>
+            <b>Prospective PhD students</b>
+            <p>DfE NI studentships cover 100% of Home fees plus a tax-free stipend (~£19k+/yr). Republic of Ireland citizens qualify for Home fees under the Common Travel Area.</p>
+          </div>
+          <div>
+            <b>Academic &amp; industry partners</b>
+            <p>Joint Horizon Europe / UKRI proposals, visiting researcher exchanges, and safety-critical perception validation for automated mobility.</p>
+          </div>
+          <div>
+            <b>MSc &amp; BEng supervision</b>
+            <p>Queen's University Belfast students interested in dissertation projects on AI safety, LiDAR perception, or XAI are welcome to reach out.</p>
+          </div>
+        </div>
+
+        <p class="teaser__more"><a class="link-arrow" href="{{ '/phd/' | relative_url }}">Topics, funding eligibility &amp; how to apply<svg class="icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#arrow-right' | relative_url }}"/></svg></a></p>
+
+        <div class="contact" id="contact">
+          <div class="contact__mail">
+            <a class="contact__email" id="contact-email" href="mailto:{{ a.email }}">{{ a.email }}</a>
+            <button class="btn-icon copy-btn" type="button" data-copy="#contact-email" data-copy-msg="Email address copied" aria-label="Copy email address">
+              <svg class="icon copy-btn__copy" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#copy' | relative_url }}"/></svg>
+              <svg class="icon copy-btn__done" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#check' | relative_url }}"/></svg>
+            </button>
+          </div>
+          <p class="contact__addr">{{ a.office }} · {{ a.department_short }}, {{ a.institution }}, Belfast, UK</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== 08 SERVICE, TALKS & BACKGROUND ===== -->
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <p class="kicker section-head__kicker">08 - Service &amp; background</p>
+      <h2 class="section-head__title" id="about-title">Talks, service and background</h2>
+    </header>
+    <div class="hang">
+      <div class="hang__main">
+        <div class="about-grid">
+          <div class="about-block">
+            <h3 class="about-block__title">Editorial &amp; Peer Review</h3>
+            {%- for e in site.data.service.editorial %}
+            <p class="about-award" style="margin-top:0; margin-bottom: 12px;"><b>{{ e.role }}</b>, <i>{{ e.section }}</i> ({{ e.venue }}).</p>
+            {%- endfor %}
+            <ul class="tags tags--venues">
+              {%- for j in site.data.service.reviewer %}
+              <li class="tag">{{ j }}</li>
+              {%- endfor %}
+            </ul>
+            <p class="about-award"><b>Affiliations:</b> Associate Fellow of Advance HE (PR307078) · Member, IEEE Intelligent Transportation Systems Society.</p>
+          </div>
+
+          <div class="about-block" id="talks">
+            <h3 class="about-block__title">Invited Talks &amp; Education</h3>
+            <ul class="about-list">
+              {%- for t in site.data.talks %}
+              <li><b>{{ t.title }}</b> — {{ t.host }} ({{ t.date }}). {{ t.summary }}</li>
+              {%- endfor %}
+              <li><b>Ph.D. in Engineering, University of Warwick</b> (2020–2024). Runtime error detection for DNN-based perception in automated driving, advised by Dr.&nbsp;Roger Woodman and Prof.&nbsp;Mehrdad Dianati.</li>
+              <li><b>B.Sc. and M.Sc. in Computer Engineering, Middle East Technical University (METU NCC)</b> (2013–2020).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hosts">
+          <h3 class="about-block__title">For hosts</h3>
+          <blockquote class="hosts__bio" id="bio-3p">
+            <p>Dr. Hakan Yekta Yatbaz is a Lecturer (Assistant Professor) in Autonomous Systems in the School of Electronics, Electrical Engineering and Computer Science (EEECS) at Queen's University Belfast. His research focuses on safe, reliable, and trustworthy AI for autonomous systems, spanning robust multi-modal sensing, run-time monitoring and introspection, explainable representations, and cooperative autonomy. Before joining Queen's, he was a Postdoctoral Research Fellow at WMG, University of Warwick, where he worked on the EU-funded EVENTS and Hi-Drive automated driving projects and completed his Ph.D. in Engineering. He holds B.Sc. and M.Sc. degrees in Computer Engineering from Middle East Technical University (METU NCC) and serves as an Associate Editor for Frontiers in Future Transportation.</p>
+          </blockquote>
+          <div class="hosts__actions">
+            <button class="btn btn--ghost btn--sm copy-btn" type="button" data-copy="#bio-3p" data-copy-msg="Bio copied">
+              <svg class="icon copy-btn__copy" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#copy' | relative_url }}"/></svg>
+              <svg class="icon copy-btn__done" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#check' | relative_url }}"/></svg>
+              Copy bio
+            </button>
+            <a class="btn btn--ghost btn--sm" href="{{ a.photo | relative_url }}" download="hakan-yatbaz-headshot.jpg">
+              <svg class="icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#download' | relative_url }}"/></svg>
+              Download headshot
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -9,51 +9,57 @@ body_class: pubs-page
 ---
 {%- assign a = site.author -%}
 
-<div class="page-hero">
-  <div class="container page-hero-inner">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <span class="sep" aria-hidden="true">›</span>
-      <span>Publications</span>
-    </nav>
-    <h1 class="page-title">Publications</h1>
-    <p class="page-lead">Peer-reviewed journal articles, conference proceedings, and doctoral research in AI safety, run-time monitoring, and autonomous systems.</p>
-    <div class="hero-actions">
-      <a class="btn btn-ghost btn-sm" href="{{ a.scholar }}" target="_blank" rel="noopener">Google Scholar Profile ↗</a>
+<!-- ==================== SUBHERO ==================== -->
+<section class="subhero wrap" aria-labelledby="pubs-hero-title">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <span class="sep" aria-hidden="true">/</span>
+    <span>Publications</span>
+  </nav>
+  <p class="kicker">Peer-Reviewed Bibliography &middot; 2019 &ndash; Present</p>
+  <h1 id="pubs-hero-title" class="subhero__title">Publications</h1>
+  <p class="subhero__deck">
+    Journal articles, conference proceedings, and doctoral research across <strong>IEEE T-ITS</strong>, <strong>IEEE T-IV</strong>, <strong>ACM TIST</strong>, <strong>CVPRW</strong>, and <strong>IEEE ITSC</strong>. Equal contribution marked with <code>*</code>.
+  </p>
+  <div class="subhero__ctas">
+    <a class="btn btn--primary" href="{{ a.scholar }}" target="_blank" rel="noopener">
+      <svg class="i" aria-hidden="true"><use href="#i-scholar"/></svg>
+      Google Scholar Profile &nearr;
+    </a>
+    <a class="btn btn--ghost" href="{{ '/#throughline' | relative_url }}">View Interactive Throughline &rarr;</a>
+  </div>
+</section>
+
+<!-- ==================== PUBLICATIONS LIST ==================== -->
+<section id="publications" class="section wrap" aria-label="Publications list">
+  <div class="pub-controls" data-pub-controls>
+    <div class="chips" role="group" aria-label="Filter by topic">
+      <button class="chip is-active" type="button" data-filter="all">All <span class="chip__count">{{ site.data.publications | size }}</span></button>
+      <button class="chip" type="button" data-filter="introspection">Introspection &amp; Safety</button>
+      <button class="chip" type="button" data-filter="sensing">3D &amp; Multimodal Sensing</button>
+      <button class="chip" type="button" data-filter="xai">Representations &amp; XAI</button>
+      <button class="chip" type="button" data-filter="autonomy">Cooperative &amp; Applied AI</button>
+      <button class="chip" type="button" data-filter="journal">Journals Only</button>
     </div>
+    <label class="switch">
+      <input type="checkbox" data-first-author>
+      <span class="switch__track" aria-hidden="true"></span>
+      <span class="switch__label">First-author only</span>
+    </label>
   </div>
-</div>
 
-<!-- ── FILTER BAR ── -->
-<div class="filter-bar" id="pubFilterBar">
-  <div class="container filter-inner">
-    <span class="filter-label">Filter:</span>
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="journal">Journals</button>
-    <button class="filter-btn" data-filter="conference">Conferences</button>
-    <button class="filter-btn" data-filter="autonomous">Autonomous Driving</button>
-    <button class="filter-btn" data-filter="sensing">Multimodal / Sensing</button>
+  <div class="pub-list" data-pub-list>
+    {%- assign years = site.data.publications | map: "year" | uniq -%}
+    {%- for y in years %}
+      {%- assign pubs_in_year = site.data.publications | where: "year", y -%}
+      <div class="pub-year hang" data-year-group="{{ y }}">
+        <aside class="hang__margin"><span class="year-tag">{{ y }}{% if y <= 2020 %}<br><small>Early work</small>{% endif %}</span></aside>
+        <ol class="pub-year__items">
+          {%- for p in pubs_in_year %}
+            {% include pub-item.html pub=p %}
+          {%- endfor %}
+        </ol>
+      </div>
+    {%- endfor %}
   </div>
-</div>
-
-<div class="container page-content">
-  <div class="pub-list-full" id="pubList">
-    {%- assign current_year = nil -%}
-    {%- for p in site.data.publications %}
-      {%- if p.year != current_year -%}
-        {%- if current_year != nil %}</div></div>{% endif -%}
-        {%- assign current_year = p.year -%}
-        {%- assign count_for_year = site.data.publications | where: "year", current_year | size -%}
-        <div class="year-group" data-year="{{ current_year }}">
-          <div class="year-heading">
-            <span class="year-num">{{ current_year }}</span>
-            <div class="year-line"></div>
-            <span class="year-count">{{ count_for_year }} publication{% if count_for_year != 1 %}s{% endif %}</span>
-          </div>
-          <div class="year-pubs">
-      {%- endif -%}
-      {% include pub-item.html pub=p %}
-    {%- endfor -%}
-    {%- if current_year != nil %}</div></div>{% endif -%}
-  </div>
-</div>
+</section>

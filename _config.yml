@@ -4,37 +4,40 @@
 
 title: "Dr. Hakan Yekta Yatbaz"
 description: >-
-  Lecturer in Autonomous Systems at Queen's University Belfast. Research in AI safety,
-  robust sensing, run-time monitoring, and cooperative autonomy. Funded PhD studentships available.
+  Lecturer (Assistant Professor) in Autonomous Systems at Queen's University Belfast.
+  Research in AI safety, robust sensing, run-time monitoring, explainable AI, and cooperative autonomy.
+  Funded PhD studentships available.
 url: "https://hakanyatbaz.com"
 baseurl: ""
 lang: en-GB
 
 author:
   name: "Dr. Hakan Yekta Yatbaz"
+  display_name: "Hakan Yekta Yatbaz"
   short_name: "Dr. H. Y. Yatbaz"
   surname: "Yatbaz"
   title: "Lecturer in Autonomous Systems"
+  role_overline: "Lecturer (Assistant Professor) in Autonomous Systems"
   department: "School of Electronics, Electrical Engineering and Computer Science"
   department_short: "School of EEECS"
   institution: "Queen's University Belfast"
+  qub_url: "https://pure.qub.ac.uk/"
   email: "h.yatbaz@qub.ac.uk"
   office: "Ashby Building, Room 08.010"
   photo: "/photo.jpg"
   scholar: "https://scholar.google.com/citations?user=5Q596f4AAAAJ"
   linkedin: "https://www.linkedin.com/in/hakanyektayatbaz/"
   github: "https://github.com/yatbazhakan"
-  # Shown in the hero. Set to false to hide the "open to PhD enquiries" badge.
   open_to_phd: true
 
-# Main navigation (order matters). `highlight: true` renders as a button.
+# Main navigation (order matters). `highlight: true` renders as a pill CTA.
 navigation:
-  - { label: "About",        url: "/#about" }
-  - { label: "Research",     url: "/#research" }
-  - { label: "Publications", url: "/publications.html" }
+  - { label: "News",         url: "/#news" }
+  - { label: "Experience",   url: "/#experience" }
+  - { label: "Work",         url: "/#work" }
+  - { label: "Publications", url: "/#publications" }
   - { label: "Teaching",     url: "/teaching.html" }
-  - { label: "Contact",      url: "/#contact" }
-  - { label: "PhD Opportunities", url: "/phd/", highlight: true }
+  - { label: "PhD & Collaborate", url: "/phd/", highlight: true }
 
 plugins:
   - jekyll-sitemap
