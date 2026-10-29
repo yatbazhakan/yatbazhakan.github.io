@@ -44,7 +44,7 @@ body_class: teaching-page
         {%- for r in inst.roles %}
         <div style="margin-top: 16px;">
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 6px;">
-            <strong style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--ink);">{{ r.title }}</strong>
+            <strong style="font-size: 1.05rem; color: var(--ink);">{{ r.title }}</strong>
             {%- if r.badge %}<span class="status-pill">{{ r.badge }}</span>{% endif %}
           </div>
           <p style="color: var(--ink-2); max-width: 44rem;">{{ r.description }}</p>
