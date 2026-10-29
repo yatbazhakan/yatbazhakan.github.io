@@ -10,9 +10,9 @@ const legendEls = [...document.querySelectorAll('.throughline__legend .lane[data
 const LANES = legendEls.length ? legendEls.map((el) => el.dataset.lane) : ['sensing', 'introspection', 'xai', 'autonomy'];
 const LANE_LABELS = Object.fromEntries(legendEls.map((el) => [el.dataset.lane, el.querySelector('.lane__name')?.textContent.trim() || el.dataset.lane]));
 const LAST_LANE = LANES.at(-1);
-const LANE_Y = [46, 90, 134, 178];
-const H = 212, TOP = 26, BOT = 206, YEAR_Y = 14;
-const UP = -13, DN = 24;
+const LANE_Y = [66, 128, 190, 252];
+const H = 292, TOP = 36, BOT = 280, YEAR_Y = 16;
+const UP = -14, DN = 24;
 const INLINE_W = 920, GUT_INLINE = 290, GUT_NAMES = 136;
 const DRAW = 1400;
 const EASE = 'cubic-bezier(.65,0,.35,1)';
@@ -141,11 +141,10 @@ function init() {
       el('circle', { class: 'tl__ring', r: n.open ? 14 : 11 }, glyph);
       el('circle', { class: 'tl__dot', r: { pub: 5, flag: 6.5, future: 6, open: 9 }[type] }, glyph);
       if (n.open) el('path', { class: 'tl__plus', d: 'M-4 0H4M0-4V4' }, glyph);
-      const below = n.future && pair && k === 0;
-      const centred = n.open || (n.future && pair && k === 1);
+      const below = (pair && k === 1) || (n.future && pair && k === 0);
       n.ly = below ? DN : UP;
-      el('text', { class: 'tl__label', x: pair && !centred ? (k ? -6 : 6) : 0, y: n.ly,
-        'text-anchor': centred ? 'middle' : pair ? (k ? 'start' : 'end') : 'middle' }, a).textContent = n.short;
+      el('text', { class: 'tl__label', x: 0, y: n.ly,
+        'text-anchor': 'middle' }, a).textContent = n.short;
     });
     box.append(svg);
     wrapped.forEach(({ t, s, w }) => wrapText(t, s, w));

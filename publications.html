@@ -23,7 +23,7 @@ body_class: pubs-page
   </p>
   <div class="subhero__ctas">
     <a class="btn btn--primary" href="{{ a.scholar }}" target="_blank" rel="noopener">
-      <svg class="i" aria-hidden="true"><use href="#i-scholar"/></svg>
+      <svg class="icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#scholar' | relative_url }}"/></svg>
       Google Scholar Profile &nearr;
     </a>
     <a class="btn btn--ghost" href="{{ '/#throughline' | relative_url }}">View Interactive Throughline &rarr;</a>
@@ -32,34 +32,37 @@ body_class: pubs-page
 
 <!-- ==================== PUBLICATIONS LIST ==================== -->
 <section id="publications" class="section wrap" aria-label="Publications list">
-  <div class="pub-controls" data-pub-controls>
-    <div class="chips" role="group" aria-label="Filter by topic">
-      <button class="chip is-active" type="button" data-filter="all">All <span class="chip__count">{{ site.data.publications | size }}</span></button>
-      <button class="chip" type="button" data-filter="introspection">Introspection &amp; Safety</button>
-      <button class="chip" type="button" data-filter="sensing">3D &amp; Multimodal Sensing</button>
-      <button class="chip" type="button" data-filter="xai">Representations &amp; XAI</button>
-      <button class="chip" type="button" data-filter="autonomy">Cooperative &amp; Applied AI</button>
-      <button class="chip" type="button" data-filter="journal">Journals Only</button>
+  <div class="hang">
+    <div class="hang__main pub-controls" data-pub-controls>
+      <div class="chips" role="group" aria-label="Filter publications by topic">
+        <button class="chip" type="button" data-topic="all" aria-pressed="true">All <span class="chip__count" data-count>{{ site.data.publications | size }}</span></button>
+        <button class="chip" type="button" data-topic="introspection" aria-pressed="false">Run-time introspection <span class="chip__count" data-count>8</span></button>
+        <button class="chip" type="button" data-topic="autonomous" aria-pressed="false">Autonomous driving <span class="chip__count" data-count>8</span></button>
+        <button class="chip" type="button" data-topic="sensing" aria-pressed="false">Multimodal &amp; IoT sensing <span class="chip__count" data-count>12</span></button>
+        <button class="chip" type="button" data-topic="journal" aria-pressed="false">Journal articles <span class="chip__count" data-count>9</span></button>
+      </div>
+      <div class="pub-controls__row">
+        <button class="switch" type="button" role="switch" aria-checked="false" data-first-author-switch>
+          <span class="switch__track" aria-hidden="true"><span class="switch__thumb"></span></span>
+          <span class="switch__label">First-author only</span>
+        </button>
+        <p class="pub-controls__status" aria-live="polite" data-pub-status>Showing {{ site.data.publications | size }} of {{ site.data.publications | size }} publications</p>
+      </div>
     </div>
-    <label class="switch">
-      <input type="checkbox" data-first-author>
-      <span class="switch__track" aria-hidden="true"></span>
-      <span class="switch__label">First-author only</span>
-    </label>
   </div>
 
-  <div class="pub-list" data-pub-list>
-    {%- assign years = site.data.publications | map: "year" | uniq -%}
-    {%- for y in years %}
-      {%- assign pubs_in_year = site.data.publications | where: "year", y -%}
-      <div class="pub-year hang" data-year-group="{{ y }}">
-        <aside class="hang__margin"><span class="year-tag">{{ y }}{% if y <= 2020 %}<br><small>Early work</small>{% endif %}</span></aside>
-        <ol class="pub-year__items">
-          {%- for p in pubs_in_year %}
-            {% include pub-item.html pub=p %}
-          {%- endfor %}
-        </ol>
-      </div>
-    {%- endfor %}
+  <div class="pubs" data-pub-list>
+    {%- assign current_year = nil -%}
+    {%- for p in site.data.publications %}
+      {%- if p.year != current_year -%}
+        {%- if current_year != nil %}</div></div>{% endif -%}
+        {%- assign current_year = p.year -%}
+        <div class="pub-year hang" data-year="{{ current_year }}">
+          <h3 class="pub-year__label hang__margin">{{ current_year }}</h3>
+          <div class="hang__main pub-year__items">
+      {%- endif -%}
+      {% include pub-item.html pub=p %}
+    {%- endfor -%}
+    {%- if current_year != nil %}</div></div>{% endif -%}
   </div>
 </section>
