@@ -461,6 +461,44 @@ body_class: home
       <p class="section-head__deck">Where the thread leads: from single-vehicle neural activation monitors to self-assessing, cooperative multi-agent autonomy.</p>
     </header>
 
+    <article class="feature" aria-labelledby="feature-qub-platform" style="margin-bottom: var(--s-8); padding-bottom: var(--s-8); border-bottom: 1px solid var(--rule);">
+      <figure class="plate plate--photo feature__plate reveal" style="--mat-pad: 12px;">
+        <div class="plate__head">
+          <span class="plate__num">Field Plate</span>
+          <span class="badge badge--real">Queen's University Belfast</span>
+        </div>
+        <button class="plate__zoom" type="button"
+                data-full="{{ '/assets/img/qub-autonomous-vehicle.jpg' | relative_url }}"
+                data-caption="Dr. Hakan Yekta Yatbaz with the Queen's University Belfast instrumented autonomous research vehicle in front of the Lanyon Building."
+                aria-label="Enlarge figure: Queen's University Belfast autonomous research vehicle in front of the Lanyon Building">
+          <span class="plate__mat">
+            <img src="{{ '/assets/img/qub-autonomous-vehicle.jpg' | relative_url }}"
+                 alt="Dr. Hakan Yekta Yatbaz standing in front of the Queen's University Belfast autonomous research vehicle and the Lanyon Building"
+                 width="1020" height="680" loading="lazy" decoding="async">
+          </span>
+          <span class="plate__zoom-icon" aria-hidden="true"><svg class="icon" width="14" height="14" focusable="false"><use href="{{ '/assets/icons/sprite.svg#maximize-2' | relative_url }}"/></svg></span>
+        </button>
+        <figcaption class="plate__cap">With the instrumented autonomous research vehicle in front of the Lanyon Building at Queen's University Belfast. <span class="plate__src">School of EEECS.</span></figcaption>
+      </figure>
+
+      <div class="feature__text">
+        <p class="kicker feature__kicker">Real-World Autonomy · Queen's University Belfast</p>
+        <h3 class="feature__title" id="feature-qub-platform">From Neural Activations to Road-Ready Trust</h3>
+        <p class="feature__subtitle">Bridging theoretical AI safety and physical autonomous platforms</p>
+        <p class="feature__deck">At Queen's University Belfast (School of EEECS), our research connects foundational advances in deep neural network introspection with real-world multi-modal sensing platforms. By monitoring internal activation dynamics across LiDAR, camera, and cooperative V2X streams, we aim to build autonomous systems that continuously quantify their own perceptual reliability in complex, everyday environments.</p>
+        <dl class="stats">
+          <div class="stat"><dt class="stat__label">Research strands</dt><dd class="stat__fig"><span class="stat__value">04</span><span class="stat__unit">Core Agendas</span></dd></div>
+          <div class="stat"><dt class="stat__label">Doctoral supervision</dt><dd class="stat__fig"><span class="stat__value">DfE</span><span class="stat__unit">&amp; CTA Funded</span></dd></div>
+        </dl>
+        <div class="feature__links">
+          <a class="link-arrow link-arrow--down" href="#collaborate">Open problems &amp; collaboration<svg class="icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#arrow-down' | relative_url }}"/></svg></a>
+          <span class="feature__pills">
+            <a class="pill" href="{{ '/phd/' | relative_url }}">PhD Studentships</a>
+          </span>
+        </div>
+      </div>
+    </article>
+
     <div class="teaser-grid">
       {%- for r in site.data.research %}
       <article class="card-progress card-progress--teaser" id="strand-{{ r.lane }}" aria-labelledby="strand-{{ r.lane }}-title"

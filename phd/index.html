@@ -18,17 +18,41 @@ body_class: phd-page
     <span aria-hidden="true">/</span>
     <span>PhD &amp; Collaborate</span>
   </p>
-  <p class="kicker" style="color: var(--accent); margin-bottom: 10px;">Doctoral Supervision &middot; Queen's University Belfast (EEECS)</p>
-  <h1 id="phd-hero-title" class="subhero__title">PhD in Autonomous Systems &amp; AI Safety</h1>
-  <p class="subhero__deck">
-    Doctoral supervision and fully funded <strong>DfE Northern Ireland studentships</strong> in the School of Electronics, Electrical Engineering and Computer Science (EEECS). Welcoming enquiries from Northern Ireland, Great Britain, the <strong>Republic of Ireland (Common Travel Area)</strong>, and international candidates.
-  </p>
-  <div class="subhero__ctas">
-    <a class="btn" href="#funding">DfE funding &amp; CTA Home fees &darr;</a>
-    <a class="btn btn--ghost" href="#strands">Research strands &darr;</a>
-    <a class="btn btn--ghost" href="#apply">How to apply &darr;</a>
-    <a class="btn btn--ghost" href="#faq">Admissions FAQ &darr;</a>
-  </div>
+
+  <article class="feature feature--flip" style="margin-bottom: 0; padding-bottom: 0; border-bottom: 0; align-items: center;">
+    <figure class="plate plate--photo feature__plate" style="--mat-pad: 12px; position: static;">
+      <div class="plate__head">
+        <span class="plate__num">Autonomous Systems Lab</span>
+        <span class="badge badge--real">Queen's University Belfast</span>
+      </div>
+      <button class="plate__zoom" type="button"
+              data-full="{{ '/assets/img/qub-autonomous-vehicle.jpg' | relative_url }}"
+              data-caption="Dr. Hakan Yekta Yatbaz with the Queen's University Belfast instrumented autonomous research vehicle in front of the Lanyon Building."
+              aria-label="Enlarge figure: Queen's University Belfast autonomous research vehicle in front of the Lanyon Building">
+        <span class="plate__mat">
+          <img src="{{ '/assets/img/qub-autonomous-vehicle.jpg' | relative_url }}"
+               alt="Dr. Hakan Yekta Yatbaz standing in front of the Queen's University Belfast autonomous research vehicle and the Lanyon Building"
+               width="1020" height="680" fetchpriority="high" decoding="async">
+        </span>
+        <span class="plate__zoom-icon" aria-hidden="true"><svg class="icon" width="14" height="14" focusable="false"><use href="{{ '/assets/icons/sprite.svg#maximize-2' | relative_url }}"/></svg></span>
+      </button>
+      <figcaption class="plate__cap">Instrumented autonomous research vehicle at Queen's University Belfast (Lanyon Building). <span class="plate__src">School of EEECS.</span></figcaption>
+    </figure>
+
+    <div class="feature__text">
+      <p class="kicker" style="color: var(--accent); margin-bottom: 10px;">Doctoral Supervision &middot; Queen's University Belfast (EEECS)</p>
+      <h1 id="phd-hero-title" class="subhero__title">PhD in Autonomous Systems &amp; AI Safety</h1>
+      <p class="subhero__deck">
+        Doctoral supervision and fully funded <strong>DfE Northern Ireland studentships</strong> in the School of Electronics, Electrical Engineering and Computer Science (EEECS). Welcoming enquiries from Northern Ireland, Great Britain, the <strong>Republic of Ireland (Common Travel Area)</strong>, and international candidates.
+      </p>
+      <div class="subhero__ctas">
+        <a class="btn" href="#funding">DfE funding &amp; CTA Home fees &darr;</a>
+        <a class="btn btn--ghost" href="#strands">Research strands &darr;</a>
+        <a class="btn btn--ghost" href="#apply">How to apply &darr;</a>
+        <a class="btn btn--ghost" href="#faq">Admissions FAQ &darr;</a>
+      </div>
+    </div>
+  </article>
 </section>
 
 <!-- ==================== 01. FUNDING & ELIGIBILITY ==================== -->

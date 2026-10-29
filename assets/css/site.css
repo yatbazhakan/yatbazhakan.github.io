@@ -260,7 +260,7 @@ a.tag:hover { color: var(--accent); background: var(--accent-wash); }
   transition: transform var(--dur-2) var(--ease-out), box-shadow var(--dur-2), border-color var(--dur-2);
 }
 .plate__mat :is(img, video) { width: 100%; height: auto; mix-blend-mode: multiply; border-radius: 1px; }
-.plate--photo .plate__mat, .plate--portrait .plate__mat { padding: 0; }
+.plate--photo .plate__mat, .plate--portrait .plate__mat { padding: 10px; background: var(--mat); }
 .plate--photo .plate__mat :is(img, video), .plate--portrait .plate__mat :is(img, video) { mix-blend-mode: normal; }
 .plate--schematic .plate__mat { background: var(--surface); }
 .plate__cap { margin-top: 12px; max-width: 60ch; font: 400 var(--fs-cap)/1.5 var(--font-sans); color: var(--ink-2); }
