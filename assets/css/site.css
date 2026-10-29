@@ -76,7 +76,7 @@ main > .section:last-child { padding-bottom: var(--section-y); }
 @media (min-width: 1024px) {
   .hang { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--col-gap); }
   .hang__margin { grid-column: 1 / 4; }
-  .hang__main { grid-column: 4 / -1; min-width: 0; }
+  .hang__main, .hang > :not(.hang__margin) { grid-column: 4 / -1; min-width: 0; }
 }
 
 /* ---------- 3. Header, nav, theme toggle, mobile menu ---------- */

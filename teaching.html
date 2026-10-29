@@ -11,94 +11,89 @@ body_class: teaching-page
 
 <!-- ==================== SUBHERO ==================== -->
 <section class="subhero wrap" aria-labelledby="teaching-hero-title">
-  <nav class="breadcrumb" aria-label="Breadcrumb">
+  <p class="subhero__crumb kicker">
     <a href="{{ '/' | relative_url }}">Home</a>
-    <span class="sep" aria-hidden="true">/</span>
+    <span aria-hidden="true">/</span>
     <span>Teaching</span>
-  </nav>
-  <p class="kicker">Associate Fellow of Advance HE (AFHEA) &middot; PR307078</p>
+  </p>
+  <p class="kicker" style="color: var(--accent); margin-bottom: 10px;">Associate Fellow of Advance HE (AFHEA) &middot; PR307078</p>
   <h1 id="teaching-hero-title" class="subhero__title">Teaching &amp; Mentorship</h1>
   <p class="subhero__deck">
     Module design, lecture delivery, and laboratory instruction across postgraduate and undergraduate engineering programmes at <strong>Queen's University Belfast</strong>, <strong>University of Warwick</strong>, and <strong>Middle East Technical University</strong>.
   </p>
   <div class="subhero__ctas">
-    <a class="btn btn--primary" href="#appointments">Teaching appointments &darr;</a>
+    <a class="btn" href="#appointments">Teaching appointments &darr;</a>
     <a class="btn btn--ghost" href="{{ '/phd/#supervision-track-record' | relative_url }}">Supervised students &rarr;</a>
   </div>
 </section>
 
 <!-- ==================== 01. TEACHING APPOINTMENTS ==================== -->
 <section id="appointments" class="section wrap" aria-labelledby="appointments-heading">
-  <div class="section-head">
-    <span class="section-num">01 &mdash; Academic teaching</span>
-    <h2 id="appointments-heading" class="section-title">Teaching appointments &amp; module leadership</h2>
-    <p class="section-sub">Connecting rigorous foundations in programming and machine learning with safety-critical engineering practice</p>
-  </div>
+  <header class="section-head">
+    <p class="kicker section-head__kicker">01 &mdash; Academic teaching</p>
+    <h2 id="appointments-heading" class="section-head__title">Teaching appointments &amp; module leadership</h2>
+    <p class="section-head__deck">Connecting rigorous foundations in programming and machine learning with safety-critical engineering practice.</p>
+  </header>
 
-  <div class="hang">
-    <aside class="hang__margin">
-      <p class="margin-note">Recognised as an Associate Fellow of the Higher Education Academy (Advance HE, 2024).</p>
-    </aside>
-    <div class="problems">
-      {%- for inst in site.data.teaching %}
-      <article class="problem">
-        <span class="problem__idx">0{{ forloop.index }}</span>
-        <div class="problem__body">
-          <h3 class="problem__q">{{ inst.institution }} <span class="muted">({{ inst.period }})</span></h3>
-          {%- for r in inst.roles %}
-          <div style="margin-top: var(--s-3);">
-            <div class="card-progress__top" style="margin-bottom: 6px;">
-              <strong style="font-size: var(--fs-base); color: var(--fg);">{{ r.title }}</strong>
-              {%- if r.badge %}<span class="badge badge--accent">{{ r.badge }}</span>{% endif %}
-            </div>
-            <p class="problem__why">{{ r.description }}</p>
-            {%- if r.items %}
-            <ul class="bullet-list">
-              {%- for it in r.items %}<li>{{ it }}</li>{% endfor -%}
-            </ul>
-            {%- endif %}
+  <ol class="problems">
+    {%- for inst in site.data.teaching %}
+    <li class="problem">
+      <span class="problem__num" aria-hidden="true">0{{ forloop.index }}</span>
+      <div class="problem__body">
+        <h3 class="problem__title">{{ inst.institution }} <span class="kicker" style="margin-left: 8px;">{{ inst.period }}</span></h3>
+        {%- for r in inst.roles %}
+        <div style="margin-top: 16px;">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 6px;">
+            <strong style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--ink);">{{ r.title }}</strong>
+            {%- if r.badge %}<span class="status-pill">{{ r.badge }}</span>{% endif %}
           </div>
-          {%- endfor %}
+          <p style="color: var(--ink-2); max-width: 44rem;">{{ r.description }}</p>
+          {%- if r.items %}
+          <ul class="bullet-list">
+            {%- for it in r.items %}<li>{{ it }}</li>{% endfor -%}
+          </ul>
+          {%- endif %}
         </div>
-      </article>
-      {%- endfor %}
-    </div>
-  </div>
+        {%- endfor %}
+      </div>
+    </li>
+    {%- endfor %}
+  </ol>
 </section>
 
 <!-- ==================== 02. STUDENT RESEARCH & SUPERVISION ==================== -->
 <section id="supervision" class="section wrap" aria-labelledby="supervision-heading">
-  <div class="section-head">
-    <span class="section-num">02 &mdash; Student research</span>
-    <h2 id="supervision-heading" class="section-title">Dissertation &amp; PhD project supervision</h2>
-  </div>
+  <header class="section-head">
+    <p class="kicker section-head__kicker">02 &mdash; Student research</p>
+    <h2 id="supervision-heading" class="section-head__title">Dissertation &amp; PhD project supervision</h2>
+    <p class="section-head__deck">Alongside taught modules, I supervise doctoral researchers as well as MSc and BSc dissertation students working on AI safety, run-time monitoring, and 3D perception.</p>
+  </header>
 
   <div class="hang">
-    <aside class="hang__margin">
-      <p class="margin-note">Open to BSc, MEng, MSc, and PhD research supervision inquiries at QUB.</p>
-    </aside>
-    <div class="collab">
-      <p class="collab__lead">
-        Alongside taught modules, I supervise doctoral researchers as well as MSc and BSc dissertation students working on <strong>AI safety</strong>, <strong>run-time monitoring</strong>, and <strong>3D perception for autonomous systems</strong>.
-      </p>
-      <div class="students-grid" style="margin-bottom: var(--s-5);">
+    <div class="hang__main">
+      <div class="students-grid">
         {%- for s in site.data.students %}
         <article class="student-card">
-          <div class="student-card__meta">{{ s.degree }} &middot; {{ s.level }}</div>
-          <h3 class="student-card__name">{{ s.name }}</h3>
+          <div class="student-card__head">
+            <h3 class="student-card__name">{{ s.name }}</h3>
+            <span class="student-card__meta">{{ s.degree }} &middot; {{ s.level }}</span>
+          </div>
           <p class="student-card__proj">&ldquo;{{ s.project }}&rdquo;</p>
         </article>
         {%- endfor %}
       </div>
-      <div class="collab__contact">
-        <div class="collab__email">
-          <span class="collab__label">Project or teaching inquiry</span>
-          <a href="mailto:{{ a.email }}?subject=Teaching%20or%20Project%20Enquiry" class="collab__addr">{{ a.email }}</a>
-          <button class="icon-btn" type="button" data-copy="{{ a.email }}" aria-label="Copy email address">
-            <svg class="i i--sm" aria-hidden="true"><use href="#i-copy"/></svg>
+
+      <p class="teaser__more"><a class="link-arrow" href="{{ '/phd/' | relative_url }}">Explore PhD opportunities, DfE studentships &amp; Common Travel Area eligibility<svg class="icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#arrow-right' | relative_url }}"/></svg></a></p>
+
+      <div class="contact">
+        <div class="contact__mail">
+          <a class="contact__email" id="teaching-contact-email" href="mailto:{{ a.email }}?subject=Teaching%20or%20Project%20Enquiry">{{ a.email }}</a>
+          <button class="btn-icon copy-btn" type="button" data-copy="#teaching-contact-email" data-copy-msg="Email address copied" aria-label="Copy email address">
+            <svg class="icon copy-btn__copy" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#copy' | relative_url }}"/></svg>
+            <svg class="icon copy-btn__done" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#check' | relative_url }}"/></svg>
           </button>
         </div>
-        <p class="collab__office"><a href="{{ '/phd/' | relative_url }}">Explore PhD opportunities, DfE studentships &amp; Common Travel Area eligibility &rarr;</a></p>
+        <p class="contact__addr">{{ a.office }} &middot; {{ a.department_short }}, {{ a.institution }}, Belfast, UK</p>
       </div>
     </div>
   </div>

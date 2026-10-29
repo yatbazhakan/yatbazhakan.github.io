@@ -11,18 +11,18 @@ body_class: pubs-page
 
 <!-- ==================== SUBHERO ==================== -->
 <section class="subhero wrap" aria-labelledby="pubs-hero-title">
-  <nav class="breadcrumb" aria-label="Breadcrumb">
+  <p class="subhero__crumb kicker">
     <a href="{{ '/' | relative_url }}">Home</a>
-    <span class="sep" aria-hidden="true">/</span>
+    <span aria-hidden="true">/</span>
     <span>Publications</span>
-  </nav>
-  <p class="kicker">Peer-Reviewed Bibliography &middot; 2019 &ndash; Present</p>
+  </p>
+  <p class="kicker" style="color: var(--accent); margin-bottom: 10px;">Peer-Reviewed Bibliography &middot; 2019 &ndash; Present</p>
   <h1 id="pubs-hero-title" class="subhero__title">Publications</h1>
   <p class="subhero__deck">
     Journal articles, conference proceedings, and doctoral research across <strong>IEEE T-ITS</strong>, <strong>IEEE T-IV</strong>, <strong>ACM TIST</strong>, <strong>CVPRW</strong>, and <strong>IEEE ITSC</strong>. Equal contribution marked with <code>*</code>.
   </p>
   <div class="subhero__ctas">
-    <a class="btn btn--primary" href="{{ a.scholar }}" target="_blank" rel="noopener">
+    <a class="btn" href="{{ a.scholar }}" target="_blank" rel="noopener">
       <svg class="icon" width="16" height="16" aria-hidden="true" focusable="false"><use href="{{ '/assets/icons/sprite.svg#scholar' | relative_url }}"/></svg>
       Google Scholar Profile &nearr;
     </a>
