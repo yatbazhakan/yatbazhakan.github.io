@@ -991,3 +991,57 @@ html.theme-transition, html.theme-transition *, html.theme-transition *::before,
 .bullet-list li { position: relative; padding-left: 16px; }
 .bullet-list li::before { content: ""; position: absolute; left: 0; top: .6em; width: 6px; height: 6px; border: 1.25px solid var(--accent); border-radius: 50%; }
 .bullet-list b, .bullet-list strong { color: var(--ink); }
+
+/* Advertised PhD project cards (October 2027 cycle) */
+.phd-call-bar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px;
+  padding: 18px 22px; margin-bottom: 24px;
+  background: var(--paper-2); border: 1px solid var(--rule); border-left: 3px solid var(--accent); border-radius: var(--r-md);
+}
+.phd-call-bar__facts { display: grid; gap: 4px; font: 400 var(--fs-cap)/1.5 var(--font-sans); color: var(--ink-2); max-width: 48rem; }
+.phd-call-bar__facts strong { color: var(--ink); font-weight: 600; }
+.phd-call-bar__deadline {
+  display: inline-flex; flex-direction: column; align-items: flex-end; flex: none;
+  padding: 10px 16px; border-radius: var(--r-sm);
+  background: var(--accent); color: var(--on-accent);
+}
+.phd-call-bar__lbl { font: 600 10.5px/1.2 var(--font-mono); letter-spacing: .09em; text-transform: uppercase; opacity: .92; }
+.phd-call-bar__date { margin-top: 3px; font: 700 1.05rem/1.15 var(--font-sans); letter-spacing: -.01em; }
+@media (max-width: 599.98px) {
+  .phd-call-bar__deadline { align-items: flex-start; width: 100%; }
+}
+
+.phd-posts-grid { display: grid; gap: 24px; }
+@media (min-width: 840px) { .phd-posts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.phd-post {
+  display: flex; flex-direction: column; gap: 12px;
+  padding: 24px; background: var(--surface);
+  border: 1px solid var(--rule); border-top: 3px solid var(--accent); border-radius: var(--r-md);
+  font: 400 var(--fs-cap)/1.55 var(--font-sans); color: var(--ink-2);
+}
+.phd-post__meta {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px;
+}
+.phd-post__code {
+  font: 700 var(--fs-xs)/1 var(--font-mono); letter-spacing: .04em; color: var(--accent);
+  padding: 4px 8px; background: var(--accent-wash); border-radius: var(--r-xs);
+}
+.phd-post__track {
+  font: 600 11px/1.2 var(--font-sans); letter-spacing: var(--track-kicker); text-transform: uppercase; color: var(--ink-3);
+}
+.phd-post__title {
+  margin-top: 2px; font-family: var(--font-serif); font-size: clamp(1.25rem, 1.1rem + .45vw, 1.5rem);
+  font-weight: 500; line-height: 1.22; letter-spacing: -.01em; color: var(--ink);
+}
+.phd-post__title a { color: inherit; text-decoration: none; }
+.phd-post__title a:hover { color: var(--accent); text-decoration: underline 1px var(--accent); text-underline-offset: .18em; }
+.phd-post__sup { font: 500 var(--fs-sm)/1.4 var(--font-sans); color: var(--ink-3); }
+.phd-post__sup b, .phd-post__sup strong { color: var(--ink-2); font-weight: 600; }
+.phd-post__summary { color: var(--ink-2); }
+.phd-post .bullet-list { margin-top: 4px; gap: 6px; font-size: var(--fs-sm); }
+.phd-post .tags { margin-top: 2px; }
+.phd-post__actions {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px;
+  margin-top: auto; padding-top: 14px; border-top: 1px solid var(--rule);
+}

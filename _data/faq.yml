@@ -1,20 +1,17 @@
 # PhD FAQ — rendered on /phd/ and emitted as FAQPage structured data for search engines.
 # Answers may contain simple HTML.
 
-- q: "Is there a guaranteed, fully funded PhD studentship available right now for Home-fee (UK, Irish, Settled Status, or ILR) students?"
-  a: "Yes. I hold a <strong>directly allocated 3-year DfE Northern Ireland PhD studentship</strong> at Queen's University Belfast covering <strong>100% of Home tuition fees plus a tax-free, NI-free living stipend</strong> (~£19,237–£20,780 per year, equivalent to a ~£25k–£27k taxed salary, plus paid teaching/demonstrating top-ups). It is open to <strong>UK/NI nationals</strong>, <strong>Republic of Ireland citizens (under the Common Travel Area)</strong>, and candidates holding <strong>EU Settled Status, Indefinite Leave to Remain (ILR), or eligible 3-year UK residency</strong> — without entering a school-wide quota lottery."
+- q: "Are PhD studentships available for UK and Republic of Ireland students?"
+  a: "Yes. Competitive DfE and EPSRC Postgraduate Studentships at Queen's University Belfast cover <strong>100% of Home tuition fees plus a tax-free maintenance stipend</strong> (approx. £21,805 per year for 3–3.5 years). Both <strong>UK nationals and Republic of Ireland nationals</strong> (as well as candidates with UK settled or pre-settled status) qualify as Home students."
 
-- q: "I am working as a graduate software engineer or studying Physics / Maths / Mechanical Engineering. Should I apply?"
-  a: "Absolutely. Graduate software and data engineers in Belfast, Great Britain, or Ireland who want to move from routine enterprise development into frontier AI, 3D vision, and robotics R&amp;D make outstanding PhD researchers. Similarly, graduates in <strong>Physics, Applied Mathematics, and Mechanical/Aerospace Engineering</strong> who have strong Python and linear algebra skills are strongly encouraged to reach out — you do not need a Computer Science degree title or prior autonomous driving experience."
+- q: "What is the application deadline for October 2027 entry?"
+  a: "Formal applications for our advertised October 2027 PhD projects (<code>EEECS27/HY1</code> and <code>EEECS27/YH2</code>, starting 1 October 2027) close on <strong>Friday, 5 February 2027</strong> via the <a href=\"https://go.qub.ac.uk/pgapply\" target=\"_blank\" rel=\"noopener\">Queen's Postgraduate Applications Portal</a>. Informal email enquiries ahead of submission are warmly encouraged."
 
-- q: "Do I need to write a formal research proposal before emailing you?"
-  a: "<strong>No.</strong> Many great candidates hold back because they think they need a polished 2-page research proposal before making contact. Simply email <a href=\"mailto:h.yatbaz@qub.ac.uk\">h.yatbaz@qub.ac.uk</a> with the subject line <code>[PhD Inquiry - HOME]</code> and your CV/transcript for a casual 15-minute coffee in the Ashby Building or a quick Teams chat. We will shape the formal proposal together once we find a topic you love."
+- q: "Can international candidates apply, and are there specific School rules?"
+  a: "Yes. A small, highly competitive pool of International scholarships is allocated across the School of EEECS. Please note two strict School rules: (1) international applicants may apply to a <strong>maximum of two projects across the entire School of EEECS</strong> (applying to three or more risks rejection), and (2) complete Bachelor's (and Master's, if applicable) academic transcripts must be uploaded at submission. Email <a href=\"mailto:h.yatbaz@qub.ac.uk\">h.yatbaz@qub.ac.uk</a> first for an informal fit check."
 
-- q: "How competitive is funding for International (Overseas fee status) applicants?"
-  a: "International fee-waiver scholarships in the School of EEECS are extremely competitive (typically <strong>≤5 awards across 30+ academics</strong>). To win a School international nomination slot, you must hold a top Master's degree and already have <strong>published or accepted peer-reviewed papers</strong> (e.g., IEEE/ACM transactions or leading vision/robotics conferences). I also enthusiastically support strong international candidates applying with external fellowships (e.g., CSC, TÜBİTAK, MSCA, or home-government sponsorships)."
+- q: "Can I apply while I am still finishing my undergraduate or Master's degree?"
+  a: "Yes. Applicants should hold <em>or expect to achieve</em> a First Class or Upper Second Class (2:1) Honours degree, or an equivalent Master's degree. Final-year students from Queen's, Ulster University, and universities across the island of Ireland and Great Britain are very welcome to get in touch before graduating."
 
-- q: "Can I apply while I am still finishing my undergraduate (BSc/MEng) or Master's (MSc) degree?"
-  a: "Yes. Final-year undergraduate and Master's students expecting a First Class or strong 2:1 degree from Queen's, Ulster University, universities across the Republic of Ireland (TCD, UCD, DCU, University of Galway, UCC, UL, Maynooth), and Great Britain are encouraged to get in touch early so we can reserve your spot ahead of graduation."
-
-- q: "What will my day-to-day setup look like in your group?"
-  a: "You will step into a working PyTorch codebase on Day 1 with pre-processed autonomous driving datasets (<code>nuScenes</code>, <code>Argoverse 2</code>, <code>KITTI</code>), high-performance GPU clusters, and access to QUB's instrumented autonomous research vehicle. We meet weekly 1-on-1 to design experiments and co-author papers for top venues (<code>CVPR</code>, <code>ICRA</code>, <code>CoRL</code>, <code>IEEE T-ITS</code>, <code>IEEE T-IV</code>), and I actively support paid summer industry research internships."
+- q: "Do I need prior experience with autonomous vehicles or ROS 2?"
+  a: "No. Strong fundamentals in Computer Science, EEE, Robotics, AI, or Applied Mathematics alongside solid programming in <strong>Python (e.g., PyTorch) or C++</strong> are what count on day one. Domain skills in CARLA simulation, ROS 2, and multi-sensor perception setups are built during the PhD with full support from our group."

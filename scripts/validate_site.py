@@ -10,7 +10,8 @@ yaml_files = [
     '_data/research.yml',
     '_data/students.yml',
     '_data/teaching.yml',
-    '_data/faq.yml'
+    '_data/faq.yml',
+    '_data/phd_posts.yml'
 ]
 
 html_files = [

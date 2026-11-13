@@ -1,6 +1,10 @@
 # Recent news — newest first. The home page shows the first 6 entries.
 # `link` is optional.
 
+- date: "Nov 2026"
+  text: 'Opened two October 2027 PhD project opportunities at Queen''s University Belfast: Reliable & Adaptive Perception (EEECS27/HY1) and Trustworthy & Explainable Multimodal Foundation Models (EEECS27/YH2) — apply by 5 February 2027.'
+  link: "/phd/#openings"
+
 - date: "Oct 2026"
   text: 'Gave an invited seminar for the IEEE QUB Student Branch: "Can We Trust AI in Autonomous Systems? From Perception to Run-Time Error Detection".'
   link: "/#talks"
